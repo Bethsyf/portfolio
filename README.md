@@ -1,4 +1,4 @@
 # portfolio
 Este es mi portafolio 
 
-![image](https://user-images.githubusercontent.com/84050237/154737303-5dad445b-be46-4ec0-8fc9-bc45cf47f59f.png)
+![mi_portafolio](https://user-images.githubusercontent.com/84050237/154738139-a2e61ed3-8e1a-4e6b-a480-edac4ddc516a.png)
