@@ -1,4 +1,4 @@
 # portfolio
 Este es mi portafolio 
 
-![](https://res.cloudinary.com/duzf4vfki/image/upload/v1628031867/ClassroomGitHub/imgIssues1_iqi3fy.png)
+![image](https://user-images.githubusercontent.com/84050237/154737303-5dad445b-be46-4ec0-8fc9-bc45cf47f59f.png)
