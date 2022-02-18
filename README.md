@@ -1,4 +1,4 @@
 # portfolio
 Este es mi portafolio 
 
-![mi_portafolio](miporfolio.jpg/
+![mi_portafolio](miporfolio.jpg/)
