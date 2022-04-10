@@ -13,19 +13,20 @@
     <link rel="stylesheet" href="estilos.css">
 
 </head>
-
-<style>
-   
-</style>
-
 <body>
+    <nav id="navbar">
     <header>
         <h3>✅ Mi Portafolio</h3>
-    </header>
-    <section class="uno">
+        <ul class="menu">
+            <li><a href="#about">Sobre Mí</a></li>
+            <li><a href="#projects">Mis Proyectos</a></li>
+            <li><a href="#contact">Contactame</a></li>
+        </ul>
+    </header></nav>
+    <section id="welcome-section" class="uno">
         <div class="caja-central">
             <div class="caja-cara">
-                <img class="cara" src="image-bethsy.jpg" alt="Maxi Programa">            
+                <img class="cara" src="image-bethsy.jpg" alt="image-bethsy">            
             </div>
             <div class="caja-presentacion">
                 <div>    
@@ -38,7 +39,7 @@
         </div>
     </section>
     <section class="dos">
-        <h2>Sobre mí</h2>
+        <h2 id="about">Sobre mí</h2>
         <p>
             Soy egresada del programa MisionTIC2022 (el cual, curse desde Mayo-2021 hasta Diciembre-2021), 
             dicho proceso me dejo muy entusiasmada y actualmente me estoy enfocando en fortalecer mis 
@@ -67,20 +68,20 @@
                 (01/11/21 al 19/12/21)</li>            
         </ul>
     </section>
-    <section class="tres">
+    <section id="projects" class="tres">
         <h2>Mis Proyectos</h2>
         <div class="proyectos">
-            <div class="card">
+            <div class="card project-tile">
                 <h3>Proyecto 1</h3>
-                <img src="proyecto1.png" alt="maxiprograma.com">
+                <img src="proyecto1.png" alt="proyecto1">
                 <p>
                     Desarrollo de una aplicación web para controlar ventas físicas y virtuales de una empresa manufacturera.
                 </p>
                 <a href="https://pacific-oasis-43276.herokuapp.com/" target="_blank">Ver</a>
             </div>
-            <div class="card">
+            <div class="card project-tile">
                 <h3>Proyecto 2</h3>
-                <img src="proyecto2.png" alt="Maxi Programa en YouTube">
+                <img src="proyecto2.png" alt="proyecto2">
                 <p>
                     Modelo de sistema de información que soporte la gestión de proyectos de investigación y mejore los procesos 
                     en la identificación y seguimiento de los proyectos.
@@ -89,7 +90,7 @@
             </div>            
         </div>
     </section>
-    <footer>
+    <footer id="contact">
         <h2>Contactame</h2>
             <div class="contacto">
                 <a href="https://www.linkedin.com/in/bethsyfalcon/" target="_blank">
@@ -100,7 +101,7 @@
                     <img src="twitter.png" class="red-social" alt="">
                 </a>
                 <hr>
-                <a href="https://github.com/Bethsyf" target="_blank">
+                <a id="profile-link" href="https://github.com/Bethsyf" target="_blank">
                     <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="red-social" alt="">
                 </a>
             </div>
