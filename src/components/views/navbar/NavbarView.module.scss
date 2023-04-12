@@ -1,0 +1,81 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.nav.home {
+  background-color: transparent;
+  color: #fff;
+}
+
+.navbar-toggle {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  transition: transform 0.5s ease;
+}
+
+.navbar-toggle span:nth-child(1) {
+  top: 0;
+}
+
+.navbar-toggle span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggle span:nth-child(3) {
+  bottom: 0;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.navbar-nav.open {
+  height: 150px;
+}
+
+.navbar-nav li {
+  margin-bottom: 10px;
+}
+
+.navbar-nav a {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.navbar-nav a:hover {
+  color: #333;
+}
