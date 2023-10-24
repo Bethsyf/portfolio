@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import s from './NavbarView.module.scss';
 import { PiBarcodeBold } from 'react-icons/pi';
 import { TiThMenu } from 'react-icons/ti';
+import Link from 'next/link';
 
 const NavbarView = () => {
   const [toggle, setToggle] = useState(false);
@@ -13,7 +14,9 @@ const NavbarView = () => {
   return (
     <nav className={s.container}>
       <div className={s.navb}>
-        <PiBarcodeBold className={s.iconCode} />
+        <Link href={'/'}>
+          <PiBarcodeBold className={s.iconCode} />
+        </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
           <TiThMenu />
         </button>
