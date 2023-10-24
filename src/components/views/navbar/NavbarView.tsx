@@ -29,7 +29,7 @@ const NavbarView = () => {
             </a>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#testimonials">
+            <a className={s.link} href="#projects">
               Proyectos
             </a>
           </li>
@@ -43,12 +43,12 @@ const NavbarView = () => {
         <div>
           <ul className={s.menuDesk}>
             <li className={s.item}>
-              <a className={s.link} href="#home">
+              <a className={s.link} href="/">
                 Inicio
               </a>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#testimonials">
+              <a className={s.link} href="#projects">
                 Proyectos
               </a>
             </li>

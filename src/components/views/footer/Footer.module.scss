@@ -1,0 +1,38 @@
+.container {
+  background-color: rgba(128, 128, 128, 0.3);
+  color: #cccccc;
+  padding: 20px;
+  text-align: center;
+  height: 46rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info {
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    color: #cccccc;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// p {
+//   font-size: 14px;
+//   margin-top: 20px;
+//   color: #ccc;
+// }
+
+@media (max-width: 768px) {
+  .info p {
+    font-size: 14px;
+  }
+}

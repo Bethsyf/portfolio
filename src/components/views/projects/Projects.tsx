@@ -22,16 +22,19 @@ const ProjectsGrid = () => {
   ];
 
   return (
-    <div className={s.container}>
-      {projects.map((project, index) => (
-        <div key={index} className={s.card}>
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
-            Ver proyecto
-          </a>
-        </div>
-      ))}
+    <div className={s.container} id="projects">
+      <h2>Proyectos</h2>
+      <div className={s.containerInner}>
+        {projects.map((project, index) => (
+          <div key={index} className={s.card}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+              Ver proyecto
+            </a>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
