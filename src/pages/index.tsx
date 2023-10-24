@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '@/styles/pages/Home.module.scss';
 import NavbarView from '@/components/views/navbar/NavbarView';
 import AboutMe from '@/components/views/aboutMe/AboutMe';
+import ProjectsGrid from '@/components/views/projects/Projects';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <main className={styles.main} id="home">
         <NavbarView />
         <AboutMe />
+        <ProjectsGrid />
       </main>
     </>
   );
