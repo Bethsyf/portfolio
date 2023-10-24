@@ -7,7 +7,7 @@ import myPhoto from '../../../../public/bethsy.png';
 
 const AboutMe = () => {
   return (
-    <div className={s.container} id="home">
+    <div className={s.container}>
       <Image className={s.myPhoto} src={myPhoto} alt={''} />
       <p className={s.text}>
         👋 ¡Hola! Soy Bethsy, una apasionada desarrolladora frontend con un poco
