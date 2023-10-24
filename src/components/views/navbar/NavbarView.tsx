@@ -18,7 +18,7 @@ const NavbarView = () => {
           <PiBarcodeBold className={s.iconCode} />
         </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
-          <TiThMenu />
+          <TiThMenu className={s.iconMenu} />
         </button>
       </div>
       <div className={s.contMenu}>
@@ -30,12 +30,12 @@ const NavbarView = () => {
           </li>
           <li className={s.item} onClick={handleToggle}>
             <a className={s.link} href="#testimonials">
-              testimonials
+              Proyectos
             </a>
           </li>
           <li className={s.item} onClick={handleToggle}>
             <a className={s.link} href="#contact">
-              contact
+              Contáctame
             </a>
           </li>
         </ul>
@@ -54,7 +54,7 @@ const NavbarView = () => {
             </li>
             <li className={s.item}>
               <a className={s.link} href="#contact">
-                Contactame
+                Contáctame
               </a>
             </li>
           </ul>

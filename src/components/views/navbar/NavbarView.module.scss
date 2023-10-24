@@ -7,11 +7,20 @@
   position: relative;
 }
 .iconCode {
-  font-size: 5rem;
+  font-size: 4rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
 }
 .btMenu {
-  background-color: white;
-  color: black;
+  border: none;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 5px;
+}
+.iconMenu {
+  font-size: 2rem;
 }
 
 .menu {
@@ -57,10 +66,12 @@
   }
   .btMenu {
     display: none;
-    border: 1px solid red;
   }
   .contMenu {
     display: flex;
+  }
+  .iconCode {
+    font-size: 5rem;
   }
   .menuDesk {
     list-style: none;
