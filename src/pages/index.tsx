@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import styles from '@/styles/pages/Home.module.scss';
 import NavbarView from '@/components/views/navbar/NavbarView';
 
@@ -12,9 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <div>
-          <NavbarView isHomePage={true} />
-        </div>
+        <NavbarView />
       </main>
     </>
   );
