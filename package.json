@@ -1,5 +1,6 @@
 {
   "name": "my-porfolio",
+  "homepage": "https://bethsyf.github.io/portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
