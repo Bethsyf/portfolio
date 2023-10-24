@@ -1,0 +1,80 @@
+.container {
+  width: 100%;
+}
+.navb {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.iconCode {
+  font-size: 5rem;
+}
+.btMenu {
+  background-color: white;
+  color: black;
+}
+
+.menu {
+  opacity: 0.9;
+  display: flex;
+  position: absolute;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #5a87c2;
+}
+.menuHidden {
+  top: -100%;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #5a87c2;
+}
+.menuDesk {
+  display: none;
+}
+.link {
+  text-decoration: none;
+}
+.logo {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    width: 100%;
+  }
+  .logo {
+    text-transform: uppercase;
+  }
+  .btMenu {
+    display: none;
+    border: 1px solid red;
+  }
+  .contMenu {
+    display: flex;
+  }
+  .menuDesk {
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+    justify-content: end;
+    flex-direction: row;
+  }
+  .menuHidden {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
+  .link {
+  }
+}
