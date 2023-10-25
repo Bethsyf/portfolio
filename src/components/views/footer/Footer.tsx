@@ -16,7 +16,7 @@ const Footer = () => {
           <div className={s.rrss}>
             <FaLinkedinIn />
             <a
-              href="https://www.linkedin.com/in/tu-linkedin"
+              href="https://www.linkedin.com/in/bethsyfalcon-frontend/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -34,7 +34,16 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <p className={s.pd}>Made with ❤️ by @Bethsyf</p>
+        <p className={s.pd}>
+          Made with ❤️ by&nbsp;
+          <a
+            href="https://github.com/Bethsyf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @Bethsyf
+          </a>
+        </p>
       </div>
     </footer>
   );
