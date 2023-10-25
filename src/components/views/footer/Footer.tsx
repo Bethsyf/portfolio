@@ -29,7 +29,7 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <p>Made with ❤️ by @Bethsyf</p>
+        <p className={s.pd}>Made with ❤️ by @Bethsyf</p>
       </div>
     </footer>
   );

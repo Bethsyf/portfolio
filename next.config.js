@@ -3,7 +3,9 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  reactStrictMode: true,
+  images: {
+    domains: ['res.cloudinary.com', 'ejemplo.com'],
+  },
 };
 
 module.exports = nextConfig;
