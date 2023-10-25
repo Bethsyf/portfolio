@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-
 import s from './ProjectsView.module.scss';
 import { v4 as uuidv4 } from 'uuid';
 import { FaGithub, FaRocket } from 'react-icons/fa';
+import projects from '@/utils/projects.json';
 
 interface ProjectsViewProps {
   title: string;
@@ -14,20 +14,11 @@ interface ProjectsViewProps {
 }
 
 const ProjectsView = () => {
-  const [projects, setProjects] = useState<ProjectsViewProps[]>([]);
-
-  useEffect(() => {
-    fetch('/src/pages/api/projects.ts')
-      .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error(error));
-  }, []);
-
   return (
     <div className={s.container} id="projects">
       <h2>Proyectos</h2>
       <div className={s.containerInner}>
-        {projects.map((project) => (
+        {projects.map((project: ProjectsViewProps) => (
           <div key={uuidv4()} className={s.card}>
             <div className={s.links}>
               <h3>{project.title}</h3>
@@ -37,14 +28,14 @@ const ProjectsView = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaRocket />
+                  <FaRocket className={s.icon} />
                 </a>
                 <a
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub />
+                  <FaGithub className={s.icon} />
                 </a>
               </div>{' '}
             </div>
