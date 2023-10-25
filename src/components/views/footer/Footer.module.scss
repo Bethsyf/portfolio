@@ -3,14 +3,24 @@
   color: #cccccc;
   padding: 20px;
   text-align: center;
-  height: 46rem;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  .pd {
+    display: flex;
+    align-items: end;
+  }
+}
+
+.info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.info {
+  height: 100%;
+  gap: 20px;
   p {
     font-size: 16px;
   }
@@ -22,6 +32,12 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+  .rrss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
   }
 }
 
