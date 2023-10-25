@@ -17,7 +17,7 @@ const ProjectsView = () => {
   const [projects, setProjects] = useState<ProjectsViewProps[]>([]);
 
   useEffect(() => {
-    fetch('/api/projects')
+    fetch('/src/pages/api/projects.ts')
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error(error));
