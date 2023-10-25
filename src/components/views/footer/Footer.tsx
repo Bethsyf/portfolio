@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
         </div>
         <p className={s.pd}>
-          Made with ❤️ by&nbsp;
+          Hecho con ❤️ por&nbsp;
           <a
             href="https://github.com/Bethsyf"
             target="_blank"
