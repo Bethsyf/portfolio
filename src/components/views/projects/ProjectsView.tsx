@@ -39,7 +39,7 @@ const ProjectsView = () => {
                 </a>
               </div>{' '}
             </div>
-            <p>Tecnologías: {project.technologies}</p>
+            <p>{project.technologies}</p>
             <Image
               className={s.imageCard}
               src={project.imageUrl}
