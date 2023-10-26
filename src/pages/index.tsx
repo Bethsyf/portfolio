@@ -13,7 +13,15 @@ export default function Home() {
         <title>Portfolio | Bethsy Falcon</title>
         <meta name="description" content="My Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/dmaviub4l/image/upload/v1698325626/djdpyrig9bo8e43ftbsp.png"
+        />
+        <meta
+          property="og:url"
+          content="https://bethsyf.github.io/portfolio/"
+        />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <main className={styles.main} id="home">
         <NavbarView />
