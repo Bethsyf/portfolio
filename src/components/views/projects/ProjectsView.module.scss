@@ -1,0 +1,53 @@
+.container {
+  margin: 8rem auto;
+  h2 {
+    text-align: center;
+  }
+
+  .containerInner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      width: 25rem;
+      height: auto;
+      margin: 20px;
+      padding: 20px;
+      background: rgba(128, 128, 128, 0.4);
+      border-radius: 1rem;
+      box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.4);
+
+      .links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        h3 {
+          font-size: 1.2rem;
+          text-shadow: 2px 2px 3px #cccccc;
+          @media (prefers-color-scheme: dark) {
+            text-shadow: 2px 2px 3px #0a0a2a;
+          }
+        }
+        a {
+          display: block;
+          margin-top: 10px;
+        }
+        .icon {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
+      .imageCard {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

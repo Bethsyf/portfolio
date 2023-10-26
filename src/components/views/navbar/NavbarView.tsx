@@ -18,24 +18,24 @@ const NavbarView = () => {
           <PiBarcodeBold className={s.iconCode} />
         </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
-          <TiThMenu />
+          <TiThMenu className={s.iconMenu} />
         </button>
       </div>
       <div className={s.contMenu}>
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#home">
+            <a className={s.link} href="/portfolio">
               Inicio
             </a>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#testimonials">
-              testimonials
+            <a className={s.link} href="#projects">
+              Proyectos
             </a>
           </li>
           <li className={s.item} onClick={handleToggle}>
             <a className={s.link} href="#contact">
-              contact
+              Contáctame
             </a>
           </li>
         </ul>
@@ -43,18 +43,18 @@ const NavbarView = () => {
         <div>
           <ul className={s.menuDesk}>
             <li className={s.item}>
-              <a className={s.link} href="#home">
+              <a className={s.link} href="/portfolio">
                 Inicio
               </a>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#testimonials">
+              <a className={s.link} href="#projects">
                 Proyectos
               </a>
             </li>
             <li className={s.item}>
               <a className={s.link} href="#contact">
-                Contactame
+                Contáctame
               </a>
             </li>
           </ul>

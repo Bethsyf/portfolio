@@ -1,20 +1,36 @@
 .container {
   display: flex;
-
-  width: 70%;
-  margin: 5rem auto;
+  flex-direction: column;
+  width: 85%;
+  margin: 5.5rem auto;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.4);
   .myPhoto {
-    width: 30rem;
+    width: 100%;
     height: auto;
   }
   .text {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto 2rem;
-    text-align: center;
+    margin: 2rem 1rem;
+    text-align: justify;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 9.5rem auto;
+
+    .myPhoto {
+      width: 30rem;
+    }
+    .text {
+      margin: 1rem 2rem;
+    }
   }
 }

@@ -3,8 +3,9 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: true,
-  reactStrictMode: true,
-  target: 'serverless',
+  images: {
+    domains: ['res.cloudinary.com', 'ejemplo.com'],
+  },
 };
 
 module.exports = nextConfig;
