@@ -21,7 +21,7 @@ export default function Home() {
           property="og:url"
           content="https://bethsyf.github.io/portfolio/"
         />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main} id="home">
         <NavbarView />
