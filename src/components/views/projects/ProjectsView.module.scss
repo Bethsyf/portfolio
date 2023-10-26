@@ -24,9 +24,11 @@
         align-items: center;
         gap: 30px;
         h3 {
-          font-size: 18px;
-          color: #c57442;
-          text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+          font-size: 1.2rem;
+          text-shadow: 2px 2px 3px #cccccc;
+          @media (prefers-color-scheme: dark) {
+            text-shadow: 2px 2px 3px #0a0a2a;
+          }
         }
         a {
           display: block;
