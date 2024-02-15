@@ -1,5 +1,12 @@
 [
   {
+    "title": "Future World",
+    "technologies": "Nextjs, SASS, Typescript, Graphql, Sanitize-html, Zustand.",
+    "deployUrl": "https://nextjs14-project.vercel.app/",
+    "repoUrl": "https://github.com/Bethsyf/nextjs14-project",
+    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1708026934/c6ybktmuivfsjzgpgxli.png"
+  },
+  {
     "title": "Pokedex(Nextjs)",
     "technologies": "Nextjs, SASS, Typescript, Axios.",
     "deployUrl": "https://netx-pokedex.vercel.app/",
