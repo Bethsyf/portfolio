@@ -17,7 +17,8 @@ const AboutMe = () => {
           experiencias web atractivas. 💻 Mi conjunto de habilidades incluye la
           manipulación de tecnologías clave como HTML, CSS y JavaScript, junto
           con la creación de aplicaciones web dinámicas utilizando React,
-          Next.js y TypeScript. Además, estoy familiarizada con la colaboración
+          Next.js y TypeScript. <br/>
+          Además, estoy familiarizada con la colaboración
           en proyectos de desarrollo a través de GitHub, lo que me permite
           trabajar de manera efectiva en equipos y contribuir al código abierto.
           🤝 Estoy comprometida con la creación de interfaces de usuario
