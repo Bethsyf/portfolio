@@ -1,5 +1,12 @@
 [
   {
+    "title": "Mi Vaquita",
+    "technologies": "Frontend: Vitejs, Tailwind, Axios, Backend: Nodejs, Express, BD: PostgreSQL",
+    "deployUrl": "https://mi-vaquita-app.vercel.app",
+    "repoUrl": "https://github.com/Bethsyf/mi-vaquita-app",
+    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1723161937/b7sjwmqkjv7nfm7dxfxs.png"
+  },
+  {
     "title": "Future World",
     "technologies": "Nextjs, SASS, Typescript, Graphql, Sanitize-html, Zustand.",
     "deployUrl": "https://nextjs14-project.vercel.app/",
@@ -7,45 +14,10 @@
     "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1708026934/c6ybktmuivfsjzgpgxli.png"
   },
   {
-    "title": "Pokedex(Nextjs)",
-    "technologies": "Nextjs, SASS, Typescript, Axios.",
-    "deployUrl": "https://netx-pokedex.vercel.app/",
-    "repoUrl": "https://github.com/Bethsyf/Netx-Pokedex",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698228107/cgl47j1ptldvbqezlb8m.png"
-  },
-  {
-    "title": "Landing Page Responsive",
-    "technologies": "React, CSS",
-    "deployUrl": "https://lading-page-responsive.vercel.app/",
-    "repoUrl": "https://github.com/Bethsyf/LadingPageResponsive",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698230881/xfkvl8eeod7x48q0mckv.png"
-  },
-  {
-    "title": "Pokedex(React)",
-    "technologies": "React, Redux, Firebase, Axios, Bootstrap, Formik, Yup.",
-    "deployUrl": "https://pokedex-ceb18.web.app/",
-    "repoUrl": "https://github.com/Bethsyf/PruebaTecnicaPokedex",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698231871/gqxsaiesosi0ivbm2has.png"
-  },
-  {
-    "title": "To-Do",
-    "technologies": "React, Redux, CSS.",
-    "deployUrl": "https://todo-app-bethsyf.vercel.app/",
-    "repoUrl": "https://github.com/Bethsyf/S3Reto2Todo-App",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698234225/impie6wm8j98hc7suzyr.png"
-  },
-  {
-    "title": "Calculadora(JS)",
-    "technologies": "JavaScript Vanilla, SASS.",
-    "deployUrl": "https://bethsyf.github.io/S1Reto2Calculadodra/",
-    "repoUrl": "https://github.com/Bethsyf/S1Reto2Calculadodra",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698235054/ys0vb69sdozkpb2homkx.png"
-  },
-  {
-    "title": "Bookmark",
-    "technologies": "CSS, HTML.",
-    "deployUrl": "https://bethsyf.github.io/Sprint1-Reto1/",
-    "repoUrl": "https://github.com/Bethsyf/Sprint1-Reto1",
-    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1698234895/kzhs4tvfuw4raeo3ctf2.png"
+    "title": "Porfolio",
+    "technologies": "Nextjs, SASS, Typescript",
+    "deployUrl": "https://bethsyf.github.io/portfolio/",
+    "repoUrl": "https://github.com/Bethsyf/portfolio",
+    "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1723161553/eokdssx9zb9u7uhpsbxe.png"
   }
 ]

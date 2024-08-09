@@ -6,6 +6,7 @@
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.4);
+  
   .myPhoto {
     width: 100%;
     height: auto;
@@ -17,13 +18,14 @@
     align-items: center;
     margin: 2rem 1rem;
     text-align: justify;
-  }
+    line-height: 1.8; 
+}
 }
 @media (min-width: 1024px) {
   .container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 75rem;
     margin: 9.5rem auto;
 
     .myPhoto {
