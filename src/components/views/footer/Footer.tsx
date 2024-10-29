@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
           <h2>Contacto</h2>
           <div className={s.rrss}>
             <SiGmail />
-            <p>bethsyfalcon@gmail.com</p>
+            <a href='mailto:bethsyfalcon@gmail.com'> bethsyfalcon@gmail.com</a>
           </div>
           <div className={s.rrss}>
             <FaLinkedinIn />
