@@ -39,6 +39,11 @@ const NavbarView = () => {
             </a>
           </li>
           <li className={s.item} onClick={handleToggle}>
+            <a className={s.link} href="#experience">
+            Experiencia
+            </a>
+          </li>
+          <li className={s.item} onClick={handleToggle}>
             <a className={s.link} href="#contact">
               Contáctame
             </a>
@@ -60,6 +65,11 @@ const NavbarView = () => {
             <li className={s.item}>
               <a className={s.link} href="#projects">
                 Proyectos
+              </a>
+            </li>
+            <li className={s.item}>
+              <a className={s.link} href="#experience">
+              Experiencia
               </a>
             </li>
             <li className={s.item}>
