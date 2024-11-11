@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from 'react-icons/fa'; // Ejemplo de iconos
 import s from './Technologies.module.scss';
-import { SiAxios, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import { SiAxios, SiNextdotjs, SiSass, SiTailwindcss, SiTypescript } from 'react-icons/si';
 
 const technologies = [
   { name: 'HTML', icon: <FaHtml5 /> },
@@ -10,6 +10,8 @@ const technologies = [
   { name: 'React', icon: <FaReact /> },
   { name: 'Next.js', icon: <SiNextdotjs /> }, 
   { name: 'TypeScript', icon: <SiTypescript /> }, 
+  { name: 'Sass', icon: <SiSass /> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss /> }, 
   { name: 'Axios', icon: <SiAxios /> }, 
   { name: 'Node.js', icon: <FaNodeJs /> },
 ];
