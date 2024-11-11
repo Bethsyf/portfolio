@@ -68,7 +68,7 @@ const NavbarView = () => {
               </a>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#experience">
+              <a className={s.link} href="#projects">
               Experiencia
               </a>
             </li>
