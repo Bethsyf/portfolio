@@ -5,6 +5,8 @@ import NavbarView from '@/components/views/navbar/NavbarView';
 import AboutMe from '@/components/views/aboutMe/AboutMe';
 import Footer from '@/components/views/footer/Footer';
 import ProjectsView from '@/components/views/projects/ProjectsView';
+import TechnologiesView from '@/components/views/technologies/Technologies';
+import ExperienceView from '@/components/views/experience/Experience';
 
 export default function Home() {
   return (
@@ -26,7 +28,9 @@ export default function Home() {
       <main className={styles.main} id="home">
         <NavbarView />
         <AboutMe />
+        <TechnologiesView/>
         <ProjectsView />
+        <ExperienceView/>
         <Footer />
       </main>
     </>
