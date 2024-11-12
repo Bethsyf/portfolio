@@ -90,6 +90,7 @@
   }
   .iconCode {
     font-size: 5rem;
+    color: rgb(215, 144, 10);
   }
   .menuDesk {
     list-style: none;
@@ -104,6 +105,24 @@
   .menu {
     display: none;
   }
-  .link {
+  .downloadButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .downloadButton:hover {
+    background-color: #45a049; 
+  }
+  
+  .downloadIcon {
+    margin-right: 8px; 
+    font-size: 18px; 
   }
 }
