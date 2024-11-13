@@ -20,6 +20,7 @@ const experiences: Experience[] = [
       'Conectar APIs con el Frontend para habilitar el intercambio de datos en las aplicaciones web.',
     ],
   },
+
 ];
 
 const ExperienceView = () => {
