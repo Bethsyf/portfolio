@@ -92,7 +92,7 @@ const NavbarView = () => {
             <li className={s.item}>
             <a
                 className={`${s.link} ${s.downloadButton}`}
-                href="/portfolio/public/cv.pdf"
+                href="/pdf/cv.pdf"
                 download="CV_Bethsy_Falcon"
               >
                 <FiDownload className={s.downloadIcon} /> Descargar CV
