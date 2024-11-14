@@ -25,68 +25,69 @@ const NavbarView = () => {
       <div className={s.contMenu}>
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="/portfolio">
+            <Link className={s.link} href="/portfolio">
               Inicio
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#technologies">
+            <Link className={s.link} href="#technologies">
               Tecnologías
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#projects">
+            <Link className={s.link} href="#projects">
               Proyectos
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#experience">
+            <Link className={s.link} href="#experience">
               Experiencia
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#contact">
+            <Link className={s.link} href="#contact">
               Contáctame
-            </a>
+            </Link>
           </li>
           {/* Botón para descargar el CV */}
           <li className={s.item} onClick={handleToggle}>
-            <a
-              className={s.link}
-              href="/cv.pdf"  // Aquí pones la ruta del archivo PDF en la carpeta 'public' o la URL de tu archivo
-              download="Mi_CV"  // El nombre del archivo que se descargará
+            <Link
+              className={`${s.link} ${s.downloadButton}`}
+              href="/cv.pdf"
+                download="CV_Bethsy_Falcon"
+                target='_blank' 
             >
               Descargar CV
-            </a>
+            </Link>
           </li>
         </ul>
 
         <div>
           <ul className={s.menuDesk}>
             <li className={s.item}>
-              <a className={s.link} href="/portfolio">
+              <Link className={s.link} href="/portfolio">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#technologies">
+              <Link className={s.link} href="#technologies">
                 Tecnologías
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#projects">
+              <Link className={s.link} href="#projects">
                 Proyectos
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#experience">
+              <Link className={s.link} href="#experience">
                 Experiencia
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#contact">
+              <Link className={s.link} href="#contact">
                 Contáctame
-              </a>
+              </Link>
             </li>
            
             <li className={s.item}>
