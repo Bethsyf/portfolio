@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import s from './NavbarView.module.scss';
 import { PiBarcodeBold } from 'react-icons/pi';
 import { TiThMenu } from 'react-icons/ti';
-import { FiDownload } from 'react-icons/fi'; 
+import { FaTimes } from 'react-icons/fa'; 
+import { FiDownload } from 'react-icons/fi';
 import Link from 'next/link';
 
 const NavbarView = () => {
@@ -19,7 +20,7 @@ const NavbarView = () => {
           <PiBarcodeBold className={s.iconCode} />
         </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
-          <TiThMenu className={s.iconMenu} />
+          {toggle ? <FaTimes className={s.iconMenu} /> : <TiThMenu className={s.iconMenu} />}
         </button>
       </div>
       <div className={s.contMenu}>
@@ -49,13 +50,12 @@ const NavbarView = () => {
               Contáctame
             </Link>
           </li>
-          {/* Botón para descargar el CV */}
           <li className={s.item} onClick={handleToggle}>
             <Link
-              className={`${s.link} ${s.downloadButton}`}
+              className={s.link}
               href="/cv.pdf"
-                download="CV_Bethsy_Falcon"
-                target='_blank' 
+              download="CV_Bethsy_Falcon"
+              target='_blank'
             >
               Descargar CV
             </Link>
@@ -89,17 +89,17 @@ const NavbarView = () => {
                 Contáctame
               </Link>
             </li>
-           
+
             <li className={s.item}>
-            <Link
+              <Link
                 className={`${s.link} ${s.downloadButton}`}
                 href="/cv.pdf"
                 download="CV_Bethsy_Falcon"
-                target='_blank' 
+                target='_blank'
               >
                 <FiDownload className={s.downloadIcon} /> Descargar CV
               </Link>
-            </li> 
+            </li>
           </ul>
         </div>
       </div>
