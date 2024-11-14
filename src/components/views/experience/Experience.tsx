@@ -14,10 +14,10 @@ const experiences: Experience[] = [
     company: 'KUTAI',
     duration: 'Junio 2022 - Septiembre 2023',
     description: [
-      'Traducir diseños a código con Next.js, TypeScript y Sass.',
-      'Mantener y optimizar la interfaz de usuario.',
-      'Mejorar la usabilidad e interacción.',
-      'Conectar APIs con el Frontend para habilitar el intercambio de datos en las aplicaciones web.',
+      '- Traducir diseños a código con Next.js, TypeScript y Sass.',
+      '- Mantener y optimizar la interfaz de usuario.',
+      '- Mejorar la usabilidad e interacción.',
+      '- Conectar APIs con el Frontend para habilitar el intercambio de datos en las aplicaciones web.',
     ],
   },
 
