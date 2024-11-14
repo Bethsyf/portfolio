@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import s from './NavbarView.module.scss';
 import { PiBarcodeBold } from 'react-icons/pi';
 import { TiThMenu } from 'react-icons/ti';
-import { FiDownload } from 'react-icons/fi'; 
+import { FaTimes } from 'react-icons/fa'; 
+import { FiDownload } from 'react-icons/fi';
 import Link from 'next/link';
 
 const NavbarView = () => {
@@ -19,86 +20,86 @@ const NavbarView = () => {
           <PiBarcodeBold className={s.iconCode} />
         </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
-          <TiThMenu className={s.iconMenu} />
+          {toggle ? <FaTimes className={s.iconMenu} /> : <TiThMenu className={s.iconMenu} />}
         </button>
       </div>
       <div className={s.contMenu}>
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="/portfolio">
+            <Link className={s.link} href="/portfolio">
               Inicio
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#technologies">
+            <Link className={s.link} href="#technologies">
               Tecnologías
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#projects">
+            <Link className={s.link} href="#projects">
               Proyectos
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#experience">
+            <Link className={s.link} href="#experience">
               Experiencia
-            </a>
+            </Link>
           </li>
           <li className={s.item} onClick={handleToggle}>
-            <a className={s.link} href="#contact">
+            <Link className={s.link} href="#contact">
               Contáctame
-            </a>
+            </Link>
           </li>
-          {/* Botón para descargar el CV */}
           <li className={s.item} onClick={handleToggle}>
-            <a
+            <Link
               className={s.link}
-              href="/cv.pdf"  // Aquí pones la ruta del archivo PDF en la carpeta 'public' o la URL de tu archivo
-              download="Mi_CV"  // El nombre del archivo que se descargará
+              href="/cv.pdf"
+              download="CV_Bethsy_Falcon"
+              target='_blank'
             >
               Descargar CV
-            </a>
+            </Link>
           </li>
         </ul>
 
         <div>
           <ul className={s.menuDesk}>
             <li className={s.item}>
-              <a className={s.link} href="/portfolio">
+              <Link className={s.link} href="/portfolio">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#technologies">
+              <Link className={s.link} href="#technologies">
                 Tecnologías
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#projects">
+              <Link className={s.link} href="#projects">
                 Proyectos
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#experience">
+              <Link className={s.link} href="#experience">
                 Experiencia
-              </a>
+              </Link>
             </li>
             <li className={s.item}>
-              <a className={s.link} href="#contact">
+              <Link className={s.link} href="#contact">
                 Contáctame
-              </a>
+              </Link>
             </li>
-           
+
             <li className={s.item}>
-            <Link
+              <Link
                 className={`${s.link} ${s.downloadButton}`}
                 href="/cv.pdf"
                 download="CV_Bethsy_Falcon"
-                target='_blank' 
+                target='_blank'
               >
                 <FiDownload className={s.downloadIcon} /> Descargar CV
               </Link>
-            </li> 
+            </li>
           </ul>
         </div>
       </div>

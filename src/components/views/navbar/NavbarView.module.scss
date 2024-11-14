@@ -21,6 +21,7 @@
   font-size: 4rem;
   margin-top: 0.5rem;
   margin-left: 0.5rem;
+  color: #c57442
 }
 .btMenu {
   border: none;
@@ -29,9 +30,11 @@
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 5px;
+  background: #c57442
 }
 .iconMenu {
   font-size: 2rem;
+  background: #c57442
 }
 
 .menu {
@@ -49,11 +52,11 @@
   gap: 20px;
   list-style-type: none;
   font-weight: 900;
-  margin-top: -1rem;
+  margin-top: -0.5rem;
 }
 
 .menuHidden {
-  top: -180%;
+  top: -250%;
   display: flex;
   position: absolute;
   flex-direction: column;
@@ -90,7 +93,7 @@
   }
   .iconCode {
     font-size: 5rem;
-    color: rgb(215, 144, 10);
+    color: #c57442;
   }
   .menuDesk {
     list-style: none;
@@ -109,7 +112,7 @@
     display: flex;
     align-items: center;
     padding: 8px 16px;
-    background-color: #4CAF50; 
+    background-color: #c57442; 
     color: white;
     font-size: 14px;
     text-decoration: none;
@@ -118,7 +121,7 @@
   }
   
   .downloadButton:hover {
-    background-color: #45a049; 
+    background-color: #a95f37; 
   }
   
   .downloadIcon {
