@@ -17,6 +17,14 @@ const ProjectsView = () => {
   return (
     <div className={s.container} id="projects">
       <h2>Proyectos</h2>
+      
+     
+      <p className={s.introText}>
+        A continuación te muestro algunos de los proyectos en los que he trabajado. Cada uno
+        de estos refleja mis habilidades en desarrollo frontend y mi capacidad para implementar
+        soluciones innovadoras utilizando tecnologías modernas. Haz clic en los enlaces para ver más detalles.
+      </p>
+
       <div className={s.containerInner}>
         {projects.map((project: ProjectsViewProps) => (
           <div key={uuidv4()} className={s.card}>
