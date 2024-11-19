@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import s from './NavbarView.module.scss';
+import { useState } from 'react';
+import Link from 'next/link';
 import { PiBarcodeBold } from 'react-icons/pi';
 import { TiThMenu } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa'; 
 import { FiDownload } from 'react-icons/fi';
-import Link from 'next/link';
+import s from './NavbarView.module.scss';
 
 const NavbarView = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,37 +25,38 @@ const NavbarView = () => {
       </div>
       <div className={s.contMenu}>
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
-          <li className={s.item} onClick={handleToggle}>
-            <Link className={s.link} href="/portfolio">
+          <li className={s.item} >
+            <Link className={s.link} href="/portfolio" onClick={handleToggle}>
               Inicio
             </Link>
           </li>
-          <li className={s.item} onClick={handleToggle}>
-            <Link className={s.link} href="#technologies">
+          <li className={s.item} >
+            <Link className={s.link} href="#technologies" onClick={handleToggle}>
               Tecnologías
             </Link>
           </li>
-          <li className={s.item} onClick={handleToggle}>
-            <Link className={s.link} href="#projects">
+          <li className={s.item} >
+            <Link className={s.link} href="#projects" onClick={handleToggle}>
               Proyectos
             </Link>
           </li>
-          <li className={s.item} onClick={handleToggle}>
-            <Link className={s.link} href="#experience">
+          <li className={s.item} >
+            <Link className={s.link} href="#experience" onClick={handleToggle}>
               Experiencia
             </Link>
           </li>
-          <li className={s.item} onClick={handleToggle}>
-            <Link className={s.link} href="#contact">
+          <li className={s.item} >
+            <Link className={s.link} href="#contact" onClick={handleToggle}>
               Contáctame
             </Link>
           </li>
-          <li className={s.item} onClick={handleToggle}>
+          <li className={s.item} >
             <Link
               className={s.link}
               href="/cv.pdf"
               download="CV_Bethsy_Falcon"
               target='_blank'
+              onClick={handleToggle}
             >
               Descargar CV
             </Link>
