@@ -1,6 +1,4 @@
-/** @type {import('next').NextConfig} */
-
-const nextConfig = {
+module.exports = {
   reactStrictMode: false,
   swcMinify: true,
   images: {
@@ -11,6 +9,6 @@ const nextConfig = {
     defaultLocale: 'es',
     localeDetection: true,
   },
+  basePath: '/nombre-del-repositorio',  
+  trailingSlash: true,  
 };
-
-module.exports = nextConfig;
