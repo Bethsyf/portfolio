@@ -4,6 +4,7 @@ import Image from "next/image";
 import s from "./AboutMe.module.scss";
 
 import myPhoto from "../../../../public/bethsy.png";
+import Link from "next/link";
 
 const AboutMe = () => {
   return (
@@ -21,6 +22,13 @@ const AboutMe = () => {
           negocio, optimizando el desarrollo y la escalabilidad de las
           aplicaciones.
         </p>
+        <div className={s.buttons}>
+          <Link href="https://www.linkedin.com/in/bethsyfalcon-frontend/" target="_blank" className={s.button}>LinkedIn</Link>
+          <Link href="https://github.com/Bethsyf" target="_blank" className={s.button}>GitHub</Link>
+          <Link   href="/cv.pdf"
+              download="CV_Bethsy_Falcon"
+              target='_blank' className={s.button}>Descargar CV</Link>
+        </div>
       </div>
     </div>
   );

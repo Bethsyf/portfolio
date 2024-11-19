@@ -5,11 +5,18 @@
 
   h2 {
     font-size: 2.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     @media (max-width: 768px) {
       font-size: 2rem; 
     }
+  }
+  .introText {
+    font-size: 1.1rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 4rem;
+    line-height: 1.6;
   }
 
   .techList {
