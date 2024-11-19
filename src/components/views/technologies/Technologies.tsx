@@ -20,6 +20,9 @@ const TechnologiesView = () => {
   return (
     <section className={s.technologies} id="technologies">
       <h2>Tecnologías</h2>
+      <p className={s.introText}>
+        Estas son las tecnologías que forman parte de mi stack y con las que tengo experiencia. Las utilizo para crear soluciones eficientes y escalables en mis proyectos.
+      </p>
       <div className={s.techList}>
         {technologies.map((tech) => (
           <div key={tech.name} className={s.techItem}>
