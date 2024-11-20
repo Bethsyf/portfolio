@@ -9,6 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <div className={s.container} id="contact">
+        <div className={s.containerInner}>
         <ContactMe/>
         <div className={s.info}>
           <h2>Contacto</h2>
@@ -36,6 +37,7 @@ const Footer = () => {
               @Bethsyf
             </Link>
           </div>
+        </div>
         </div>
         <p className={s.pd}>
           Hecho con ❤️ por&nbsp;
