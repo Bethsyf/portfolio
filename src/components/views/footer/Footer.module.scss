@@ -1,6 +1,5 @@
 .container {
   background-color: rgba(128, 128, 128, 0.3);
-
   padding: 20px;
   text-align: center;
   height: 40rem;
@@ -40,12 +39,6 @@
     font-size: 1.2rem;
   }
 }
-
-// p {
-//   font-size: 14px;
-//   margin-top: 20px;
-//   color: #ccc;
-// }
 
 @media (max-width: 768px) {
   .info p {
