@@ -3,11 +3,13 @@ import s from './Footer.module.scss';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import Link from 'next/link';
+import ContactMe from '../contact/contactMe';
 
 const Footer = () => {
   return (
     <footer>
       <div className={s.container} id="contact">
+        <ContactMe/>
         <div className={s.info}>
           <h2>Contacto</h2>
           <div className={s.rrss}>
