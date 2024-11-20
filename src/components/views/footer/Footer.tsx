@@ -3,7 +3,7 @@ import s from './Footer.module.scss';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 import Link from 'next/link';
-import ContactMe from '../contact/contactMe';
+import ContactMe from '../contact/ContactMe';
 
 const Footer = () => {
   return (
