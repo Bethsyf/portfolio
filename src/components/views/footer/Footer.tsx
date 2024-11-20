@@ -1,48 +1,53 @@
 import React from 'react';
 import s from './Footer.module.scss';
-import { FaEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
+import Link from 'next/link';
+import ContactMe from '../contact/ContactMe';
 
 const Footer = () => {
   return (
     <footer>
       <div className={s.container} id="contact">
+        <div className={s.containerInner}>
+        <ContactMe/>
         <div className={s.info}>
           <h2>Contacto</h2>
           <div className={s.rrss}>
             <SiGmail />
-            <a href='mailto:bethsyfalcon@gmail.com'> bethsyfalcon@gmail.com</a>
+            <Link href='mailto:bethsyfalcon@gmail.com'> bethsyfalcon@gmail.com</Link>
           </div>
           <div className={s.rrss}>
             <FaLinkedinIn />
-            <a
+            <Link
               href="https://www.linkedin.com/in/bethsyfalcon-frontend/"
               target="_blank"
               rel="noopener noreferrer"
             >
               @Bethsy Falcon
-            </a>
+            </Link>
           </div>
           <div className={s.rrss}>
             <FaGithub />
-            <a
+            <Link
               href="https://github.com/Bethsyf"
               target="_blank"
               rel="noopener noreferrer"
             >
               @Bethsyf
-            </a>
+            </Link>
           </div>
+        </div>
         </div>
         <p className={s.pd}>
           Hecho con ❤️ por&nbsp;
-          <a
+          <Link
             href="https://github.com/Bethsyf"
             target="_blank"
             rel="noopener noreferrer"
           >
             @Bethsyf
-          </a>
+          </Link>
         </p>
       </div>
     </footer>

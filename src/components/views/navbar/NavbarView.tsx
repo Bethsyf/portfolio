@@ -26,7 +26,7 @@ const NavbarView = () => {
       <div className={s.contMenu}>
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
           <li className={s.item} >
-            <Link className={s.link} href="/portfolio" onClick={handleToggle}>
+            <Link className={s.link} href="/" onClick={handleToggle}>
               Inicio
             </Link>
           </li>
@@ -66,7 +66,7 @@ const NavbarView = () => {
         <div>
           <ul className={s.menuDesk}>
             <li className={s.item}>
-              <Link className={s.link} href="/portfolio">
+              <Link className={s.link} href="/">
                 Inicio
               </Link>
             </li>
