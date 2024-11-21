@@ -11,17 +11,18 @@ const ContactMe = () => {
   };
   const validationSchema = Yup.object().shape({
     name: Yup.string()
-      .min(3, 'El nombre debe tener al menos 3 caracteres')
-      .max(30, 'El nombre no puede tener más de 30 caracteres')
-      .required('El nombre es obligatorio'),
+      .min(3, 'Mínimo 3 caracteres')
+      .max(30, 'Máximo 30 caracteres')
+      .required('Nombre requerido'),
     email: Yup.string()
-      .email('Debe ser un correo válido')
-      .required('El correo es obligatorio'),
+      .email('Correo no válido')
+      .required('Correo requerido'),
     message: Yup.string()
-      .min(3, 'El mensaje debe tener al menos 3 caracteres')
-      .max(500, 'El mensaje no puede tener más de 500 caracteres')
-      .required('El mensaje es obligatorio'),
+      .min(3, 'Mínimo 3 caracteres')
+      .max(500, 'Máximo 500 caracteres')
+      .required('Mensaje requerido'),
   });
+
 
   const handleSubmit = (values: typeof initialValues) => {
     console.log('Formulario enviado:', values);
