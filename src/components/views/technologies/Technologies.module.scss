@@ -13,9 +13,13 @@
   }
   .introText {
     color: #ccc;
-    margin: 2rem;
-    text-align: justify;
+    margin: 2rem 6rem 4rem 6rem;
+    text-align: center;
     line-height: 1.6;
+    @media (max-width: 768px) {
+      text-align: justify;
+      margin: 2rem;
+    }
   }
 
   .techList {
