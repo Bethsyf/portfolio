@@ -11,7 +11,7 @@ const technologies = [
   { name: 'Next.js', icon: <SiNextdotjs /> }, 
   { name: 'TypeScript', icon: <SiTypescript /> }, 
   { name: 'Sass', icon: <SiSass /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss /> }, 
+  { name: 'Tailwind', icon: <SiTailwindcss /> }, 
   { name: 'Axios', icon: <SiAxios /> }, 
   { name: 'Node.js', icon: <FaNodeJs /> },
 ];
