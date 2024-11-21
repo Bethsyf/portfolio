@@ -9,18 +9,23 @@ const ContactMe = () => {
     email: '',
     message: '',
   };
-
-  const validationSchema = Yup.object({
-    name: Yup.string().required('El nombre es obligatorio.'),
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(3, 'El nombre debe tener al menos 3 caracteres')
+      .max(30, 'El nombre no puede tener más de 30 caracteres')
+      .required('El nombre es obligatorio'),
     email: Yup.string()
-      .email('Introduce un correo electrónico válido.')
-      .required('El correo electrónico es obligatorio.'),
-    message: Yup.string().required('El mensaje no puede estar vacío.'),
+      .email('Debe ser un correo válido')
+      .required('El correo es obligatorio'),
+    message: Yup.string()
+      .min(3, 'El mensaje debe tener al menos 3 caracteres')
+      .max(500, 'El mensaje no puede tener más de 500 caracteres')
+      .required('El mensaje es obligatorio'),
   });
 
   const handleSubmit = (values: typeof initialValues) => {
     console.log('Formulario enviado:', values);
-    // Aquí puedes agregar la lógica para enviar los datos al servidor.
+   
   };
 
   return (
