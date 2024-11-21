@@ -1,79 +1,96 @@
 .contactForm {
-    display: none;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(207, 206, 206, 0.4);
-    max-width: 500px;
-    text-align: center;
-    margin: 2rem;
-  
-    @media (max-width: 768px) {
-      padding: 15px;
-    }
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(207, 206, 206, 0.4);
+  max-width: 500px;
+  text-align: center;
+  margin: 2rem auto; // Centrado en el contenedor
+
+  @media (max-width: 768px) {
+    padding: 15px;
   }
-  
-  .titleForm {
-    font-size: 1.8rem;
+}
+
+.titleForm {
+  font-size: 1.8rem;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-weight: bold;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-bottom: 1.5rem; // Separación entre grupos de campos
+
+  label {
+    font-size: 0.9rem;
+    margin: 10px 0 5px 0;
     color: #ccc;
-    margin-bottom: 20px;
-    font-weight: bold;
-  
-    @media (max-width: 768px) {
-      font-size: 1.6rem;
-    }
   }
-  
-  .formGroup {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  
-    label {
-      font-size: 0.9rem;
-      margin: 10px 0 5px 0;
-      color: #ccc;
-    }
-  
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      color: #ccc;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: border-color 0.3s ease;
-  
-      &:focus {
-        border-color: #a95f37;
-        outline: none;
-      }
-    }
-  
-    textarea {
-      resize: none;
-    }
-  }
-  
-  .submitButton {
-    padding: 10px 15px;
-    background-color: #c57442; 
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
     color: #ccc;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
+    background-color: transparent; // Fondo transparente
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 2rem;
-  
-    &:hover {
-        background-color: #a95f37; 
-    }
-  
+    font-size: 1rem;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+
     &:focus {
+      border-color: #a95f37;
       outline: none;
-      box-shadow: 0 0 5px #a95f37;
+      background-color: #1a1a1a; // Fondo sutil al enfocarse
+    }
+
+    &::placeholder {
+      color: #aaa;
     }
   }
-  
+
+  textarea {
+    resize: none;
+  }
+
+  .error {
+    color: #ff4d4d;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.submitButton {
+  padding: 10px 15px;
+  background-color: #c57442;
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: #a95f37;
+    transform: scale(1.05); // Sutil aumento al pasar el cursor
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px #a95f37;
+  }
+
+  &:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+}
