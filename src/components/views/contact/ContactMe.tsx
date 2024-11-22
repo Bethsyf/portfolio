@@ -9,6 +9,7 @@ const ContactMe = () => {
     email: '',
     message: '',
   };
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, 'Mínimo 3 caracteres')
@@ -23,10 +24,27 @@ const ContactMe = () => {
       .required('Mensaje requerido'),
   });
 
+  const handleSubmit = async (values: typeof initialValues, { setSubmitting, resetForm }: any) => {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
 
-  const handleSubmit = (values: typeof initialValues) => {
-    console.log('Formulario enviado:', values);
-   
+      const result = await response.json();
+      if (response.ok) {
+        alert('Mensaje enviado correctamente');
+        resetForm();
+      } else {
+        alert(`Error: ${result.message || 'No se pudo enviar el mensaje'}`);
+      }
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      alert('Error al conectar con el servidor');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -48,11 +66,7 @@ const ContactMe = () => {
                 placeholder="Tu nombre"
                 className={s.inputField}
               />
-              <ErrorMessage
-                name="name"
-                component="p"
-                className={s.error}
-              />
+              <ErrorMessage name="name" component="p" className={s.error} />
             </div>
             <div className={s.formGroup}>
               <label htmlFor="email">Correo Electrónico</label>
@@ -63,11 +77,7 @@ const ContactMe = () => {
                 placeholder="Tu correo electrónico"
                 className={s.inputField}
               />
-              <ErrorMessage
-                name="email"
-                component="p"
-                className={s.error}
-              />
+              <ErrorMessage name="email" component="p" className={s.error} />
             </div>
             <div className={s.formGroup}>
               <label htmlFor="message">Mensaje</label>
@@ -79,17 +89,9 @@ const ContactMe = () => {
                 rows={4}
                 className={s.textArea}
               />
-              <ErrorMessage
-                name="message"
-                component="p"
-                className={s.error}
-              />
+              <ErrorMessage name="message" component="p" className={s.error} />
             </div>
-            <button
-              type="submit"
-              className={s.submitButton}
-              disabled={isSubmitting}
-            >
+            <button type="submit" className={s.submitButton} disabled={isSubmitting}>
               {isSubmitting ? 'Enviando...' : 'Enviar'}
             </button>
           </Form>
