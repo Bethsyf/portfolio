@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@types/node": "18.15.11",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
@@ -21,6 +22,7 @@
     "i18next": "^23.16.5",
     "next": "13.3.0",
     "next-i18next": "^15.3.1",
+    "nodemailer": "^6.9.16",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^15.1.1",

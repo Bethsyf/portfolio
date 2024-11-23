@@ -9,10 +9,10 @@ const Footer = () => {
   return (
     <footer>
       <div className={s.container} id="contact">
+      <h2>Contacto</h2>
         <div className={s.containerInner}>
         <ContactMe/>
         <div className={s.info}>
-          <h2>Contacto</h2>
           <div className={s.rrss}>
             <SiGmail />
             <Link href='mailto:bethsyfalcon@gmail.com'> bethsyfalcon@gmail.com</Link>
