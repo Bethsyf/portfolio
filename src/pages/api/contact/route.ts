@@ -6,15 +6,15 @@ export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, 
-      pass: process.env.GMAIL_PASS, 
+      user: process.env.NEXT_PUBLIC_GMAIL_USER, 
+      pass: process.env.NEXT_PUBLIC_GMAIL_PASS, 
     },
   });
-
+console.log(process.env.GMAIL_USER)
   try {
     await transporter.sendMail({
       from: email,
-      to: process.env.GMAIL_USER, 
+      to: process.env.NEXT_PUBLIC_GMAIL_USER, 
       subject: `Mensaje directo de la página web de ${name}`,
       html: `
         <div style="font-family: 'Roboto', sans-serif; color: #333; padding: 20px; background-color: #C0C0C0;">

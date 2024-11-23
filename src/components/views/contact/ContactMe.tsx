@@ -25,19 +25,19 @@ const ContactMe = () => {
   });
 
   const handleSubmit = async (values: typeof initialValues, { setSubmitting, resetForm }: any) => {
+    console.log('Enviando los siguientes valores:', values);
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       });
-
       const result = await response.json();
-      if (response.ok) {
+      if (result.success) {
         alert('Mensaje enviado correctamente');
         resetForm();
       } else {
-        alert(`Error: ${result.message || 'No se pudo enviar el mensaje'}`);
+        alert('Hubo un error al enviar el mensaje');
       }
     } catch (error) {
       console.error('Error al enviar el mensaje:', error);
@@ -46,6 +46,7 @@ const ContactMe = () => {
       setSubmitting(false);
     }
   };
+  
 
   return (
     <div className={s.contactForm}>
