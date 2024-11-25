@@ -1,4 +1,3 @@
-import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import s from './ContactMe.module.scss';
@@ -10,7 +9,7 @@ const ContactMe = () => {
     message: '',
   };
 
-  const validationSchema = Yup.object().shape({
+  const validationSchema = Yup.object({
     name: Yup.string()
       .min(3, 'Mínimo 3 caracteres')
       .max(30, 'Máximo 30 caracteres')
@@ -36,7 +35,7 @@ const ContactMe = () => {
         },
         body: JSON.stringify(values),
       });
-  
+
       if (response.ok) {
         alert('Correo enviado correctamente, espera y serás contactado');
         resetForm();
@@ -47,7 +46,7 @@ const ContactMe = () => {
       console.error(error);
       alert('Error al enviar el correo');
     }
-  };  
+  };
 
   return (
     <div className={s.contactForm}>
@@ -70,6 +69,7 @@ const ContactMe = () => {
               />
               <ErrorMessage name="name" component="p" className={s.error} />
             </div>
+
             <div className={s.formGroup}>
               <label htmlFor="email">Correo Electrónico</label>
               <Field
@@ -81,6 +81,7 @@ const ContactMe = () => {
               />
               <ErrorMessage name="email" component="p" className={s.error} />
             </div>
+
             <div className={s.formGroup}>
               <label htmlFor="message">Mensaje</label>
               <Field
@@ -93,7 +94,12 @@ const ContactMe = () => {
               />
               <ErrorMessage name="message" component="p" className={s.error} />
             </div>
-            <button type="submit" className={s.submitButton} disabled={isSubmitting}>
+
+            <button
+              type="submit"
+              className={s.submitButton}
+              disabled={isSubmitting}
+            >
               {isSubmitting ? 'Enviando...' : 'Enviar'}
             </button>
           </Form>

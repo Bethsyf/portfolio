@@ -4,21 +4,13 @@
   box-shadow: 0 4px 8px rgba(207, 206, 206, 0.4);
   max-width: 500px;
   text-align: center;
-
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
 }
 
 .titleForm {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #ccc;
   margin-bottom: 20px;
   font-weight: bold;
-
-  @media (max-width: 768px) {
-    font-size: 1.6rem;
-  }
 }
 
 .formGroup {
@@ -86,5 +78,26 @@
   &:disabled {
     background-color: #999;
     cursor: not-allowed;
+  }
+}
+
+@media (min-width: 768px) {
+  .contactForm {
+    padding: 20px;
+  }
+
+  .titleForm {
+    font-size: 1.8rem;
+  }
+
+  .formGroup {
+    input,
+    textarea {
+      font-size: 1.1rem;
+    }
+  }
+
+  .submitButton {
+    font-size: 1.1rem;
   }
 }
