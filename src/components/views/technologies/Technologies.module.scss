@@ -1,39 +1,28 @@
 .technologies {
   margin: 2rem auto;
-  padding: 9rem 1rem 0 1rem; 
+  padding: 9rem 1rem 0 1rem;
   text-align: center;
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
-
-    @media (max-width: 768px) {
-      font-size: 2rem; 
-    }
   }
+
   .introText {
     color: #ccc;
-    margin: 2rem 6rem 4rem 6rem;
-    text-align: center;
+    margin: 2rem;
+    text-align: justify;
     line-height: 1.6;
-    @media (max-width: 768px) {
-      text-align: justify;
-      margin: 2rem;
-    }
   }
 
   .techList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 6rem;
-    max-width: 1200px;
+    gap: 2rem;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem; 
-
-    @media (max-width: 768px) {
-      gap: 2rem; 
-    }
+    padding: 0 1rem;
   }
 
   .techItem {
@@ -52,25 +41,45 @@
     }
 
     .icon {
-      font-size: 3rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
       color: #333;
 
       @media (prefers-color-scheme: dark) {
         color: #c57442;
       }
-
-      @media (max-width: 768px) {
-        font-size: 2rem; 
-      }
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: bold;
+    }
+  }
 
-      @media (max-width: 768px) {
-        font-size: 1rem;
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    .introText {
+      margin: 2rem 6rem 4rem 6rem;
+      text-align: center;
+    }
+
+    .techList {
+      gap: 6rem;
+      max-width: 1200px;
+    }
+
+    .techItem {
+      width: 120px;
+
+      .icon {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.2rem;
       }
     }
   }
