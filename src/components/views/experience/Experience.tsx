@@ -1,14 +1,7 @@
-import React from 'react';
 import s from './Experience.module.scss';
+import { ExperienceProps } from './Experienceprops';
 
-interface Experience {
-  role: string;
-  company: string;
-  duration: string;
-  description: string[];
-}
-
-const experiences: Experience[] = [
+const experiences: ExperienceProps[] = [
   {
     role: 'Desarrollador Frontend Junior',
     company: 'KUTAI',
@@ -20,7 +13,6 @@ const experiences: Experience[] = [
       '- Conectar APIs con el Frontend para habilitar el intercambio de datos en las aplicaciones web.',
     ],
   },
-
 ];
 
 const ExperienceView = () => {
