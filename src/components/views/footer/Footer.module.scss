@@ -1,29 +1,23 @@
 .container {
-  background-color: rgba(128, 128, 128, 0.3);
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
- 
- 
-  .containerInner {
+    background-color: rgba(128, 128, 128, 0.3);
+    padding: 20px;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    width: 100%;
-    max-width: 1200px;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
+  
+    .containerInner {
+      display: flex;
+      flex-direction: column; 
       align-items: center;
-    }}
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+  
     .pd {
       font-size: 0.9rem;
-      margin-top: 2rem;
+      margin-top: 3rem;
   
       a {
         color: #c57442;
@@ -33,43 +27,49 @@
         }
       }
     }
-}
-
-.info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-  padding-top: 1rem;
-  p {
-    font-size: 16px;
   }
-
-  a {
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+  
+  .info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 2rem;
+    padding-top: 1rem;
+  
+    p {
+      font-size: 14px; 
+    }
+  
+    a {
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    .rrss {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.2rem;
     }
   }
-  .rrss {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .containerInner{
-    display: flex;
-    flex-direction: column;
-   justify-content: center;
-   
-  }
-  .info p {
-    font-size: 14px;
-    
-  }
-}
+  
+  @media (min-width: 768px) {
+    .container{
+    .containerInner {
+      flex-direction: row; 
+      justify-content: space-around;
+      align-items: center; 
+    }
+  
+    .info {
+      gap: 4rem; 
+      p {
+        font-size: 16px; 
+      }
+    }
+  }}
+  
