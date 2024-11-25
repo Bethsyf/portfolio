@@ -24,29 +24,30 @@ const ContactMe = () => {
       .required('Mensaje requerido'),
   });
 
-  const handleSubmit = async (values: typeof initialValues, { setSubmitting, resetForm }: any) => {
-    console.log('Enviando los siguientes valores:', values);
+  const handleSubmit = async (
+    values: { name: string; email: string; message: string },
+    { resetForm }: any
+  ) => {
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify(values),
       });
-      const result = await response.json();
-      if (result.success) {
-        alert('Mensaje enviado correctamente');
+  
+      if (response.ok) {
+        alert('Correo enviado correctamente, espera y serás contactado');
         resetForm();
       } else {
-        alert('Hubo un error al enviar el mensaje');
+        alert('Error al enviar el correo');
       }
     } catch (error) {
-      console.error('Error al enviar el mensaje:', error);
-      alert('Error al conectar con el servidor');
-    } finally {
-      setSubmitting(false);
+      console.error(error);
+      alert('Error al enviar el correo');
     }
-  };
-  
+  };  
 
   return (
     <div className={s.contactForm}>
@@ -103,3 +104,4 @@ const ContactMe = () => {
 };
 
 export default ContactMe;
+ 

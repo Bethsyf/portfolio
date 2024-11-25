@@ -1,14 +1,12 @@
 .contactForm {
- display: none;
   border-radius: 10px;
   padding: 30px;
   box-shadow: 0 4px 8px rgba(207, 206, 206, 0.4);
   max-width: 500px;
   text-align: center;
-  margin: 2rem auto; 
 
   @media (max-width: 768px) {
-    padding: 15px;
+    padding: 20px;
   }
 }
 
@@ -27,12 +25,11 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-bottom: 1.5rem; 
-  position: relative; 
+  margin-bottom: 1.5rem;
 
   label {
     font-size: 0.9rem;
-    margin: 10px 0 5px 0;
+    margin-bottom: 5px;
     color: #ccc;
   }
 
@@ -40,17 +37,16 @@
   textarea {
     width: 100%;
     padding: 10px;
-    color: black;
-    background-color: #ccc; 
+    color: #333;
+    background-color: #f8f8f8;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
-    transition: border-color 0.3s ease, background-color 0.3s ease;
+    transition: border-color 0.3s ease;
 
     &:focus {
       border-color: #a95f37;
       outline: none;
-      background-color: #ccc; 
     }
 
     &::placeholder {
@@ -63,22 +59,17 @@
   }
 
   .error {
-    position: absolute; 
     color: #ff4d4d;
     font-size: 0.875rem;
-    margin-top: 0.5rem;
-    top: 100%; 
-    left: 0;
-    width: 100%; 
-    padding-top: 0.25rem; 
-    font-weight: bold; 
+    margin-top: 5px;
+    font-weight: bold;
   }
 }
 
 .submitButton {
   padding: 10px 15px;
   background-color: #c57442;
-  color: #ccc;
+  color: #fff;
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -89,12 +80,7 @@
 
   &:hover {
     background-color: #a95f37;
-    transform: scale(1.05); 
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 5px #a95f37;
+    transform: scale(1.05);
   }
 
   &:disabled {
