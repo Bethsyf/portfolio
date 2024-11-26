@@ -31,21 +31,29 @@
     gap: 1rem;
 
     .button {
-      font-size: 13px;
-      padding: 0.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem; 
       background-color: #c57442;
-      color: #0a0a2a;
+      color: #ccc;
       text-shadow: 2px 2px 3px rgba(128, 128, 128, 0.4);
-      text-align: center;
       border-radius: 0.5rem;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s;
       box-shadow: 0px 0px 20px rgba(207, 206, 206, 0.4);
-
+    
+      svg {
+        margin: 0;
+        color: #ccc; 
+        font-size: 2rem;
+      }
+    
       &:hover {
         background-color: #a95f37;
+        transform: scale(1.05);
       }
-    }
+    }    
   }
 }
 
@@ -74,10 +82,7 @@
         gap: 2rem;
         width: 26rem;
 
-        .button {
-          font-size: 15px;
-          padding: 1rem;
-        }
+      
       }
     }
   }
@@ -101,10 +106,7 @@
       .buttons {
         gap: 3rem;
 
-        .button {
-          font-size: 1rem;
-          padding: 1rem;
-        }
+      
       }
     }
   }
