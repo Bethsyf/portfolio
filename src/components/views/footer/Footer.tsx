@@ -1,11 +1,10 @@
-import React from "react";
 import s from "./Footer.module.scss";
 import Link from "next/link";
 import ContactMe from "../contact/ContactMe";
-import InfoRRSS from "./inforrss/InfoRRSS";
-
+import InfoRRSS from "../inforrss/InfoRRSS";
 
 const Footer = () => {
+
   return (
     <footer>
       <div className={s.container} id="contact">
@@ -14,6 +13,10 @@ const Footer = () => {
           <ContactMe />
           <InfoRRSS />
         </div>
+        <hr className={s.divider} />
+        <Link href="#top" className={s.toTop}>
+          ↑ Ir al inicio
+        </Link>
         <p className={s.pd}>
           Hecho con ❤️ por&nbsp;
           <Link
