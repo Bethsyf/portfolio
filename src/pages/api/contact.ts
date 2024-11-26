@@ -9,14 +9,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-          user: process.env.NEXT_PUBLIC_GMAIL_USER,
-          pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
+          user: process.env.GMAIL_USER,
+          pass: process.env.GMAIL_PASS,
         },
       });
 
       await transporter.sendMail({
         from: `"${name}" <${email}>`,
-        to: process.env.NEXT_PUBLIC_GMAIL_USER,
+        to: process.env.GMAIL_USER,
         subject: `Mensaje desde el formulario de contacto de mi portafolio`,
         html: `
           <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">

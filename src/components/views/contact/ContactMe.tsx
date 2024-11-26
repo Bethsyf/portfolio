@@ -50,7 +50,7 @@ const ContactMe = () => {
 
   return (
     <div className={s.contactForm}>
-      <h2 className={s.titleForm}>Envíame un mensaje</h2>
+      <h3 className={s.titleForm}>Envíame un mensaje</h3>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}

@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
 import myPhoto from "../../../../public/bethsy.png";
 import styles from "./AboutMe.module.scss";
 
@@ -8,15 +10,19 @@ const AboutMe = () => {
   const buttons = [
     {
       href: "https://www.linkedin.com/in/bethsyfalcon-frontend/",
-      label: "LinkedIn",
+      label: <FaLinkedinIn />,
     },
     {
       href: "https://github.com/Bethsyf",
-      label: "GitHub",
+      label: <FaGithub />,
     },
     {
       href: "/cv.pdf",
-      label: "Descargar CV",
+      label: (
+        <>
+          <FiDownload /> CV
+        </>
+      ),
       download: true,
     },
   ];
@@ -42,7 +48,7 @@ const AboutMe = () => {
         <div className={styles.buttons}>
           {buttons.map(({ href, label, download }) => (
             <Link
-              key={label}
+              key={href}
               href={href}
               target="_blank"
               download={download || undefined}

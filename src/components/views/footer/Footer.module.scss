@@ -1,75 +1,74 @@
+.footerDay {
+  background-color: rgba(128, 128, 128, 0.2);
+  color: #ccc;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.footerNight {
+  background-color: #333;
+  color: #f9f9f9;
+  transition: background-color 0.5s, color 0.5s;
+}
+
 .container {
-    background-color: rgba(128, 128, 128, 0.3);
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 1s ease-in-out;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .containerInner {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
-    .containerInner {
-      display: flex;
-      flex-direction: column; 
-      align-items: center;
-      gap: 2rem;
-      width: 100%;
-      max-width: 1200px;
-    }
-  
-    .pd {
-      font-size: 0.9rem;
-      margin-top: 3rem;
-  
-      a {
-        color: #c57442;
-  
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-  
-  .info {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
     gap: 2rem;
-    padding-top: 1rem;
-  
-    p {
-      font-size: 14px; 
-    }
-  
-    a {
-      text-decoration: none;
-  
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  
-    .rrss {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      font-size: 1.2rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .divider {
+    width: 80%;
+    border: 0;
+    border-top: 1px solid #c57442;
+    margin: 1.5rem 0;
+  }
+
+  .toTop {
+    display: block;
+    margin: 1rem auto;
+    font-size: 0.9rem;
+    color: #c57442;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #a95f37;
     }
   }
-  
-  @media (min-width: 768px) {
-    .container{
+
+  .legal {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    color: inherit;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    h2 {
+      font-size: 2.5rem;
+    }
+
     .containerInner {
-      flex-direction: row; 
+      flex-direction: row;
       justify-content: space-around;
-      align-items: center; 
+      align-items: center;
     }
-  
-    .info {
-      gap: 4rem; 
-      p {
-        font-size: 16px; 
-      }
-    }
-  }}
-  
+  }
+}
