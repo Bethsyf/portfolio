@@ -1,10 +1,16 @@
 .container {
   margin: 2rem auto;
-  padding: 5rem auto 2rem auto;
+  padding-top: 4rem;
+  @media (min-width: 768px) {
+    padding-top: 5rem;
+  }
   h2 {
     text-align: center;
-    font-size: 2.5rem;
     margin-bottom: 2rem;
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+       
+       }
   }
   h3{
     text-align: center;
@@ -32,15 +38,17 @@
       height: auto;
       margin: 20px;
       padding: 20px;
-      background: rgba(128, 128, 128, 0.4);
+      background: rgba(128, 128, 128, 0.2);
       border-radius: 1rem;
-      box-shadow: 0px 0px 20px rgba(128, 128, 128, 0.4);
+     
+      box-shadow: 0px 0px 20px #c57442;
 
       .links {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 30px;
+       
         h3 {
           font-size: 1.2rem;
           text-shadow: 2px 2px 3px #cccccc;
@@ -51,12 +59,17 @@
         a {
           display: block;
           margin-top: 10px;
-        
+          
+          &:hover {
+            transform: scale(1.05);
+          }
         }
         .icon {
           font-size: 2rem;
           color: #c57442;
+          filter: drop-shadow(0px 0px 10px rgba(128, 128, 128, 0.4)s);
         }
+        
       }
 
       p {
