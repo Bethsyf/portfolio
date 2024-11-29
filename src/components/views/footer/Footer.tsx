@@ -14,6 +14,7 @@ const Footer = () => {
           <InfoRRSS />
         </div>
         <hr className={s.divider} />
+        <div className={s.foot}>
         <Link href="#top" className={s.toTop}>
           ↑ Ir al inicio
         </Link>
@@ -27,6 +28,7 @@ const Footer = () => {
             @Bethsyf
           </Link>
         </p>
+        </div>
       </div>
     </footer>
   );
