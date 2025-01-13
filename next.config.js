@@ -8,7 +8,5 @@ module.exports = {
   //   locales: ['es', 'en'],
   //   defaultLocale: 'es',
   //   localeDetection: true,
-  // },
-  basePath: '/portfolio',  
-  // trailingSlash: true,  
+  // }
 };
