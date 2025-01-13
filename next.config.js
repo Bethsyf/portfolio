@@ -9,6 +9,6 @@ module.exports = {
   //   defaultLocale: 'es',
   //   localeDetection: true,
   // },
-  // basePath: '/nombre-del-repositorio',  
+  basePath: '/portfolio',  
   // trailingSlash: true,  
 };
