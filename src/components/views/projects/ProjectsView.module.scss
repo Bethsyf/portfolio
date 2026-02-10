@@ -1,82 +1,100 @@
 .container {
   margin: 2rem auto;
   padding-top: 4rem;
+
   @media (min-width: 768px) {
     padding-top: 5rem;
   }
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    @media (min-width: 768px) {
-      font-size: 2.5rem;
-       
-       }
-  }
-  h3{
+
+  h2, h3 {
     text-align: center;
   }
 
-  .introText {
-    color: #ccc;
-    text-align: center;
-    margin: 2rem 6rem 3rem 6rem;
-    line-height: 1.6;
-    @media (max-width: 768px) {
-      text-align: justify;
-      margin: 2rem;
+  h2 {
+    margin-bottom: 2rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
     }
   }
+
+.introText {
+  color: #ccc;
+  text-align: center;
+  margin: 2rem auto 3rem auto;
+  line-height: 1.6;
+  max-width: 900px;  
+  padding: 0 1rem;   
+
+  @media (max-width: 768px) {
+    text-align: justify; 
+  }
+}
+
 
   .containerInner {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2rem;
     margin-bottom: 3rem;
 
     .card {
-      width: 25rem;
-      height: auto;
-      margin: 20px;
-      padding: 20px;
-      background: rgba(128, 128, 128, 0.2);
+      flex: 1 1 25rem;
+      max-width: 25rem;
+      background: rgba(128, 128, 128, 0.15);
       border-radius: 1rem;
-     
+      padding: 20px;
       box-shadow: 0px 0px 20px #c57442;
+      transition: transform 0.2s;
 
-      .links {
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .cardHeader {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 30px;
-       
+        margin-bottom: 1rem;
+
         h3 {
           font-size: 1.2rem;
           text-shadow: 2px 2px 3px #cccccc;
+
           @media (prefers-color-scheme: dark) {
             text-shadow: 2px 2px 3px #0a0a2a;
           }
         }
-        a {
-          display: block;
-          margin-top: 10px;
-          
-          &:hover {
-            transform: scale(1.05);
+
+        .cardLinks {
+          display: flex;
+          gap: 0.5rem;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .icon {
+              font-size: 2rem;
+              color: #c57442;
+              filter: drop-shadow(0px 0px 10px rgba(128, 128, 128, 0.4));
+            }
           }
         }
-        .icon {
-          font-size: 2rem;
-          color: #c57442;
-          filter: drop-shadow(0px 0px 10px rgba(128, 128, 128, 0.4)s);
-        }
-        
       }
 
-      p {
-        font-size: 14px;
-        margin-top: 0;
-        margin-bottom: 2rem;
+      .technologies {
+        font-size: 0.875rem;
+        margin-bottom: 1rem;
       }
+
       .imageCard {
         width: 100%;
         border-radius: 10px;
