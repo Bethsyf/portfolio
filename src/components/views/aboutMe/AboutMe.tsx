@@ -1,20 +1,31 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload } from "react-icons/fi";
 import myPhoto from "../../../../public/bethsy.png";
 import styles from "./AboutMe.module.scss";
 
+type Button = {
+  href: string;
+  label: React.ReactNode;
+  ariaLabel: string;
+  external?: boolean;
+  download?: boolean;
+};
+
 const AboutMe = () => {
-  const buttons = [
+  const buttons: Button[] = [
     {
       href: "https://www.linkedin.com/in/bethsyfalcon-frontend/",
       label: <FaLinkedinIn />,
+      ariaLabel: "Visitar LinkedIn",
+      external: true,
     },
     {
       href: "https://github.com/Bethsyf",
       label: <FaGithub />,
+      ariaLabel: "Visitar GitHub",
+      external: true,
     },
     {
       href: "/cv.pdf",
@@ -23,6 +34,7 @@ const AboutMe = () => {
           <FiDownload /> CV
         </>
       ),
+      ariaLabel: "Descargar CV",
       download: true,
     },
   ];
@@ -32,31 +44,39 @@ const AboutMe = () => {
       <Image
         className={styles.myPhoto}
         src={myPhoto}
-        alt="Photograph of Bethsy Falcon"
+        alt="Fotografía de Bethsy Falcon"
+        priority
+        sizes="(max-width: 768px) 150px, 250px"
       />
+
       <div className={styles.text}>
         <h2>Acerca de Mí</h2>
+
         <p>
           👋 ¡Hola! Soy Bethsy Falcon, desarrolladora Frontend con más de un año
-          de experiencia, creo interfaces de usuario atractivas y funcionales.
-          Haciendo uso de React, Next.js y TypeScript, contribuyo a proyectos
-          web colaborativos, entregando soluciones innovadoras y eficientes. Mi
-          comprensión de la integración backend me permite establecer una
-          conexión fluida entre la interfaz y la lógica del negocio, optimizando
-          el desarrollo y la escalabilidad de las aplicaciones.
+          de experiencia creando interfaces de usuario atractivas y funcionales.
+          Trabajo con React, Next.js y TypeScript para construir experiencias
+          web modernas. También tengo comprensión de integración backend, lo que
+          me permite conectar la interfaz con la lógica del negocio y mejorar la
+          escalabilidad de las aplicaciones.
         </p>
+
         <div className={styles.buttons}>
-          {buttons.map(({ href, label, download }) => (
-            <Link
-              key={href}
-              href={href}
-              target="_blank"
-              download={download || undefined}
-              className={styles.button}
-            >
-              {label}
-            </Link>
-          ))}
+          {buttons.map(
+            ({ href, label, ariaLabel, external, download }) => (
+              <a
+                key={href}
+                href={href}
+                aria-label={ariaLabel}
+                target={external ? "_blank" : undefined}
+                rel={external ? "noopener noreferrer" : undefined}
+                download={download}
+                className={styles.button}
+              >
+                {label}
+              </a>
+            )
+          )}
         </div>
       </div>
     </section>
