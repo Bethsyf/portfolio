@@ -1,0 +1,40 @@
+.container {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.content {
+  max-width: 720px;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.description {
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.8rem;
+  background: #c57442;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #a95f37;
+  transform: translateY(-2px);
+}
