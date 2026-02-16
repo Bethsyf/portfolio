@@ -1,96 +1,82 @@
 import { useRouter } from "next/router";
-import Head from "next/head";
 import Link from "next/link";
-import styles from "@/styles/pages/PostPaage.module.scss";
+import Head from "next/head";
 import { blogPosts } from "@/data/blogPost";
+import styles from "@/styles/pages/PostPage.module.scss";
 
-const PostPage = () => {
+export default function BlogPostPage() {
 
   const router = useRouter();
-
   const { slug } = router.query;
 
-
   const post = blogPosts.find(
-    (p) => p.slug === slug
+    (post) => post.slug === slug
   );
 
-
-  if (!post) {
-
-    return (
-      <main className={styles.container}>
-        <p>Post no encontrado</p>
-
-        <Link href="/" className={styles.back}>
-          ← Volver
-        </Link>
-
-      </main>
-    );
-
-  }
-
+  if (!post) return null;
 
   return (
 
     <>
-
       <Head>
 
         <title>
           {post.title} | Bethsy Falcon
         </title>
 
+        <meta
+          name="description"
+          content={post.description}
+        />
+
+        {/* Open Graph */}
+
+        <meta
+          property="og:title"
+          content={post.title}
+        />
+
+        <meta
+          property="og:description"
+          content={post.description}
+        />
+
+        <meta
+          property="og:image"
+          content={post.image}
+        />
+
       </Head>
 
 
       <main className={styles.container}>
 
-
-        <Link
-          href="/blog"
-          className={styles.back}
-        >
+        <Link href="/blog" className={styles.back}>
           ← Volver al blog
         </Link>
 
 
+        <article>
 
-        <img
-          src={post.image}
-          alt={post.title}
-          className={styles.image}
-        />
+          <img
+            src={post.image}
+            className={styles.image}
+          />
 
-
-
-        <h1 className={styles.title}>
-          {post.title}
-        </h1>
+          <h1 className={styles.title}>
+            {post.title}
+          </h1>
 
 
+          <div className={styles.content}>
+            {post.content}
+          </div>
 
-        <span className={styles.meta}>
-          {post.date} • {post.readingTime}
-        </span>
-
-
-
-        <article className={styles.content}>
-
-          {post.content}
 
         </article>
-
-
 
       </main>
 
     </>
-
   );
-
-};
-
-export default PostPage;
+}
