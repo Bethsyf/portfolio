@@ -1,49 +1,68 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import NavbarView from '@/components/views/navbar/NavbarView';
-import Footer from '@/components/views/footer/Footer';
+import Head from "next/head";
+import Link from "next/link";
+import styles from "@/styles/pages/BlogPage.module.scss";
+import { blogPosts } from "@/data/blogPost";
 
 const BlogPage = () => {
   return (
     <>
       <Head>
         <title>Blog | Bethsy Falcon</title>
-        <meta
-          name="description"
-          content="Blog donde comparto mi aprendizaje, retos técnicos y evolución como desarrolladora."
-        />
       </Head>
 
-      <main
-        style={{
-          minHeight: '80vh',
-          padding: '8rem 2rem',
-          textAlign: 'center'
-        }}
-      >
-        
+      <main className={styles.container}>
 
-        <h1>Blog en construcción 🚀</h1>
-
-        <p style={{ maxWidth: '600px', margin: '2rem auto 4rem auto' }}>
-          Aquí compartiré cómo aprendo, cómo resuelvo problemas y mi evolución
-          como desarrolladora. Muy pronto encontrarás artículos técnicos y
-          experiencias reales del camino.
-        </p>
-        <Link
-          href="/"
-          style={{
-            display: 'inline-block',
-            marginBottom: '2rem',
-            textDecoration: 'none',
-            color: '#c57442',
-            fontWeight: 600
-          }}
-        >
+        <Link href="/" className={styles.back}>
           ← Volver al inicio
         </Link>
-      </main>
 
+        <h1 className={styles.title}>
+          Blog
+        </h1>
+
+        <p className={styles.description}>
+          Artículos sobre mi proceso de aprendizaje y evolución como desarrolladora.
+        </p>
+
+        <div className={styles.grid}>
+
+          {blogPosts.map((post) => (
+
+            <Link
+              key={post.slug}
+              href={`/blog/${post.slug}`}
+              className={styles.card}
+            >
+
+              <img
+                src={post.image}
+                alt={post.title}
+                className={styles.image}
+              />
+
+              <div className={styles.cardContent}>
+
+                <h3 className={styles.cardTitle}>
+                  {post.title}
+                </h3>
+
+                <p className={styles.cardDescription}>
+                  {post.description}
+                </p>
+
+                <span className={styles.meta}>
+                  {post.date} • {post.readingTime}
+                </span>
+
+              </div>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+      </main>
     </>
   );
 };
