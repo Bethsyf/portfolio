@@ -5,6 +5,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import s from './NavbarView.module.scss';
+import ThemeToggleView from '../ThemeTogle/ThemeToggleView';
 
 const navItems = [
   { label: 'Inicio', href: '/' },
@@ -44,37 +45,48 @@ const NavbarView = () => {
       <div className={s.contMenu}>
         
         {/* 📱 MOBILE */}
-        <ul className={`${toggle ? s.menu : s.menuHidden}`}>
-          {renderNavItems(handleToggle)}
+ <ul className={`${toggle ? s.menu : s.menuHidden}`}>
+  {renderNavItems(handleToggle)}
 
-          <li className={s.item}>
-            <Link
-              className={s.link}
-              href="/cv.pdf"
-              download="CV_Bethsy_Falcon"
-              target="_blank"
-              onClick={handleToggle}
-            >
-              Descargar CV
-            </Link>
-          </li>
-        </ul>
+  <li className={s.item}>
+    <ThemeToggleView />
+  </li>
+
+  <li className={s.item}>
+    <Link
+      className={s.link}
+      href="/cv.pdf"
+      download="CV_Bethsy_Falcon"
+      target="_blank"
+      onClick={handleToggle}
+    >
+      Descargar CV
+    </Link>
+  </li>
+
+</ul>
 
         {/* 🖥 DESKTOP */}
-        <ul className={s.menuDesk}>
-          {renderNavItems()}
+<ul className={s.menuDesk}>
+  {renderNavItems()}
 
-          <li className={s.item}>
-            <Link
-              className={`${s.link} ${s.downloadButton}`}
-              href="/cv.pdf"
-              download="CV_Bethsy_Falcon"
-              target="_blank"
-            >
-              <FiDownload className={s.downloadIcon} /> Descargar CV
-            </Link>
-          </li>
-        </ul>
+  <li className={s.item}>
+    <ThemeToggleView />
+  </li>
+
+  <li className={s.item}>
+    <Link
+      className={`${s.link} ${s.downloadButton}`}
+      href="/cv.pdf"
+      download="CV_Bethsy_Falcon"
+      target="_blank"
+    >
+      <FiDownload className={s.downloadIcon} /> Descargar CV
+    </Link>
+  </li>
+
+</ul>
+
 
       </div>
     </nav>

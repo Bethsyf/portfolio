@@ -1,0 +1,47 @@
+.toggle {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 1px solid var(--color-border);
+
+  background: transparent;
+
+  color: var(--color-text);
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition:
+
+    background var(--transition),
+    color var(--transition),
+    border var(--transition),
+    transform 0.15s ease;
+
+}
+
+
+/* hover */
+
+.toggle:hover {
+
+  background: var(--color-border);
+
+}
+
+
+/* click */
+
+.toggle:active {
+
+  transform: scale(0.92);
+
+}

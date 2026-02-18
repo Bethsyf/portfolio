@@ -69,7 +69,7 @@ Y este blog es parte de ese proceso.
 
     title: "Aprendiendo Next.js desde proyectos reales",
 
-    image: "/blog/blog2.jpg",
+    image: "/blog/blog1.jpg",
 
     description:
       "Mi enfoque para aprender frameworks modernos construyendo soluciones reales.",
