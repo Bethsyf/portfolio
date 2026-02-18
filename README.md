@@ -1,12 +1,17 @@
 # Bethsy Falcon — Frontend Portfolio
 
-Modern portfolio built with Next.js to showcase my frontend projects, blog, and technical growth as a developer.
+Modern frontend portfolio built with Next.js to showcase my projects, blog, and technical growth as a developer.
+
+Designed with a focus on clean architecture, scalability, and real-world frontend practices.
+
+---
 
 ## Live Demo
 
+Primary deploy:  
 https://portfolio-bfb.vercel.app
 
-Alternative deploy:
+Alternative deploy (GitHub Pages):  
 https://bethsyf.github.io/portfolio/
 
 ---
@@ -19,13 +24,13 @@ https://bethsyf.github.io/portfolio/
 
 ## Features
 
-- Dark / Light mode toggle
-- Responsive design (mobile, tablet, desktop)
-- Blog section
+- Dark / Light mode toggle with custom React Hook
+- Fully responsive design (mobile, tablet, desktop)
+- Blog section with centralized data
 - Projects showcase
-- Glass style navbar
-- Custom theme system with React Hook
-- SCSS Modules architecture
+- Glass-style navbar with theme support
+- Modular and scalable architecture
+- SCSS Modules styling system
 
 ---
 
@@ -40,6 +45,36 @@ https://bethsyf.github.io/portfolio/
 
 ---
 
-## Project Structure
+## Architecture
 
+This project follows production-level frontend architecture principles:
 
+- Component-based structure
+- Custom Theme System using React Hook
+- Global theme variables with SCSS
+- Centralized blog data management
+- Separation between views, hooks, styles, and data
+- Scalable and maintainable folder structure
+
+---
+
+## Theme System
+
+The theme system was built from scratch using:
+
+- Custom `useTheme` hook
+- CSS variables
+- SCSS theme files
+- Persistent theme state
+
+This allows seamless switching between light and dark mode across the entire application.
+
+---
+
+## Getting Started
+
+Run locally:
+
+```bash
+npm install
+npm run dev
