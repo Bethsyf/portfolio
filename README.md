@@ -8,17 +8,7 @@ Designed with a focus on clean architecture, scalability, and real-world fronten
 
 ## Live Demo
 
-Primary deploy:  
 https://portfolio-bfb.vercel.app
-
-Alternative deploy (GitHub Pages):  
-https://bethsyf.github.io/portfolio/
-
----
-
-## Preview
-
-![Portfolio Preview](./public/blog/blog1.JPG)
 
 ---
 
@@ -26,11 +16,12 @@ https://bethsyf.github.io/portfolio/
 
 - Dark / Light mode toggle with custom React Hook
 - Fully responsive design (mobile, tablet, desktop)
-- Blog section with centralized data
+- Blog section
 - Projects showcase
-- Glass-style navbar with theme support
-- Modular and scalable architecture
-- SCSS Modules styling system
+- Glass-style navbar
+- Custom theme system
+- SCSS Modules architecture
+- Modern and clean UI
 
 ---
 
@@ -41,40 +32,25 @@ https://bethsyf.github.io/portfolio/
 - TypeScript
 - SCSS Modules
 - Vercel
-- GitHub Pages
 
 ---
 
 ## Architecture
 
-This project follows production-level frontend architecture principles:
+This project follows modern frontend architecture principles:
 
 - Component-based structure
-- Custom Theme System using React Hook
-- Global theme variables with SCSS
-- Centralized blog data management
-- Separation between views, hooks, styles, and data
-- Scalable and maintainable folder structure
-
----
-
-## Theme System
-
-The theme system was built from scratch using:
-
 - Custom `useTheme` hook
-- CSS variables
-- SCSS theme files
-- Persistent theme state
-
-This allows seamless switching between light and dark mode across the entire application.
+- Theme system using CSS variables
+- Modular SCSS styling
+- Centralized data
+- Scalable and maintainable structure
 
 ---
 
 ## Getting Started
 
-Run locally:
+Install dependencies:
 
 ```bash
 npm install
-npm run dev
