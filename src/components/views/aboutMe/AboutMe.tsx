@@ -47,17 +47,17 @@ export default function AboutMe() {
           </a>
         </div>
       </div>
-  <div className={styles.right}>
-  <div className={styles.imageWrapper}>
-    <Image
-      src={myPhoto}
-      alt="Bethsy Falcon"
-      fill
-      priority
-      className={styles.image}
-    />
-  </div>
-</div>
+      <div className={styles.right}>
+        <div className={styles.imageWrapper}>
+          <Image
+            src={myPhoto}
+            alt="Bethsy Falcon"
+            fill
+            priority
+            className={styles.image}
+          />
+        </div>
+      </div>
     </section>
   );
 }

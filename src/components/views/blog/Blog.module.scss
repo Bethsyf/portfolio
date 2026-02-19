@@ -22,16 +22,12 @@
   margin-bottom: 3rem;
 }
 
-/* ===== GRID ===== */
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 3rem;
 }
-
-/* ===== CARD ===== */
 
 .card {
   background: #ffffff08;
@@ -68,8 +64,6 @@
   opacity: 0.75;
   line-height: 1.5;
 }
-
-/* ===== BUTTON ===== */
 
 .button {
   display: inline-block;

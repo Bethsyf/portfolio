@@ -51,7 +51,7 @@
   height: 25rem;
   gap: 20px;
   list-style: none;
-    background: var(--color-bg-secondary);
+  background: var(--color-bg-secondary);
   border-bottom: 1px solid var(--color-border);
   animation: slideDown 0.25s ease;
 }
@@ -68,12 +68,12 @@
   text-decoration: none;
   color: var(--color-text);
   transition: color var(--transition);
-  
+
 }
+
 .link:hover {
   color: var(--color-primary);
 }
-
 
 .downloadButton {
   display: flex;
@@ -85,18 +85,15 @@
   transition: opacity var(--transition);
 }
 
-
 .downloadButton:hover {
   background: var(--color-primary-hover);
-   color: var(--color-bg-secondary);
+  color: var(--color-bg-secondary);
 }
-
 
 .downloadIcon {
   margin-right: 8px;
   font-size: 18px;
 }
-
 
 @media (min-width: 768px) {
 
@@ -107,17 +104,14 @@
     padding: 0.5rem 2rem;
   }
 
-
   .btMenu {
     display: none;
   }
-
 
   .contMenu {
     display: flex;
     align-items: center;
   }
-
 
   .menuDesk {
     display: flex;
@@ -127,19 +121,16 @@
     list-style: none;
   }
 
-
   .menu {
     display: none;
   }
 }
-
 
 @media (max-width: 1220px) and (min-width: 768px) {
 
   .menuDesk {
     gap: 1.5rem;
   }
-
 
   .downloadButton {
     display: none;
