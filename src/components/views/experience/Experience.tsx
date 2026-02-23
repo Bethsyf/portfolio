@@ -23,6 +23,10 @@ export default function ExperienceView() {
       <h2 className={s.title}>
         Experiencia
       </h2>
+      
+        <p className={s.intro}>
+    Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento, escalabilidad y una experiencia de usuario intuitiva.
+  </p>
 
       <div className={s.list}>
         {experiences.map((exp) => (

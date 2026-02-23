@@ -42,9 +42,7 @@ export default function TechnologiesView() {
       <h2>Tecnologías</h2>
 
       <p className={s.introText}>
-        Estas son las tecnologías que forman parte de mi stack y con las que
-        tengo experiencia. Las utilizo para crear soluciones eficientes y
-        escalables en mis proyectos.
+        Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida.
       </p>
 
       <div className={s.techList}>
