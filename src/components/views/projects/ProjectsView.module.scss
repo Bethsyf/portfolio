@@ -13,15 +13,15 @@
 .container h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  
 }
 
 .intro {
   text-align: center;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto 3rem;
   color: var(--color-text-secondary);
 }
+
 .sectionTitle {
   font-size: 1.8rem;
   margin: 3rem 0 1.5rem;
@@ -42,8 +42,8 @@
   border-radius: var(--radius-sm);
   overflow: hidden;
   transition: 0.3s;
-    max-width: 1100px;
-  
+  max-width: 1100px;
+
 }
 
 .card:hover {
@@ -55,9 +55,9 @@
 .image {
   width: 100%;
   height: auto;
-}cs
+}
 
-.content {
+cs .content {
   padding: 1.2rem;
 }
 
@@ -66,7 +66,6 @@
   justify-content: space-between;
   align-items: center;
   margin: .5rem 1rem;
-  
 }
 
 .header h3 {

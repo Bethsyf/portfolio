@@ -19,15 +19,12 @@ const experiences: ExperienceProps[] = [
 export default function ExperienceView() {
   return (
     <section className={s.container} id="experience">
-
       <h2 className={s.title}>
         Experiencia
       </h2>
-      
-        <p className={s.intro}>
-    Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento, escalabilidad y una experiencia de usuario intuitiva.
-  </p>
-
+      <p className={s.intro}>
+        Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento, escalabilidad y una experiencia de usuario intuitiva.
+      </p>
       <div className={s.list}>
         {experiences.map((exp) => (
           <article key={exp.role} className={s.card}>
@@ -36,21 +33,17 @@ export default function ExperienceView() {
               <h3>{exp.role}</h3>
               <span>{exp.company}</span>
             </header>
-
             <p className={s.duration}>
               {exp.duration}
             </p>
-
             <ul className={s.description}>
               {exp.description.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
-
           </article>
         ))}
       </div>
-
     </section>
   );
 }
