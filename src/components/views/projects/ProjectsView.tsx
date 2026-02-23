@@ -1,8 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import s from './ProjectsView.module.scss';
-import { FaGithub, FaRocket } from 'react-icons/fa';
-import projects from '@/utils/projects.json';
+import Image from "next/image";
+import s from "./ProjectsView.module.scss";
+import { FaGithub, FaRocket } from "react-icons/fa";
+import projects from "@/utils/projects.json";
 
 interface Project {
   title: string;
@@ -12,64 +11,84 @@ interface Project {
   imageUrl: string;
 }
 
-const ProjectsView: React.FC = () => {
-  const renderProjects = (projectList: Project[], showRepo: boolean = true) =>
-    projectList.map((project) => (
-      <div key={project.title} className={s.card}>
-        <div className={s.cardHeader}>
-          <h3>{project.title}</h3>
-          <div className={s.cardLinks}>
-            <a
-              href={project.deployUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Ver despliegue de ${project.title}`}
-            >
-              <FaRocket className={s.icon} />
-            </a>
-            {showRepo && project.repoUrl && (
+export default function ProjectsView() {
+  const renderProjects = (
+    list: Project[],
+    showRepo: boolean = true
+  ) => {
+    return list.map((project) => (
+      <article key={project.title} className={s.card}>
+
+        <Image
+          src={project.imageUrl}
+          alt={`Preview ${project.title}`}
+          width={400}
+          height={220}
+          className={s.image}
+        />
+
+        <div className={s.content}>
+
+          <header className={s.header}>
+
+            <h3>{project.title}</h3>
+
+            <div className={s.links}>
+
               <a
-                href={project.repoUrl}
+                href={project.deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Ver repositorio de ${project.title}`}
               >
-                <FaGithub className={s.icon} />
+                <FaRocket />
               </a>
-            )}
-          </div>
+
+              {showRepo && project.repoUrl && (
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub />
+                </a>
+              )}
+
+            </div>
+
+          </header>
+
+          <p className={s.tech}>
+            {project.technologies}
+          </p>
+
         </div>
-        <p className={s.technologies}>{project.technologies}</p>
-        <Image
-          className={s.imageCard}
-          src={project.imageUrl}
-          alt={`Captura de ${project.title}`}
-          width={350}
-          height={200}
-        />
-      </div>
+
+      </article>
     ));
+  };
 
   return (
     <section className={s.container} id="projects">
+
       <h2>Proyectos</h2>
-      <p className={s.introText}>
-        A continuación te muestro algunos de los proyectos en los que he trabajado.
-        Cada uno refleja mis habilidades en desarrollo frontend y mi capacidad para implementar
-        soluciones innovadoras utilizando tecnologías modernas. Haz clic en los enlaces para ver más detalles.
+
+      <p className={s.intro}>
+        Algunos proyectos donde aplico mis habilidades
+        en desarrollo frontend moderno.
       </p>
 
-      <h3>Académicos</h3>
-      <div className={s.containerInner}>
+      <h3 className={s.sectionTitle}>Académicos</h3>
+
+      <div className={s.grid}>
         {renderProjects(projects.academicProjects)}
       </div>
 
-      <h3>Reales</h3>
-      <div className={s.containerInner}>
+      <h3 className={s.sectionTitle}>Reales</h3>
+
+      <div className={s.grid}>
         {renderProjects(projects.realProjects, false)}
       </div>
+
     </section>
   );
-};
-
-export default ProjectsView;
+}
