@@ -73,8 +73,7 @@ export default function ProjectsView() {
       <h2>Proyectos</h2>
 
       <p className={s.intro}>
-        Algunos proyectos donde aplico mis habilidades
-        en desarrollo frontend moderno.
+        Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, escalables y alineadas con las mejores prácticas de desarrollo frontend.
       </p>
 
       <h3 className={s.sectionTitle}>Académicos</h3>
