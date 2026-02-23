@@ -1,5 +1,5 @@
-import s from './Experience.module.scss';
-import { ExperienceProps } from './Experienceprops';
+import s from "./Experience.module.scss";
+import { ExperienceProps } from "./Experienceprops";
 
 const experiences: ExperienceProps[] = [
   {
@@ -7,34 +7,46 @@ const experiences: ExperienceProps[] = [
     company: 'KUTAI',
     duration: 'Junio 2022 - Septiembre 2023',
     description: [
-      '- Traducir diseños a código con Next.js, TypeScript y Sass.',
-      '- Mantener y optimizar la interfaz de usuario.',
-      '- Mejorar la usabilidad e interacción.',
-      '- Conectar APIs con el Frontend para habilitar el intercambio de datos en las aplicaciones web.',
+      'Desarrollé interfaces web responsivas y escalables utilizando Next.js, TypeScript y Sass, basadas en diseños UI/UX.',
+      'Optimicé componentes existentes, mejorando el rendimiento, la mantenibilidad y la calidad del código.',
+      'Mejoré la experiencia de usuario mediante la implementación de interacciones más intuitivas y accesibles.',
+      'Integré APIs REST para gestionar y mostrar datos dinámicos dentro de las aplicaciones.',
+      'Colaboré con diseñadores y desarrolladores backend para implementar nuevas funcionalidades.',
     ],
-  },
+  }
 ];
 
-const ExperienceView = () => {
+export default function ExperienceView() {
   return (
-    <section className={s.experience} id="experience">
-      <h2>Experiencia</h2>
-      <div className={s.experienceList}>
-        {experiences.map((experience) => (
-          <div key={experience.role} className={s.experienceItem}>
-            <h3>{experience.role}</h3>
-            <h4>{experience.company}</h4>
-            <p>{experience.duration}</p>
-            <ul>
-              {experience.description.map((desc, index) => (
-                <li key={index+1}>{desc}</li>
+    <section className={s.container} id="experience">
+
+      <h2 className={s.title}>
+        Experiencia
+      </h2>
+
+      <div className={s.list}>
+        {experiences.map((exp) => (
+          <article key={exp.role} className={s.card}>
+
+            <header className={s.header}>
+              <h3>{exp.role}</h3>
+              <span>{exp.company}</span>
+            </header>
+
+            <p className={s.duration}>
+              {exp.duration}
+            </p>
+
+            <ul className={s.description}>
+              {exp.description.map((item, index) => (
+                <li key={index}>{item}</li>
               ))}
             </ul>
-          </div>
+
+          </article>
         ))}
       </div>
+
     </section>
   );
-};
-
-export default ExperienceView;
+}
