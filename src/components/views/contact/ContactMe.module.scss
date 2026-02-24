@@ -1,14 +1,15 @@
 .contactForm {
   border-radius: 10px;
+  background-color: var(--color-bg-secondary);
   padding: 30px;
-  box-shadow: 0 4px 8px #c57442;
+  box-shadow: 0 4px 8px var(--color-border);
   max-width: 500px;
   text-align: center;
 }
 
 .titleForm {
   font-size: 1.6rem;
-  color: #ccc;
+  color: var(--color-text);
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -22,27 +23,27 @@
   label {
     font-size: 0.9rem;
     margin-bottom: 5px;
-    color: #ccc;
+    color: var(--color-text);
   }
 
   input,
   textarea {
     width: 100%;
     padding: 10px;
-    color: #333;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-bg-secondary);
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s ease;
 
     &:focus {
-      border-color: #a95f37;
+      border-color: var(--color-primary);
       outline: none;
     }
 
     &::placeholder {
-      color: #aaa;
+      color: var(--color-text-secondary);
     }
   }
 
@@ -60,19 +61,18 @@
 
 .submitButton {
   padding: 10px 15px;
-  background-color: #c57442;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: white;
   font-size: 1rem;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   margin-top: 1rem;
 
   &:hover {
-    background-color: #a95f37;
-    transform: scale(1.05);
+    background-color: var(--color-primary-hover);
   }
 
   &:disabled {

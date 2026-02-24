@@ -1,0 +1,37 @@
+
+.container {
+  padding: 8rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.content {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--color-text-secondary);
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

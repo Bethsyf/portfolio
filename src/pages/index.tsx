@@ -8,6 +8,7 @@ import ProjectsView from '@/components/views/projects/ProjectsView';
 import TechnologiesView from '@/components/views/technologies/Technologies';
 import ExperienceView from '@/components/views/experience/Experience';
 import BlogPreview from '@/components/views/blog/Blog';
+import ContactSection from '@/components/views/contact/ContactSection';
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         <ProjectsView />
         <ExperienceView />
         <BlogPreview />
+        <ContactSection />
         <Footer />
       </main>
     </>
