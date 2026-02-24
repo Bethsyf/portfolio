@@ -1,33 +1,59 @@
-
 .footer {
   padding: 2rem 1.5rem;
   border-top: 1px solid var(--color-border);
+  background: var(--color-bg-secondary);
 }
 
 .content {
   max-width: 1100px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 .toTop {
+  font-size: 0.9rem;
   color: var(--color-primary);
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: 0.3s;
+  transition: all 0.25s ease;
 }
 
 .toTop:hover {
   opacity: 0.7;
+  transform: translateY(-2px);
 }
 
 .copy {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-.copy span {
-  margin-left: 10px;
+.name {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.role {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .copy {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+  }
 }
