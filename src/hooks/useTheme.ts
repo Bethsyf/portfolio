@@ -10,37 +10,29 @@ export function useTheme() {
     useState<Theme>("light");
 
   useEffect(() => {
-
     const saved =
       localStorage.getItem("theme") as Theme;
 
     if (saved) {
-
       setTheme(saved);
-
       document.documentElement.setAttribute(
         "data-theme",
         saved
       );
 
     } else {
-
       document.documentElement.setAttribute(
         "data-theme",
         "light"
       );
-
     }
-
   }, []);
 
   const toggleTheme = () => {
-
     const newTheme =
       theme === "light"
         ? "dark"
         : "light";
-
     setTheme(newTheme);
 
     localStorage.setItem(
@@ -52,14 +44,10 @@ export function useTheme() {
       "data-theme",
       newTheme
     );
-
   };
 
   return {
-
     theme,
     toggleTheme,
-
   };
-
 }
