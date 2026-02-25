@@ -52,7 +52,7 @@
   }
 
   .error {
-    color: #ff4d4d;
+    color: var(--color-error);
     font-size: 0.875rem;
     margin-top: 5px;
     font-weight: bold;
@@ -62,7 +62,7 @@
 .submitButton {
   padding: 10px 15px;
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-white);
   font-size: 1rem;
   font-weight: bold;
   border: none;
@@ -76,7 +76,7 @@
   }
 
   &:disabled {
-    background-color: #999;
+    background-color: var(--color-disabled);
     cursor: not-allowed;
   }
 }
