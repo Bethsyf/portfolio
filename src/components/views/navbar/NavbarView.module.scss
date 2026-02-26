@@ -75,26 +75,6 @@
   color: var(--color-primary);
 }
 
-.downloadButton {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  background: var(--color-primary);
-  color: var(--color-bg);
-  border-radius: var(--radius-sm);
-  transition: opacity var(--transition);
-}
-
-.downloadButton:hover {
-  background: var(--color-primary-hover);
-  color: var(--color-bg-secondary);
-}
-
-.downloadIcon {
-  margin-right: 8px;
-  font-size: 18px;
-}
-
 @media (min-width: 768px) {
 
   .container {
@@ -130,10 +110,6 @@
 
   .menuDesk {
     gap: 1.5rem;
-  }
-
-  .downloadButton {
-    display: none;
   }
 }
 

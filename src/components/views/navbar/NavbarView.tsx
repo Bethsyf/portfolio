@@ -45,33 +45,12 @@ const NavbarView = () => {
           <li className={s.item}>
             <ThemeToggleView />
           </li>
-          <li className={s.item}>
-            <Link
-              className={s.link}
-              href="/cv.pdf"
-              download="CV_Bethsy_Falcon"
-              target="_blank"
-              onClick={handleToggle}
-            >
-              Descargar CV
-            </Link>
-          </li>
         </ul>
         {/* 🖥 DESKTOP */}
         <ul className={s.menuDesk}>
           {renderNavItems()}
           <li className={s.item}>
             <ThemeToggleView />
-          </li>
-          <li className={s.item}>
-            <Link
-              className={`${s.link} ${s.downloadButton}`}
-              href="/cv.pdf"
-              download="CV_Bethsy_Falcon"
-              target="_blank"
-            >
-              <FiDownload className={s.downloadIcon} /> Descargar CV
-            </Link>
           </li>
         </ul>
       </div>
