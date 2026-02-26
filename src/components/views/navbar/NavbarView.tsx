@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { PiBarcodeBold } from 'react-icons/pi';
+import { FiCode } from 'react-icons/fi';
 import { TiThMenu } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
@@ -32,7 +32,7 @@ const NavbarView = () => {
     <nav className={s.container}>
       <div className={s.navb}>
         <Link href="/">
-          <PiBarcodeBold className={s.iconCode} />
+          <FiCode className={s.iconCode} />
         </Link>
         <button onClick={handleToggle} className={s.btMenu} type="button">
           {toggle ? <FaTimes className={s.iconMenu} /> : <TiThMenu className={s.iconMenu} />}

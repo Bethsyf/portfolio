@@ -1,18 +1,19 @@
 import { useTheme } from "@/hooks/useTheme";
-import styles from "./ThemeToggleView.module.scss";
+import ButtonControl from "@/components/controls/button/ButtonControl";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 export default function ThemeToggleView() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button
+    <ButtonControl
       onClick={toggleTheme}
-      className={styles.toggle}
+      variant="icon"
       aria-label="Cambiar tema"
     >
       {theme === "light"
-        ? "🌙"
-        : "☀️"}
-    </button>
+        ? <FiMoon size={18} />
+        : <FiSun size={18} />}
+    </ButtonControl>
   );
 }
