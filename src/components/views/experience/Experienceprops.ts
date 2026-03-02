@@ -1,6 +1,6 @@
 export interface ExperienceProps {
-    role: string;
-    company: string;
-    duration: string;
-    description: string[];
-  }
+  role: string;
+  company: string;
+  duration: string;
+  description: string[];
+}
