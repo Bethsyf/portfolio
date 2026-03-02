@@ -16,16 +16,11 @@ export default function AboutMe() {
           Frontend Developer
         </h2>
         <p>
-          <p>
-            <p>
-              👋 Soy Bethsy Falcon, desarrolladora Frontend especializada en React, Next.js y TypeScript. 
-              Me enfoco en crear interfaces modernas, escalables y centradas en el usuario, integrando 
-              frontend con backend para construir aplicaciones completas y eficientes.
-            </p>
-          </p>
+          👋 Soy Bethsy Falcon, desarrolladora Frontend especializada en React, Next.js y TypeScript.
+          Me enfoco en crear interfaces modernas, escalables y centradas en el usuario, integrando
+          frontend con backend para construir aplicaciones completas y eficientes.
         </p>
         <div className={styles.buttons}>
-
           <ButtonControl
             href="/cv.pdf"
             download
@@ -33,7 +28,6 @@ export default function AboutMe() {
             <FiDownload />
             Descargar CV
           </ButtonControl>
-
           <ButtonControl
             href="https://github.com/Bethsyf"
             target="_blank"
@@ -42,7 +36,6 @@ export default function AboutMe() {
           >
             <FaGithub />
           </ButtonControl>
-
           <ButtonControl
             href="https://linkedin.com/in/bethsyfalcon-frontend"
             target="_blank"
