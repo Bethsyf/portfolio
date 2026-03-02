@@ -59,28 +59,6 @@
   }
 }
 
-.submitButton {
-  padding: 10px 15px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-top: 1rem;
-
-  &:hover {
-    background-color: var(--color-primary-hover);
-  }
-
-  &:disabled {
-    background-color: var(--color-disabled);
-    cursor: not-allowed;
-  }
-}
-
 @media (min-width: 768px) {
   .contactForm {
     padding: 20px;
@@ -98,7 +76,5 @@
     }
   }
 
-  .submitButton {
-    font-size: 1.1rem;
-  }
+  
 }

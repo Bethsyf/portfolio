@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import s from "./ContactMe.module.scss";
+import ButtonControl from "@/components/controls/button/ButtonControl";
 
 interface ContactFormValues {
   name: string;
@@ -84,15 +85,15 @@ export default function ContactMe() {
               as="textarea"
               placeholder="Escribe tu mensaje"
             />
-            <button
+            <ButtonControl
               type="submit"
-              className={s.submitButton}
-              disabled={isSubmitting}
+              variant="primary"
+              size="md"
             >
               {isSubmitting
                 ? "Enviando..."
                 : "Enviar mensaje"}
-            </button>
+            </ButtonControl>
           </Form>
         )}
       </Formik>

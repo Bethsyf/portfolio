@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Blog.module.scss";
 import { blogPosts } from "@/data/blogPost";
+import ButtonControl from "@/components/controls/button/ButtonControl";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);
@@ -39,12 +40,11 @@ export default function BlogPreview() {
             </article>
           ))}
         </div>
-        <Link
-          href="/blog"
-          className={styles.button}
-        >
-          Ver todos los artículos
-        </Link>
+        <div className={styles.buttons}>
+          <ButtonControl href="/blog">
+            Ver todos los artículos
+          </ButtonControl>
+        </div>
       </div>
     </section>
   );

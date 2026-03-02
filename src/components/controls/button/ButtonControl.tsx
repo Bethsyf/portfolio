@@ -1,5 +1,6 @@
 import React from "react";
 import s from "./ButtonControl.module.scss";
+import Link from "next/link";
 
 type Variant =
   | "primary"
@@ -12,47 +13,29 @@ type Size =
   | "lg";
 
 interface Props {
-
   children: React.ReactNode;
-
   variant?: Variant;
-
   size?: Size;
-
   href?: string;
-
   download?: boolean;
-
   target?: string;
-
   rel?: string;
-
   onClick?: () => void;
-
   type?: "button" | "submit";
-
+  disabled?: boolean;
 }
 
 export default function ButtonControl({
-
   children,
-
   variant = "primary",
-
   size = "md",
-
   href,
-
   download,
-
   target,
-
   rel,
-
   type = "button",
-
+  disabled,
   onClick,
-
 }: Props) {
 
   const className = `
@@ -62,26 +45,47 @@ export default function ButtonControl({
   `;
 
   if (href) {
+    const isExternal = href.startsWith("http");
+    const isDownload = download;
+
+    if (isDownload) {
+      return (
+        <a
+          href={href}
+          download
+          className={className}
+        >
+          {children}
+        </a>
+      );
+    }
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={rel}
+          className={className}
+        >
+          {children}
+        </a>
+      );
+    }
 
     return (
-
-      <a
-        href={href}
-        download={download}
-        target={target}
-        rel={rel}
-        className={className}
-      >
-
+      <Link href={href} className={className}>
         {children}
-      </a>
+      </Link>
     );
   }
+
   return (
     <button
-      className={className}
       type={type}
       onClick={onClick}
+      disabled={disabled}
+      className={className}
     >
       {children}
     </button>
