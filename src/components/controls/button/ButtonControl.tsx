@@ -10,7 +10,10 @@ type Variant =
 type Size =
   | "sm"
   | "md"
-  | "lg";
+  | "lg"
+  | "icon-sm"
+  | "icon-lg";
+ 
 
 interface Props {
   children: React.ReactNode;
@@ -38,11 +41,11 @@ export default function ButtonControl({
   onClick,
 }: Props) {
 
-  const className = `
-    ${s.button}
-    ${s[variant]}
-    ${s[size]}
-  `;
+const className = `
+  ${s.button}
+  ${s[variant]}
+  ${variant !== "icon" ? s[size] : ""}
+`;
 
   if (href) {
     const isExternal = href.startsWith("http");

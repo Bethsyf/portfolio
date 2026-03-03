@@ -17,7 +17,7 @@
     {
       "title": "Portfolio",
       "technologies": "Nextjs, SASS, Typescript",
-      "deployUrl": "https://bethsyf.github.io/portfolio/",
+      "deployUrl": "https://portfolio-bfb.vercel.app",
       "repoUrl": "https://github.com/Bethsyf/portfolio",
       "imageUrl": "https://res.cloudinary.com/dmaviub4l/image/upload/v1723161553/eokdssx9zb9u7uhpsbxe.png"
     }
