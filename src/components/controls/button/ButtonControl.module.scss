@@ -10,6 +10,10 @@
   text-decoration: none;
   
 }
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 .primary {
   padding: 0.8rem 1.6rem;
