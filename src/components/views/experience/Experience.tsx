@@ -1,6 +1,7 @@
 import CardControl from "@/components/controls/card/CardControl";
 import s from "./Experience.module.scss";
 import { ExperienceProps } from "./Experienceprops";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
 
 const experiences: ExperienceProps[] = [
   {
@@ -20,13 +21,8 @@ const experiences: ExperienceProps[] = [
 export default function ExperienceView() {
   return (
     <section className={s.container} id="experience">
-      <h2 className={s.title}>
-        Experiencia
-      </h2>
-      <p className={s.intro}>
-        Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
-        escalabilidad y una experiencia de usuario intuitiva.
-      </p>
+      <SectionHeader title="Experiencia" description=" Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
+        escalabilidad y una experiencia de usuario intuitiva." align="center" />
       <div className={s.list}>
         {experiences.map((exp) => (
           <CardControl key={exp.role} hoverable={false}>

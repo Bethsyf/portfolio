@@ -4,6 +4,7 @@ import styles from "./Blog.module.scss";
 import { blogPosts } from "@/data/blogPost";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import CardControl from "@/components/controls/card/CardControl";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);
@@ -11,13 +12,8 @@ export default function BlogPreview() {
   return (
     <section className={styles.container} id="blog">
       <div className={styles.content}>
-        <h2 className={styles.title}>
-          Blog
-        </h2>
-        <p className={styles.subtitle}>
-          Aquí documento mi proceso de reconectar con el desarrollo frontend,
-          repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino.
-        </p>
+        <SectionHeader title={" Blog"} description="Aquí documento mi proceso de reconectar con el desarrollo frontend,
+          repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino." align="center" />
         <div className={styles.grid}>
           {previewPosts.map((post) => (
             <CardControl key={post.slug} >

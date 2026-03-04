@@ -3,6 +3,7 @@ import s from "./ProjectsView.module.scss";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import projects from "@/utils/projects.json";
 import CardControl from "@/components/controls/card/CardControl";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
 
 interface Project {
   title: string;
@@ -58,10 +59,8 @@ export default function ProjectsView() {
 
   return (
     <section className={s.container} id="projects">
-      <h2>Proyectos</h2>
-      <p className={s.intro}>
-        Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, escalables y alineadas con las mejores prácticas de desarrollo frontend.
-      </p>
+      <SectionHeader title="Proyectos" description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
+      escalables y alineadas con las mejores prácticas de desarrollo frontend." align="center" />
       <h3 className={s.sectionTitle}>Académicos</h3>
       <div className={s.grid}>
         {renderProjects(projects.academicProjects)}

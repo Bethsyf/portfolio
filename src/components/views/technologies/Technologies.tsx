@@ -17,6 +17,7 @@ import {
 } from "react-icons/si";
 
 import s from "./Technologies.module.scss";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
 
 type Technology = {
   name: string;
@@ -39,13 +40,8 @@ const technologies: Technology[] = [
 export default function TechnologiesView() {
   return (
     <section className={s.technologies} id="technologies">
-      <h2>Tecnologías</h2>
-
-      <p className={s.introText}>
-        Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend modernas, 
-        priorizando rendimiento, escalabilidad y una experiencia de usuario sólida.
-      </p>
-
+      <SectionHeader title="Tecnologías" description="Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend 
+      modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida." align="center" />
       <div className={s.techList}>
         {technologies.map(({ name, icon: Icon }) => (
           <article key={name} className={s.techItem}>
