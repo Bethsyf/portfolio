@@ -4,7 +4,7 @@ import { FaGithub, FaRocket } from "react-icons/fa";
 import projects from "@/utils/projects.json";
 import CardControl from "@/components/controls/card/CardControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/SectionLayout/SectionLayout";
+import SectionLayout from "@/components/layout/ssectionLayout/SectionLayout";
 
 interface Project {
   title: string;

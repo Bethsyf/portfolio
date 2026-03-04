@@ -5,7 +5,7 @@ import { blogPosts } from "@/data/blogPost";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import CardControl from "@/components/controls/card/CardControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/SectionLayout/SectionLayout";
+import SectionLayout from "@/components/layout/ssectionLayout/SectionLayout";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);

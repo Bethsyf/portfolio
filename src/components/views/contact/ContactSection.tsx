@@ -2,7 +2,7 @@ import s from "./ContactSection.module.scss";
 import ContactMe from "./ContactMe";
 import InfoRRSS from "../inforrss/InfoRRSS";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/SectionLayout/SectionLayout";
+import SectionLayout from "@/components/layout/ssectionLayout/SectionLayout";
 
 export default function ContactSection() {
   return (
