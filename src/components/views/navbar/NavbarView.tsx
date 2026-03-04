@@ -5,7 +5,7 @@ import { TiThMenu } from 'react-icons/ti';
 import { FaTimes } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 import s from './NavbarView.module.scss';
-import ThemeToggleView from '@/components/controls/tthemeToggle/ThemeToggleControl';
+import ThemeToggleView from '@/components/controls/themeToggle/ThemeToggleControl';
 
 const navItems = [
   { label: 'Inicio', href: '/' },
