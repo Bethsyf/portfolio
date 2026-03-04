@@ -2,7 +2,7 @@ import { useTheme } from "@/hooks/useTheme";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import { FiMoon, FiSun } from "react-icons/fi";
 
-export default function ThemeToggleView() {
+export default function ThemeToggleControl() {
   const { theme, toggleTheme } = useTheme();
 
   return (

@@ -1,7 +1,8 @@
 import CardControl from "@/components/controls/card/CardControl";
 import s from "./Experience.module.scss";
 import { ExperienceProps } from "./Experienceprops";
-import SectionHeader from "@/components/controls/sectionHeader/SectionHeaderControl";
+import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
+import SectionLayout from "@/components/layout/SectionLayout/SectionLayout";
 
 const experiences: ExperienceProps[] = [
   {
@@ -20,27 +21,29 @@ const experiences: ExperienceProps[] = [
 
 export default function ExperienceView() {
   return (
-    <section className={s.container} id="experience">
-      <SectionHeader title="Experiencia" description=" Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
-        escalabilidad y una experiencia de usuario intuitiva." align="center" />
-      <div className={s.list}>
-        {experiences.map((exp) => (
-          <CardControl key={exp.role} hoverable={false}>
-            <header className={s.header}>
-              <h3>{exp.role}</h3>
-              <span>{exp.company}</span>
-            </header>
-            <p className={s.duration}>
-              {exp.duration}
-            </p>
-            <ul className={s.description}>
-              {exp.description.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </CardControl>
-        ))}
-      </div>
+    <section id="experience">
+      <SectionLayout paddingY="8rem" align="left">
+        <SectionHeader title="Experiencia" description=" Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
+          escalabilidad y una experiencia de usuario intuitiva." align="center" />
+        <div className={s.list}>
+          {experiences.map((exp) => (
+            <CardControl key={exp.role} hoverable={false}>
+              <header className={s.header}>
+                <h3>{exp.role}</h3>
+                <span>{exp.company}</span>
+              </header>
+              <p className={s.duration}>
+                {exp.duration}
+              </p>
+              <ul className={s.description}>
+                {exp.description.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            </CardControl>
+          ))}
+        </div>
+      </SectionLayout>
     </section>
   );
 }

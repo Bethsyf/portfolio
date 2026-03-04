@@ -3,7 +3,8 @@ import s from "./ProjectsView.module.scss";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import projects from "@/utils/projects.json";
 import CardControl from "@/components/controls/card/CardControl";
-import SectionHeader from "@/components/controls/sectionHeader/SectionHeaderControl";
+import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
+import SectionLayout from "@/components/layout/SectionLayout/SectionLayout";
 
 interface Project {
   title: string;
@@ -35,6 +36,7 @@ export default function ProjectsView() {
                 href={project.deployUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Ver proyecto"
               >
                 <FaRocket />
               </a>
@@ -43,6 +45,7 @@ export default function ProjectsView() {
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ver repositorio"
                 >
                   <FaGithub />
                 </a>
@@ -58,17 +61,19 @@ export default function ProjectsView() {
   };
 
   return (
-    <section className={s.container} id="projects">
-      <SectionHeader title="Proyectos" description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
-      escalables y alineadas con las mejores prácticas de desarrollo frontend." align="center" />
-      <h3 className={s.sectionTitle}>Académicos</h3>
-      <div className={s.grid}>
-        {renderProjects(projects.academicProjects)}
-      </div>
-      <h3 className={s.sectionTitle}>Reales</h3>
-      <div className={s.grid}>
-        {renderProjects(projects.realProjects, false)}
-      </div>
-    </section>
+    <div id="projects">
+      <SectionLayout paddingY="8rem" align="center">
+        <SectionHeader title="Proyectos" description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
+        escalables y alineadas con las mejores prácticas de desarrollo frontend." align="center" />
+        <h3 className={s.sectionTitle}>Académicos</h3>
+        <div className={s.grid}>
+          {renderProjects(projects.academicProjects)}
+        </div>
+        <h3 className={s.sectionTitle}>Reales</h3>
+        <div className={s.grid}>
+          {renderProjects(projects.realProjects, false)}
+        </div>
+      </SectionLayout>
+    </div>
   );
 }

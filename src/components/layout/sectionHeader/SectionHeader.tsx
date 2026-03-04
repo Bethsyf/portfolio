@@ -1,18 +1,18 @@
-import s from "./SectionHeaderControl.module.scss";
+import s from "./SectionHeader.module.scss";
 
-interface SectionHeaderControlProps {
+interface SectionHeaderProps {
   id?: string;
   title: string;
   description?: string;
   align?: "left" | "center";
 }
 
-export default function SectionHeaderControl({
+export default function SectionHeader({
   id,
   title,
   description,
   align = "left",
-}: SectionHeaderControlProps) {
+}: SectionHeaderProps) {
   return (
     <header
       id={id}
