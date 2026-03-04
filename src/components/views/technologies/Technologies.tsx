@@ -17,7 +17,7 @@ import {
 } from "react-icons/si";
 
 import s from "./Technologies.module.scss";
-import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeaderControl";
 
 type Technology = {
   name: string;

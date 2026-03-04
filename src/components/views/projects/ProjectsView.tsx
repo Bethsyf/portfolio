@@ -3,7 +3,7 @@ import s from "./ProjectsView.module.scss";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import projects from "@/utils/projects.json";
 import CardControl from "@/components/controls/card/CardControl";
-import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeaderControl";
 
 interface Project {
   title: string;

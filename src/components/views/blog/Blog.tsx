@@ -4,7 +4,7 @@ import styles from "./Blog.module.scss";
 import { blogPosts } from "@/data/blogPost";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import CardControl from "@/components/controls/card/CardControl";
-import SectionHeader from "@/components/controls/sectionHeader/SectionHeader";
+import SectionHeader from "@/components/controls/sectionHeader/SectionHeaderControl";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);
