@@ -18,7 +18,7 @@ import {
 
 import s from "./Technologies.module.scss";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/ssectionLayout/SectionLayout";
+import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 type Technology = {
   name: string;

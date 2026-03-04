@@ -2,7 +2,7 @@ import CardControl from "@/components/controls/card/CardControl";
 import s from "./Experience.module.scss";
 import { ExperienceProps } from "./Experienceprops";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/ssectionLayout/SectionLayout";
+import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 const experiences: ExperienceProps[] = [
   {
