@@ -1,3 +1,4 @@
+import CardControl from "@/components/controls/card/CardControl";
 import s from "./Experience.module.scss";
 import { ExperienceProps } from "./Experienceprops";
 
@@ -23,13 +24,12 @@ export default function ExperienceView() {
         Experiencia
       </h2>
       <p className={s.intro}>
-        Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento, 
+        Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
         escalabilidad y una experiencia de usuario intuitiva.
       </p>
       <div className={s.list}>
         {experiences.map((exp) => (
-          <article key={exp.role} className={s.card}>
-
+          <CardControl key={exp.role} hoverable={false}>
             <header className={s.header}>
               <h3>{exp.role}</h3>
               <span>{exp.company}</span>
@@ -42,7 +42,7 @@ export default function ExperienceView() {
                 <li key={index}>{item}</li>
               ))}
             </ul>
-          </article>
+          </CardControl>
         ))}
       </div>
     </section>

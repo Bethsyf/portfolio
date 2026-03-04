@@ -2,6 +2,7 @@ import Image from "next/image";
 import s from "./ProjectsView.module.scss";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import projects from "@/utils/projects.json";
+import CardControl from "@/components/controls/card/CardControl";
 
 interface Project {
   title: string;
@@ -17,7 +18,7 @@ export default function ProjectsView() {
     showRepo: boolean = true
   ) => {
     return list.map((project) => (
-      <article key={project.title} className={s.card}>
+      <CardControl>
         <Image
           src={project.imageUrl}
           alt={`Preview ${project.title}`}
@@ -51,7 +52,7 @@ export default function ProjectsView() {
             {project.technologies}
           </p>
         </div>
-      </article>
+      </CardControl>
     ));
   };
 

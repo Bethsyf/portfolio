@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./Blog.module.scss";
 import { blogPosts } from "@/data/blogPost";
 import ButtonControl from "@/components/controls/button/ButtonControl";
+import CardControl from "@/components/controls/card/CardControl";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);
@@ -19,7 +20,7 @@ export default function BlogPreview() {
         </p>
         <div className={styles.grid}>
           {previewPosts.map((post) => (
-            <article key={post.slug} className={styles.card}>
+            <CardControl key={post.slug} >
               <Link href={`/blog/${post.slug}`}>
                 <Image
                   src={post.image}
@@ -37,7 +38,7 @@ export default function BlogPreview() {
                   </p>
                 </div>
               </Link>
-            </article>
+            </CardControl>
           ))}
         </div>
         <div className={styles.buttons}>

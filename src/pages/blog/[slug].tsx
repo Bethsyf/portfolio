@@ -3,6 +3,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { blogPosts } from "@/data/blogPost";
 import styles from "@/styles/pages/PostPage.module.scss";
+import Image from "next/image";
 
 export default function BlogPostPage() {
   const router = useRouter();
@@ -27,11 +28,15 @@ export default function BlogPostPage() {
           ← Volver al blog
         </Link>
         <article className={styles.article}>
-          <img
-            src={post.image}
-            alt={post.title}
-            className={styles.image}
-          />
+          <div className={styles.imageWrapper}>
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className={styles.image}
+              priority
+            />
+          </div>
           <header className={styles.header}>
             <h1 className={styles.title}>
               {post.title}

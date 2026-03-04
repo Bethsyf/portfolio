@@ -28,20 +28,6 @@
   gap: 2rem;
 }
 
-.card {
-  background: var(--color-bg-secondary);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 10px 30px var(--color-border);
-}
-
 .card a {
   text-decoration: none;
   color: inherit;
@@ -51,6 +37,9 @@
   width: 100%;
   height: 180px;
   object-fit: cover;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .cardContent {

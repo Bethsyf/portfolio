@@ -36,29 +36,15 @@
   margin-bottom: 4rem;
 }
 
-.card {
-  background:
-    var(--color-bg-secondary);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  transition: 0.3s;
-  max-width: 1100px;
-  box-shadow: var(--shadow-sm);
-
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 10px 30px var(--color-border);
-}
-
 .image {
   width: 100%;
   height: auto;
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
+  overflow: hidden;
 }
 
-cs .content {
+.content {
   padding: 1.2rem;
 }
 

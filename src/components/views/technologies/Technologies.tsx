@@ -42,7 +42,8 @@ export default function TechnologiesView() {
       <h2>Tecnologías</h2>
 
       <p className={s.introText}>
-        Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida.
+        Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend modernas, 
+        priorizando rendimiento, escalabilidad y una experiencia de usuario sólida.
       </p>
 
       <div className={s.techList}>

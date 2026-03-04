@@ -37,26 +37,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: .5rem;
+
 }
 
 .header h3 {
   font-size: 1.4rem;
+  padding: 1rem 2rem;
 }
 
 .header span {
   color: var(--color-primary);
   font-weight: 600;
+  padding: 2rem;
 }
 
 .duration {
-  margin-bottom: 1rem;
   font-size: .9rem;
   opacity: .7;
+  padding-left: 2rem;
 }
 
 .description {
-  padding-left: 1.2rem;
+  padding: 1rem 3rem;
 }
 
 .description li {
@@ -68,10 +70,6 @@
   .container {
     padding: 4rem 4rem 1rem 4rem;
 
-  }
-
-  .card {
-    padding: 1.5rem;
   }
 
   .title {
