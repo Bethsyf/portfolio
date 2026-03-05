@@ -15,10 +15,7 @@ interface Project {
 }
 
 export default function ProjectsView() {
-  const renderProjects = (
-    list: Project[],
-    showRepo: boolean = true
-  ) => {
+  const renderProjects = (list: Project[], showRepo: boolean = true) => {
     return list.map((project) => (
       <CardControl key={project.title}>
         <Image
@@ -52,9 +49,7 @@ export default function ProjectsView() {
               )}
             </div>
           </header>
-          <p className={s.tech}>
-            {project.technologies}
-          </p>
+          <p className={s.tech}>{project.technologies}</p>
         </div>
       </CardControl>
     ));
@@ -63,16 +58,15 @@ export default function ProjectsView() {
   return (
     <div id="projects">
       <SectionLayout paddingY="8rem" align="center">
-        <SectionHeader title="Proyectos" description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
-        escalables y alineadas con las mejores prácticas de desarrollo frontend."/>
+        <SectionHeader
+          title="Proyectos"
+          description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
+        escalables y alineadas con las mejores prácticas de desarrollo frontend."
+        />
         <h3 className={s.sectionTitle}>Académicos</h3>
-        <div className={s.grid}>
-          {renderProjects(projects.academicProjects)}
-        </div>
+        <div className={s.grid}>{renderProjects(projects.academicProjects)}</div>
         <h3 className={s.sectionTitle}>Reales</h3>
-        <div className={s.grid}>
-          {renderProjects(projects.realProjects, false)}
-        </div>
+        <div className={s.grid}>{renderProjects(projects.realProjects, false)}</div>
       </SectionLayout>
     </div>
   );

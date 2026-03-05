@@ -7,26 +7,14 @@ interface SectionHeaderProps {
   description?: string;
 }
 
-export default function SectionHeader({
-  id,
-  title,
-  description,
-}: SectionHeaderProps) {
+export default function SectionHeader({ id, title, description }: SectionHeaderProps) {
   return (
     <header id={id} className={s.header}>
-      <TextControl
-        as="h2"
-        variant="title"
-        align="center"
-      >
+      <TextControl as="h2" variant="title" align="center">
         {title}
       </TextControl>
       {description && (
-        <TextControl
-          variant="subtitle"
-          align="justify"
-          className={s.description}
-        >
+        <TextControl variant="subtitle" align="justify" className={s.description}>
           {description}
         </TextControl>
       )}

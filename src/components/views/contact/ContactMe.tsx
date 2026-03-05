@@ -20,9 +20,7 @@ const validationSchema = Yup.object({
     .min(3, "Mínimo 3 caracteres")
     .max(30, "Máximo 30 caracteres")
     .required("Nombre requerido"),
-  email: Yup.string()
-    .email("Correo no válido")
-    .required("Correo requerido"),
+  email: Yup.string().email("Correo no válido").required("Correo requerido"),
   message: Yup.string()
     .min(3, "Mínimo 3 caracteres")
     .max(500, "Máximo 500 caracteres")
@@ -32,7 +30,7 @@ const validationSchema = Yup.object({
 export default function ContactMe() {
   const handleSubmit = async (
     values: ContactFormValues,
-    { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>
+    { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>,
   ) => {
     try {
       const response = await fetch("/api/contact", {
@@ -42,8 +40,7 @@ export default function ContactMe() {
         },
         body: JSON.stringify(values),
       });
-      if (!response.ok)
-        throw new Error("Error al enviar");
+      if (!response.ok) throw new Error("Error al enviar");
       resetForm();
       alert("Mensaje enviado correctamente. Te contactaré pronto.");
     } catch (error) {
@@ -56,9 +53,7 @@ export default function ContactMe() {
 
   return (
     <div className={s.contactForm}>
-      <h3 className={s.titleForm}>
-        Envíame un mensaje
-      </h3>
+      <h3 className={s.titleForm}>Envíame un mensaje</h3>
 
       <Formik
         initialValues={initialValues}
@@ -67,12 +62,7 @@ export default function ContactMe() {
       >
         {({ isSubmitting }) => (
           <Form className={s.form}>
-            <FormField
-              label="Nombre"
-              name="name"
-              type="text"
-              placeholder="Tu nombre"
-            />
+            <FormField label="Nombre" name="name" type="text" placeholder="Tu nombre" />
             <FormField
               label="Correo electrónico"
               name="email"
@@ -85,14 +75,8 @@ export default function ContactMe() {
               as="textarea"
               placeholder="Escribe tu mensaje"
             />
-            <ButtonControl
-              type="submit"
-              variant="primary"
-              size="md"
-            >
-              {isSubmitting
-                ? "Enviando..."
-                : "Enviar mensaje"}
+            <ButtonControl type="submit" variant="primary" size="md">
+              {isSubmitting ? "Enviando..." : "Enviar mensaje"}
             </ButtonControl>
           </Form>
         )}
@@ -107,20 +91,11 @@ interface FormFieldProps {
   type?: string;
   placeholder?: string;
   as?: string;
-
 }
-function FormField({
-  label,
-  name,
-  type = "text",
-  placeholder,
-  as,
-}: FormFieldProps) {
+function FormField({ label, name, type = "text", placeholder, as }: FormFieldProps) {
   return (
     <div className={s.formGroup}>
-      <label htmlFor={name}>
-        {label}
-      </label>
+      <label htmlFor={name}>{label}</label>
       <Field
         id={name}
         name={name}
@@ -129,11 +104,7 @@ function FormField({
         as={as}
         className={s.inputField}
       />
-      <ErrorMessage
-        name={name}
-        component="p"
-        className={s.error}
-      />
+      <ErrorMessage name={name} component="p" className={s.error} />
     </div>
   );
 }

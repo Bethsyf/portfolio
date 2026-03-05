@@ -1,20 +1,8 @@
 import { IconType } from "react-icons";
 
-import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-} from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 
-import {
-  SiAxios,
-  SiNextdotjs,
-  SiSass,
-  SiTailwindcss,
-  SiTypescript,
-} from "react-icons/si";
+import { SiAxios, SiNextdotjs, SiSass, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 import s from "./Technologies.module.scss";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";

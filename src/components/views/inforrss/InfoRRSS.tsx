@@ -23,11 +23,7 @@ const InfoRRSS = () => {
       </div>
       <div className={s.rrss}>
         <FaGithub />
-        <Link
-          href="https://github.com/Bethsyf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://github.com/Bethsyf" target="_blank" rel="noopener noreferrer">
           @Bethsyf
         </Link>
       </div>

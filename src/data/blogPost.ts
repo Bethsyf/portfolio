@@ -71,8 +71,7 @@ Y este blog es parte de ese proceso.
 
     image: "/blog/blog2.jpg",
 
-    description:
-      "Mi enfoque para aprender frameworks modernos construyendo soluciones reales.",
+    description: "Mi enfoque para aprender frameworks modernos construyendo soluciones reales.",
 
     date: "2026-02-18",
 
@@ -128,8 +127,7 @@ Y esa es la diferencia entre estudiar y aprender.
 
     image: "/blog/blog3.jpg",
 
-    description:
-      "Cómo analizo problemas técnicos y desarrollo soluciones paso a paso.",
+    description: "Cómo analizo problemas técnicos y desarrollo soluciones paso a paso.",
 
     date: "2026-02-19",
 

@@ -7,18 +7,8 @@ interface CardControlProps {
   hoverable?: boolean;
 }
 
-export default function CardControl({
-  children,
-  className,
-  hoverable = true,
-}: CardControlProps) {
-  const classes = [
-    s.card,
-    hoverable && s.hoverable,
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+export default function CardControl({ children, className, hoverable = true }: CardControlProps) {
+  const classes = [s.card, hoverable && s.hoverable, className].filter(Boolean).join(" ");
 
   return <article className={classes}>{children}</article>;
 }

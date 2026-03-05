@@ -14,11 +14,14 @@ export default function BlogPreview() {
     <section id="blog">
       <SectionLayout paddingY="8rem" align="center">
         <div className={styles.content}>
-          <SectionHeader title={" Blog"} description="Aquí documento mi proceso de reconectar con el desarrollo frontend,
-          repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino." />
+          <SectionHeader
+            title={" Blog"}
+            description="Aquí documento mi proceso de reconectar con el desarrollo frontend,
+          repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino."
+          />
           <div className={styles.grid}>
             {previewPosts.map((post) => (
-              <CardControl key={post.slug} >
+              <CardControl key={post.slug}>
                 <Link href={`/blog/${post.slug}`}>
                   <Image
                     src={post.image}
@@ -28,21 +31,15 @@ export default function BlogPreview() {
                     className={styles.image}
                   />
                   <div className={styles.cardContent}>
-                    <h3>
-                      {post.title}
-                    </h3>
-                    <p>
-                      {post.description}
-                    </p>
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
                   </div>
                 </Link>
               </CardControl>
             ))}
           </div>
           <div className={styles.buttons}>
-            <ButtonControl href="/blog">
-              Ver todos los artículos
-            </ButtonControl>
+            <ButtonControl href="/blog">Ver todos los artículos</ButtonControl>
           </div>
         </div>
       </SectionLayout>

@@ -9,8 +9,11 @@ export default function ContactSection() {
     <section id="contact">
       <SectionLayout paddingY="8rem" align="center">
         <div className={s.content}>
-          <SectionHeader title={"Contacto"} description="¿Tienes una oportunidad o proyecto en mente?
-            Estaré encantada de conversar contigo."/>
+          <SectionHeader
+            title={"Contacto"}
+            description="¿Tienes una oportunidad o proyecto en mente?
+            Estaré encantada de conversar contigo."
+          />
           <div className={s.grid}>
             <ContactMe />
             <InfoRRSS />

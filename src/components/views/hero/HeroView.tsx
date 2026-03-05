@@ -19,14 +19,11 @@ export default function HeroView() {
             Frontend Developer
           </TextControl>
 
-          <TextControl
-            variant="body"
-            className={styles.description}
-          >
-            👋 Soy Bethsy Falcon, desarrolladora Frontend especializada en React,
-            Next.js y TypeScript. Me enfoco en crear interfaces modernas,
-            escalables y centradas en el usuario, integrando frontend con backend
-            para construir aplicaciones completas y eficientes.
+          <TextControl variant="body" className={styles.description}>
+            👋 Soy Bethsy Falcon, desarrolladora Frontend especializada en React, Next.js y
+            TypeScript. Me enfoco en crear interfaces modernas, escalables y centradas en el
+            usuario, integrando frontend con backend para construir aplicaciones completas y
+            eficientes.
           </TextControl>
         </div>
 
@@ -58,13 +55,7 @@ export default function HeroView() {
 
       <div className={styles.right}>
         <div className={styles.imageWrapper}>
-          <Image
-            src={myPhoto}
-            alt="Bethsy Falcon"
-            fill
-            priority
-            className={styles.image}
-          />
+          <Image src={myPhoto} alt="Bethsy Falcon" fill priority className={styles.image} />
         </div>
       </div>
     </section>

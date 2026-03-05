@@ -1,13 +1,13 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
+  if (req.method === "POST") {
     try {
       const { name, email, message } = req.body;
 
       const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        service: "gmail",
         auth: {
           user: process.env.GMAIL_USER,
           pass: process.env.GMAIL_PASS,
@@ -29,13 +29,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         `,
       });
 
-      res.status(200).json({ message: 'Correo enviado exitosamente' });
+      res.status(200).json({ message: "Correo enviado exitosamente" });
     } catch (error) {
-      console.error('Error enviando correo:', error);
-      res.status(500).json({ message: 'Error enviando correo' });
+      console.error("Error enviando correo:", error);
+      res.status(500).json({ message: "Error enviando correo" });
     }
   } else {
-    res.setHeader('Allow', ['POST']);
+    res.setHeader("Allow", ["POST"]);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 }

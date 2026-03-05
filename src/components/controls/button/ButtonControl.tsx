@@ -16,78 +16,60 @@ type ButtonProps = BaseProps &
   React.ButtonHTMLAttributes<HTMLButtonElement> &
   React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-const ButtonControl = forwardRef<
-  HTMLButtonElement | HTMLAnchorElement,
-  ButtonProps
->(function ButtonControl(
-  {
-    children,
-    variant = "primary",
-    size = "md",
-    href,
-    download,
-    className,
-    ...rest
-  },
-  ref
-) {
-  const classes = [
-    s.button,
-    s[variant],
-    variant !== "icon" && s[size],
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+const ButtonControl = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+  function ButtonControl(
+    { children, variant = "primary", size = "md", href, download, className, ...rest },
+    ref,
+  ) {
+    const classes = [s.button, s[variant], variant !== "icon" && s[size], className]
+      .filter(Boolean)
+      .join(" ");
 
-  if (href) {
-    const isExternal = href.startsWith("http");
+    if (href) {
+      const isExternal = href.startsWith("http");
 
-    if (download) {
+      if (download) {
+        return (
+          <a
+            href={href}
+            download
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            className={classes}
+            {...rest}
+          >
+            {children}
+          </a>
+        );
+      }
+
+      if (isExternal) {
+        return (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            ref={ref as React.Ref<HTMLAnchorElement>}
+            className={classes}
+            {...rest}
+          >
+            {children}
+          </a>
+        );
+      }
+
       return (
-        <a
-          href={href}
-          download
-          ref={ref as React.Ref<HTMLAnchorElement>}
-          className={classes}
-          {...rest}
-        >
+        <Link href={href} className={classes}>
           {children}
-        </a>
-      );
-    }
-
-    if (isExternal) {
-      return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          ref={ref as React.Ref<HTMLAnchorElement>}
-          className={classes}
-          {...rest}
-        >
-          {children}
-        </a>
+        </Link>
       );
     }
 
     return (
-      <Link href={href} className={classes}>
+      <button ref={ref as React.Ref<HTMLButtonElement>} className={classes} {...rest}>
         {children}
-      </Link>
+      </button>
     );
-  }
-
-  return (
-    <button
-      ref={ref as React.Ref<HTMLButtonElement>}
-      className={classes}
-      {...rest}
-    >
-      {children}
-    </button>
-  );
-});
+  },
+);
 
 export default ButtonControl;

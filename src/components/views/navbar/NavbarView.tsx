@@ -1,26 +1,26 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { FiCode } from 'react-icons/fi';
-import { TiThMenu } from 'react-icons/ti';
-import { FaTimes } from 'react-icons/fa';
-import { FiDownload } from 'react-icons/fi';
-import s from './NavbarView.module.scss';
-import ThemeToggleView from '@/components/controls/themeToggle/ThemeToggleControl';
+import { useState } from "react";
+import Link from "next/link";
+import { FiCode } from "react-icons/fi";
+import { TiThMenu } from "react-icons/ti";
+import { FaTimes } from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+import s from "./NavbarView.module.scss";
+import ThemeToggleView from "@/components/controls/themeToggle/ThemeToggleControl";
 
 const navItems = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Tecnologías', href: '#technologies' },
-  { label: 'Proyectos', href: '#projects' },
-  { label: 'Experiencia', href: '#experience' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contáctame', href: '#contact' },
+  { label: "Inicio", href: "/" },
+  { label: "Tecnologías", href: "#technologies" },
+  { label: "Proyectos", href: "#projects" },
+  { label: "Experiencia", href: "#experience" },
+  { label: "Blog", href: "#blog" },
+  { label: "Contáctame", href: "#contact" },
 ];
 
 const NavbarView = () => {
   const [toggle, setToggle] = useState(false);
-  const handleToggle = () => setToggle(prev => !prev);
+  const handleToggle = () => setToggle((prev) => !prev);
   const renderNavItems = (onClick?: () => void) =>
-    navItems.map(item => (
+    navItems.map((item) => (
       <li key={item.label} className={s.item}>
         <Link className={s.link} href={item.href} onClick={onClick}>
           {item.label}

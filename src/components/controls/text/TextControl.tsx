@@ -17,10 +17,6 @@ export default function TextControl({
   className = "",
 }: TextControlProps) {
   return (
-    <Component
-      className={`${s.text} ${s[variant]} ${s[align]} ${className}`}
-    >
-      {children}
-    </Component>
+    <Component className={`${s.text} ${s[variant]} ${s[align]} ${className}`}>{children}</Component>
   );
 }

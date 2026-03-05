@@ -1,10 +1,9 @@
 {
-    "navbar": {
-      "home": "Home",
-      "technologies": "Technologies",
-      "projects": "Projects",
-      "experience": "Experience",
-      "contactMe": "Contact Me"
-    }
+  "navbar": {
+    "home": "Home",
+    "technologies": "Technologies",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contactMe": "Contact Me"
   }
-  
+}

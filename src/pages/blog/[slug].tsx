@@ -8,9 +8,7 @@ import Image from "next/image";
 export default function BlogPostPage() {
   const router = useRouter();
   const { slug } = router.query;
-  const post = blogPosts.find(
-    (post) => post.slug === slug
-  );
+  const post = blogPosts.find((post) => post.slug === slug);
   if (!post) return null;
 
   return (
@@ -29,25 +27,15 @@ export default function BlogPostPage() {
         </Link>
         <article className={styles.article}>
           <div className={styles.imageWrapper}>
-            <Image
-              src={post.image}
-              alt={post.title}
-              fill
-              className={styles.image}
-              priority
-            />
+            <Image src={post.image} alt={post.title} fill className={styles.image} priority />
           </div>
           <header className={styles.header}>
-            <h1 className={styles.title}>
-              {post.title}
-            </h1>
+            <h1 className={styles.title}>{post.title}</h1>
             <span className={styles.meta}>
               {post.date} • {post.readingTime}
             </span>
           </header>
-          <div className={styles.content}>
-            {post.content}
-          </div>
+          <div className={styles.content}>{post.content}</div>
         </article>
       </main>
     </>
