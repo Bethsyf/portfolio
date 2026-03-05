@@ -20,7 +20,7 @@ export default function ProjectsView() {
     showRepo: boolean = true
   ) => {
     return list.map((project) => (
-      <CardControl>
+      <CardControl key={project.title}>
         <Image
           src={project.imageUrl}
           alt={`Preview ${project.title}`}
