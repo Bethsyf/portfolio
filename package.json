@@ -29,10 +29,12 @@
     "react-icons": "^4.11.0",
     "sass": "^1.62.0",
     "typescript": "5.0.4",
-    "uuid": "^9.0.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.6"
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-n": "^17.24.0",
+    "eslint-plugin-promise": "^7.2.1"
   }
 }
