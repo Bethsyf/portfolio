@@ -1,5 +1,5 @@
 import React from "react";
-import s from "./Textcontrol.module.scss";
+import s from "./TextControl.module.scss";
 
 interface TextControlProps {
   as?: "h1" | "h2" | "h3" | "p" | "span";
