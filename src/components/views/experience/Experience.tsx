@@ -22,9 +22,9 @@ const experiences: ExperienceProps[] = [
 export default function ExperienceView() {
   return (
     <section id="experience">
-      <SectionLayout paddingY="8rem" align="left">
+      <SectionLayout paddingY="8rem" align="center">
         <SectionHeader title="Experiencia" description=" Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
-          escalabilidad y una experiencia de usuario intuitiva." align="center" />
+          escalabilidad y una experiencia de usuario intuitiva."/>
         <div className={s.list}>
           {experiences.map((exp) => (
             <CardControl key={exp.role} hoverable={false}>

@@ -64,7 +64,7 @@ export default function ProjectsView() {
     <div id="projects">
       <SectionLayout paddingY="8rem" align="center">
         <SectionHeader title="Proyectos" description="Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, 
-        escalables y alineadas con las mejores prácticas de desarrollo frontend." align="center" />
+        escalables y alineadas con las mejores prácticas de desarrollo frontend."/>
         <h3 className={s.sectionTitle}>Académicos</h3>
         <div className={s.grid}>
           {renderProjects(projects.academicProjects)}

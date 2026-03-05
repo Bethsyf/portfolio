@@ -45,7 +45,6 @@ export default function TechnologiesView() {
         <SectionHeader
           title="Tecnologías"
           description="Este es el stack de tecnologías con el que trabajo para desarrollar aplicaciones frontend modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida."
-          align="center"
         />
         <div className={s.techList}>
           {technologies.map(({ name, icon: Icon }) => (

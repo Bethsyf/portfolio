@@ -1,14 +1,13 @@
 import Head from 'next/head';
-
 import styles from '@/styles/pages/Home.module.scss';
 import NavbarView from '@/components/views/navbar/NavbarView';
-import AboutMe from '@/components/views/aboutMe/AboutMe';
 import Footer from '@/components/views/footer/Footer';
 import ProjectsView from '@/components/views/projects/ProjectsView';
 import TechnologiesView from '@/components/views/technologies/Technologies';
 import ExperienceView from '@/components/views/experience/Experience';
 import BlogPreview from '@/components/views/blog/Blog';
 import ContactSection from '@/components/views/contact/ContactSection';
+import HeroView from '@/components/views/hero/HeroView';
 
 export default function Home() {
   return (
@@ -36,7 +35,7 @@ export default function Home() {
 
       <main className={styles.main} id="home">
         <NavbarView />
-        <AboutMe />
+        <HeroView />
         <TechnologiesView />
         <ProjectsView />
         <ExperienceView />

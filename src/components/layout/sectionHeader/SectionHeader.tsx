@@ -1,27 +1,34 @@
+import TextControl from "@/components/controls/text/TextControl";
 import s from "./SectionHeader.module.scss";
 
 interface SectionHeaderProps {
   id?: string;
   title: string;
   description?: string;
-  align?: "left" | "center";
 }
 
 export default function SectionHeader({
   id,
   title,
   description,
-  align = "left",
 }: SectionHeaderProps) {
   return (
-    <header
-      id={id}
-      className={`${s.header} ${s[align]}`}>
-      <h2 className={s.title}>{title}</h2>
+    <header id={id} className={s.header}>
+      <TextControl
+        as="h2"
+        variant="title"
+        align="center"
+      >
+        {title}
+      </TextControl>
       {description && (
-        <p className={s.description}>
+        <TextControl
+          variant="subtitle"
+          align="justify"
+          className={s.description}
+        >
           {description}
-        </p>
+        </TextControl>
       )}
     </header>
   );
