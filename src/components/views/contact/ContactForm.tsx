@@ -1,6 +1,6 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import s from "./ContactMe.module.scss";
+import s from "./ContactForm.module.scss";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 
 interface ContactFormValues {
@@ -27,7 +27,7 @@ const validationSchema = Yup.object({
     .required("Mensaje requerido"),
 });
 
-export default function ContactMe() {
+export default function ContactForm() {
   const handleSubmit = async (
     values: ContactFormValues,
     { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>,

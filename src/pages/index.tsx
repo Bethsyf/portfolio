@@ -6,8 +6,8 @@ import ProjectsView from "@/components/views/projects/ProjectsView";
 import TechnologiesView from "@/components/views/technologies/Technologies";
 import ExperienceView from "@/components/views/experience/Experience";
 import BlogPreview from "@/components/views/blog/Blog";
-import ContactSection from "@/components/views/contact/ContactSection";
 import HeroView from "@/components/views/hero/HeroView";
+import ContactView from "@/components/views/contact/ContactView";
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
         <ProjectsView />
         <ExperienceView />
         <BlogPreview />
-        <ContactSection />
+        <ContactView />
         <Footer />
       </main>
     </>
