@@ -24,7 +24,13 @@ const BlogPage = () => {
           {blogPosts.map((post) => (
             <CardControl key={post.slug}>
               <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
-                <Image src={post.image} alt={post.title} className={styles.image} />
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  className={styles.image}
+                  width={400}
+                  height={220}
+                />
                 <div className={styles.cardContent}>
                   <h3 className={styles.cardTitle}>{post.title}</h3>
                   <p className={styles.cardDescription}>{post.description}</p>

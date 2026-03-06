@@ -27,7 +27,14 @@ export default function BlogPostPage() {
         </Link>
         <article className={styles.article}>
           <div className={styles.imageWrapper}>
-            <Image src={post.image} alt={post.title} fill className={styles.image} priority />
+            <Image
+              width={800}
+              height={600}
+              src={post.image}
+              alt={post.title}
+              className={styles.image}
+              priority
+            />
           </div>
           <header className={styles.header}>
             <h1 className={styles.title}>{post.title}</h1>
