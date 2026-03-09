@@ -1,11 +1,23 @@
 import Image from "next/image";
+
 import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
-import myPhoto from "../../../../public/bethsy.png";
-import ButtonControl from "@/components/controls/button/ButtonControl";
-import styles from "./HeroView.module.scss";
-import TextControl from "@/components/controls/text/TextControl";
 import { SiNextdotjs, SiSass, SiTypescript } from "react-icons/si";
+
+import myPhoto from "../../../../public/bethsy.png";
+
+import ButtonControl from "@/components/controls/button/ButtonControl";
+import TextControl from "@/components/controls/text/TextControl";
+
+import styles from "./HeroView.module.scss";
+
+const technologies = [
+  { Icon: FaReact, label: "React" },
+  { Icon: SiNextdotjs, label: "Next.js" },
+  { Icon: SiTypescript, label: "TypeScript" },
+  { Icon: SiSass, label: "SCSS / Sass" },
+  { Icon: FaNodeJs, label: "Node.js" },
+];
 
 export default function HeroView() {
   return (
@@ -21,22 +33,19 @@ export default function HeroView() {
           </TextControl>
 
           <TextControl variant="body" className={styles.description}>
-            👋 Soy Bethsy Falcon, desarrolladora Frontend especializada en React, Next.js y
-            TypeScript. Me enfoco en crear interfaces modernas, escalables y centradas en el
-            usuario, integrando frontend con backend para construir aplicaciones completas y
-            eficientes.
+            Soy desarrolladora Frontend especializada en React, Next.js y TypeScript. Construyo
+            interfaces modernas, escalables y centradas en el usuario.
           </TextControl>
         </div>
+
         <div className={styles.techStack}>
-          <FaReact title="React" />
-          <SiNextdotjs title="Next.js" />
-          <SiTypescript title="TypeScript" />
-          <SiSass title="SCSS / Sass" />
-          <FaNodeJs title="Node.js" />
+          {technologies.map(({ Icon, label }) => (
+            <Icon key={label} aria-label={label} title={label} />
+          ))}
         </div>
+
         <div className={styles.buttons}>
           <ButtonControl href="#projects">
-            {" "}
             <FiGrid />
             Ver proyectos
           </ButtonControl>
@@ -51,6 +60,7 @@ export default function HeroView() {
             target="_blank"
             rel="noopener noreferrer"
             variant="icon"
+            aria-label="Github"
           >
             <FaGithub />
           </ButtonControl>
@@ -60,6 +70,7 @@ export default function HeroView() {
             target="_blank"
             rel="noopener noreferrer"
             variant="icon"
+            aria-label="LinkedIn"
           >
             <FaLinkedinIn />
           </ButtonControl>
@@ -68,7 +79,13 @@ export default function HeroView() {
 
       <div className={styles.right}>
         <div className={styles.imageWrapper}>
-          <Image src={myPhoto} alt="Bethsy Falcon" fill priority className={styles.image} />
+          <Image
+            src={myPhoto}
+            alt="Bethsy Falcon - Frontend Developer"
+            fill
+            priority
+            className={styles.image}
+          />
         </div>
       </div>
     </section>
