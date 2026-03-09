@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
 import myPhoto from "../../../../public/bethsy.png";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import styles from "./HeroView.module.scss";
 import TextControl from "@/components/controls/text/TextControl";
+import { SiNextdotjs, SiSass, SiTypescript } from "react-icons/si";
 
 export default function HeroView() {
   return (
@@ -26,7 +27,13 @@ export default function HeroView() {
             eficientes.
           </TextControl>
         </div>
-
+        <div className={styles.techStack}>
+          <FaReact title="React" />
+          <SiNextdotjs title="Next.js" />
+          <SiTypescript title="TypeScript" />
+          <SiSass title="SCSS / Sass" />
+          <FaNodeJs title="Node.js" />
+        </div>
         <div className={styles.buttons}>
           <ButtonControl href="#projects">
             {" "}

@@ -1,16 +1,18 @@
 .container {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
   min-height: calc(100vh - 80px);
+  text-align: center;
 }
 
 .left {
-  flex: 1;
+  width: 100%;
 }
 
 .textBlock {
@@ -20,13 +22,35 @@
 }
 
 .description {
-  max-width: 500px;
+  max-width: 100%;
   opacity: 0.9;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  opacity: 0.9;
+  color: var(--color-primary-hover);
+  svg {
+    transition:
+      transform 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  svg:hover {
+    transform: translateY(-4px) scale(1.1);
+    opacity: 1;
+  }
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.8rem;
   margin-top: 2rem;
 }
@@ -47,17 +71,32 @@
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .container {
-    flex-direction: column-reverse;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
+    gap: 4rem;
+  }
+
+  .left {
+    flex: 1;
   }
 
   .description {
-    max-width: 100%;
+    max-width: 500px;
   }
 
   .buttons {
-    justify-content: center;
+    justify-content: flex-start;
+  }
+
+  .techStack {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    gap: 6rem;
   }
 }
