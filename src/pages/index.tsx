@@ -2,7 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/pages/Home.module.scss";
 import NavbarView from "@/components/views/navbar/NavbarView";
 import Footer from "@/components/views/footer/Footer";
-import ProjectsView from "@/components/views/projects/ProjectsView";
+import ProjectsView from "@/components/views/projects/proyectView/ProjectsView";
 import TechnologiesView from "@/components/views/technologies/Technologies";
 import ExperienceView from "@/components/views/experience/Experience";
 import BlogPreview from "@/components/views/blog/Blog";

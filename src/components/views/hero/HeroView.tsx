@@ -9,7 +9,7 @@ import myPhoto from "../../../../public/bethsy.png";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import TextControl from "@/components/controls/text/TextControl";
 
-import styles from "./HeroView.module.scss";
+import s from "./HeroView.module.scss";
 
 const technologies = [
   { Icon: FaReact, label: "React" },
@@ -21,9 +21,9 @@ const technologies = [
 
 export default function HeroView() {
   return (
-    <section className={styles.container}>
-      <div className={styles.left}>
-        <div className={styles.textBlock}>
+    <section className={s.container}>
+      <div className={s.left}>
+        <div className={s.textBlock}>
           <TextControl as="h1" variant="hero">
             Bethsy Falcon
           </TextControl>
@@ -32,19 +32,19 @@ export default function HeroView() {
             Frontend Developer
           </TextControl>
 
-          <TextControl variant="body" className={styles.description}>
+          <TextControl variant="body" className={s.description}>
             Soy desarrolladora Frontend especializada en React, Next.js y TypeScript. Construyo
             interfaces modernas, escalables y centradas en el usuario.
           </TextControl>
         </div>
 
-        <div className={styles.techStack}>
+        <div className={s.techStack}>
           {technologies.map(({ Icon, label }) => (
             <Icon key={label} aria-label={label} title={label} />
           ))}
         </div>
 
-        <div className={styles.buttons}>
+        <div className={s.buttons}>
           <ButtonControl href="#projects">
             <FiGrid />
             Ver proyectos
@@ -77,14 +77,14 @@ export default function HeroView() {
         </div>
       </div>
 
-      <div className={styles.right}>
-        <div className={styles.imageWrapper}>
+      <div className={s.right}>
+        <div className={s.imageWrapper}>
           <Image
             src={myPhoto}
             alt="Bethsy Falcon - Frontend Developer"
             fill
             priority
-            className={styles.image}
+            className={s.image}
           />
         </div>
       </div>

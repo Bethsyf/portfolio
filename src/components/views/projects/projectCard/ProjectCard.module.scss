@@ -1,19 +1,6 @@
-.sectionTitle {
-  font-size: 1.8rem;
-  margin: 3rem 0 1.5rem;
-  background: var(--color-bg-secondary);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
 .image {
   width: 100%;
-  height: auto;
+  height: 150px;
   border-top-left-radius: var(--radius-md);
   border-top-right-radius: var(--radius-md);
   overflow: hidden;
@@ -46,15 +33,4 @@
 
 .links a:hover {
   color: var(--color-primary-hover);
-}
-
-.tech {
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 4rem 4rem 0rem 4rem;
-  }
 }
