@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiGrid } from "react-icons/fi";
 import myPhoto from "../../../../public/bethsy.png";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import styles from "./HeroView.module.scss";
@@ -28,6 +28,12 @@ export default function HeroView() {
         </div>
 
         <div className={styles.buttons}>
+          <ButtonControl href="#projects">
+            {" "}
+            <FiGrid />
+            Ver proyectos
+          </ButtonControl>
+
           <ButtonControl href="/cv.pdf" download>
             <FiDownload />
             Descargar CV
