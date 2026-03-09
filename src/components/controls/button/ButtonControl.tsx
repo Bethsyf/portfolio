@@ -16,7 +16,7 @@ type ButtonProps = BaseProps &
   React.ButtonHTMLAttributes<HTMLButtonElement> &
   React.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-const ButtonControl = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
+export default forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   function ButtonControl(
     { children, variant = "primary", size = "md", href, download, className, ...rest },
     ref,
@@ -71,5 +71,3 @@ const ButtonControl = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
     );
   },
 );
-
-export default ButtonControl;
