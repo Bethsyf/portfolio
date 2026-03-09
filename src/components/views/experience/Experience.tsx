@@ -1,8 +1,11 @@
 import CardControl from "@/components/controls/card/CardControl";
-import s from "./Experience.module.scss";
-import { ExperienceProps } from "./Experienceprops";
+import TextControl from "@/components/controls/text/TextControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+
+import { ExperienceProps } from "./Experienceprops";
+
+import s from "./Experience.module.scss";
 
 const experiences: ExperienceProps[] = [
   {
@@ -25,20 +28,32 @@ export default function ExperienceView() {
       <SectionLayout paddingY="8rem" align="center">
         <SectionHeader
           title="Experiencia"
-          description=" Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
+          description="Experiencia profesional desarrollando interfaces frontend modernas, enfocadas en rendimiento,
           escalabilidad y una experiencia de usuario intuitiva."
         />
+
         <div className={s.list}>
           {experiences.map((exp) => (
             <CardControl key={exp.role} hoverable={false}>
               <header className={s.header}>
-                <h3>{exp.role}</h3>
-                <span>{exp.company}</span>
+                <TextControl as="h3" variant="title" className={s.role}>
+                  {exp.role}
+                </TextControl>
+
+                <TextControl variant="caption" className={s.company}>
+                  {exp.company}
+                </TextControl>
               </header>
-              <p className={s.duration}>{exp.duration}</p>
+
+              <TextControl variant="caption" className={s.duration}>
+                {exp.duration}
+              </TextControl>
+
               <ul className={s.description}>
                 {exp.description.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>
+                    <TextControl variant="body">{item}</TextControl>
+                  </li>
                 ))}
               </ul>
             </CardControl>

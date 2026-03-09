@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { FaGithub, FaRocket } from "react-icons/fa";
+
 import CardControl from "@/components/controls/card/CardControl";
-import { FaRocket, FaGithub } from "react-icons/fa";
-import s from "./ProjectCard.module.scss";
 import TextControl from "@/components/controls/text/TextControl";
+
+import s from "./ProjectCard.module.scss";
 
 interface Project {
   title: string;

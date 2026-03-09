@@ -1,10 +1,12 @@
-import s from "./ProjectsView.module.scss";
 import projects from "@/data/projects.json";
 
+import TextControl from "@/components/controls/text/TextControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+
 import ProjectCard from "../projectCard/ProjectCard";
-import TextControl from "@/components/controls/text/TextControl";
+
+import s from "./ProjectsView.module.scss";
 
 export default function ProjectsView() {
   const renderProjects = (list: any[], showRepo = true) =>
