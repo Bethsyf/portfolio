@@ -9,9 +9,7 @@ import ButtonControl from "@/components/controls/button/ButtonControl";
 import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./HeroView.module.scss";
-import { technologies } from "@/data/technologies";
-
-const heroTechnologies = technologies.filter((tech) => tech.featured);
+import { featuredTechnologies } from "@/data/technologies";
 
 export default function HeroView() {
   return (
@@ -33,8 +31,8 @@ export default function HeroView() {
         </div>
 
         <div className={s.techStack}>
-          {heroTechnologies.map(({ icon: Icon, name }) => (
-            <Icon key={name} />
+          {featuredTechnologies.map(({ name, icon: Icon }) => (
+            <Icon key={name} aria-label={name} />
           ))}
         </div>
 
