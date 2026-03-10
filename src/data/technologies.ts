@@ -14,6 +14,8 @@ import {
   SiMongodb,
   SiPostman,
   SiSlack,
+  SiVisualstudiocode,
+  SiFigma,
 } from "react-icons/si";
 
 export type Technology = {
@@ -46,6 +48,8 @@ export const technologyCategories: TechnologyCategory[] = [
     category: "Tools",
     items: [
       { name: "GitHub", icon: FaGithub },
+      { name: "VS Code", icon: SiVisualstudiocode },
+      { name: "Figma", icon: SiFigma },
       { name: "Insomnia", icon: SiInsomnia },
       { name: "Postman", icon: SiPostman },
       { name: "Notion", icon: SiNotion },
