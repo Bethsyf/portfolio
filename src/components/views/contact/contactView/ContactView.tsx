@@ -1,8 +1,10 @@
-import s from "./ContactView.module.scss";
-import ContactForm from "./ContactForm";
-import InfoRRSS from "../inforrss/InfoRRSS";
+import ContactForm from "../contactForm/ContactForm";
+import InfoRRSS from "../../inforrss/InfoRRSS";
+
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+
+import s from "./ContactView.module.scss";
 
 export default function ContactView() {
   return (
