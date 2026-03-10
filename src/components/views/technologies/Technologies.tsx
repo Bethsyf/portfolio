@@ -7,24 +7,7 @@ import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 import s from "./Technologies.module.scss";
-
-type Technology = {
-  name: string;
-  icon: IconType;
-};
-
-const technologies: Technology[] = [
-  { name: "HTML", icon: FaHtml5 },
-  { name: "CSS", icon: FaCss3Alt },
-  { name: "JavaScript", icon: FaJs },
-  { name: "React", icon: FaReact },
-  { name: "Next.js", icon: SiNextdotjs },
-  { name: "TypeScript", icon: SiTypescript },
-  { name: "Sass", icon: SiSass },
-  { name: "Tailwind", icon: SiTailwindcss },
-  { name: "Axios", icon: SiAxios },
-  { name: "Node.js", icon: FaNodeJs },
-];
+import { technologies } from "@/data/technologies";
 
 export default function TechnologiesView() {
   return (

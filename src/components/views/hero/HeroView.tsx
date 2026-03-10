@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
-import { SiNextdotjs, SiSass, SiTypescript } from "react-icons/si";
 
 import myPhoto from "../../../../public/bethsy.png";
 
@@ -10,14 +9,9 @@ import ButtonControl from "@/components/controls/button/ButtonControl";
 import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./HeroView.module.scss";
+import { technologies } from "@/data/technologies";
 
-const technologies = [
-  { Icon: FaReact, label: "React" },
-  { Icon: SiNextdotjs, label: "Next.js" },
-  { Icon: SiTypescript, label: "TypeScript" },
-  { Icon: SiSass, label: "SCSS / Sass" },
-  { Icon: FaNodeJs, label: "Node.js" },
-];
+const heroTechnologies = technologies.filter((tech) => tech.featured);
 
 export default function HeroView() {
   return (
@@ -39,8 +33,8 @@ export default function HeroView() {
         </div>
 
         <div className={s.techStack}>
-          {technologies.map(({ Icon, label }) => (
-            <Icon key={label} aria-label={label} title={label} />
+          {heroTechnologies.map(({ icon: Icon, name }) => (
+            <Icon key={name} />
           ))}
         </div>
 
