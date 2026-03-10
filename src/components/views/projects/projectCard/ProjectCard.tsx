@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
+import ButtonControl from "@/components/controls/button/ButtonControl";
 import CardControl from "@/components/controls/card/CardControl";
 import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./ProjectCard.module.scss";
-import ButtonControl from "@/components/controls/button/ButtonControl";
 
 interface Project {
   title: string;
@@ -46,14 +46,17 @@ export default function ProjectCard({ project, showRepo = true }: ProjectCardPro
             >
               <FaExternalLinkAlt />
             </ButtonControl>
-            <ButtonControl
-              href={project.repoUrl}
-              target="_blank"
-              variant="icon"
-              aria-label="Ver proyecto"
-            >
-              <FaGithub />
-            </ButtonControl>
+
+            {project.repoUrl && (
+              <ButtonControl
+                href={project.repoUrl}
+                target="_blank"
+                variant="icon"
+                aria-label="Ver repositorio"
+              >
+                <FaGithub />
+              </ButtonControl>
+            )}
           </div>
         </header>
 

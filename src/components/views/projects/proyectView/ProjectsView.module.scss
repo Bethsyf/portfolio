@@ -1,6 +1,9 @@
 .sectionTitle {
   background: var(--color-bg-secondary);
   padding: 0.5rem 1rem;
+  color: var(--color-primary);
+  border-top-left-radius: var(--radius-md);
+  border-top-right-radius: var(--radius-md);
 }
 
 .grid {
@@ -8,4 +11,5 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  padding: 1rem;
 }
