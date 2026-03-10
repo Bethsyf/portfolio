@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { FaGithub, FaRocket } from "react-icons/fa";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 import CardControl from "@/components/controls/card/CardControl";
 import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./ProjectCard.module.scss";
+import ButtonControl from "@/components/controls/button/ButtonControl";
 
 interface Project {
   title: string;
@@ -37,25 +38,22 @@ export default function ProjectCard({ project, showRepo = true }: ProjectCardPro
           </TextControl>
 
           <div className={s.links}>
-            <a
+            <ButtonControl
               href={project.deployUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              variant="icon"
               aria-label="Ver proyecto"
             >
-              <FaRocket />
-            </a>
-
-            {showRepo && project.repoUrl && (
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Ver repositorio"
-              >
-                <FaGithub />
-              </a>
-            )}
+              <FaExternalLinkAlt />
+            </ButtonControl>
+            <ButtonControl
+              href={project.repoUrl}
+              target="_blank"
+              variant="icon"
+              aria-label="Ver proyecto"
+            >
+              <FaGithub />
+            </ButtonControl>
           </div>
         </header>
 

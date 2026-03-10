@@ -6,6 +6,7 @@ import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 import { ExperienceProps } from "./Experienceprops";
 
 import s from "./Experience.module.scss";
+import Link from "next/link";
 
 const experiences: ExperienceProps[] = [
   {
@@ -40,9 +41,11 @@ export default function ExperienceView() {
                   {exp.role}
                 </TextControl>
 
-                <TextControl variant="caption" className={s.company}>
-                  {exp.company}
-                </TextControl>
+                <Link href="https://www.kutai.co" target="_blank" rel="noopener noreferrer">
+                  <TextControl variant="caption" className={s.company}>
+                    {exp.company}
+                  </TextControl>
+                </Link>
               </header>
 
               <TextControl variant="caption" className={s.duration}>

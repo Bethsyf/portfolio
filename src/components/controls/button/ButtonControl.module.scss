@@ -37,6 +37,7 @@
 .icon:hover {
   background: var(--color-bg-secondary);
   transform: translateY(-2px);
+  border-color: var(--color-primary-hover);
 }
 
 .icon svg {
