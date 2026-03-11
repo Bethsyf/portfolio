@@ -1,9 +1,13 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
-import { blogPosts } from "@/data/blogPost";
-import styles from "@/styles/pages/PostPage.module.scss";
 import Image from "next/image";
+
+import { blogPosts } from "@/data/blogPost";
+
+import TextControl from "@/components/controls/text/TextControl";
+
+import s from "@/styles/pages/PostPage.module.scss";
 
 export default function BlogPostPage() {
   const router = useRouter();
@@ -21,28 +25,30 @@ export default function BlogPostPage() {
         <meta property="og:image" content={post.image} />
         <meta property="og:type" content="article" />
       </Head>
-      <main className={styles.container}>
-        <Link href="/blog" className={styles.back}>
+      <main className={s.container}>
+        <Link href="/blog" className={s.back}>
           ← Volver al blog
         </Link>
-        <article className={styles.article}>
-          <div className={styles.imageWrapper}>
+        <article className={s.article}>
+          <div className={s.imageWrapper}>
             <Image
               width={800}
               height={600}
               src={post.image}
               alt={post.title}
-              className={styles.image}
+              className={s.image}
               priority
             />
           </div>
-          <header className={styles.header}>
-            <h1 className={styles.title}>{post.title}</h1>
-            <span className={styles.meta}>
-              {post.date} • {post.readingTime}
-            </span>
+          <header className={s.header}>
+            <TextControl as="h1" variant="hero" className={s.title}>
+              {post.title}
+            </TextControl>
+            <TextControl as="span" variant="caption" className={s.meta}>
+              <time>{post.date}</time> • {post.readingTime}
+            </TextControl>
           </header>
-          <div className={styles.content}>{post.content}</div>
+          <div className={s.content}>{post.content}</div>
         </article>
       </main>
     </>
