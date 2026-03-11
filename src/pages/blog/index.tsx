@@ -1,45 +1,38 @@
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
-import styles from "@/styles/pages/BlogPage.module.scss";
+
 import { blogPosts } from "@/data/blogPost";
-import CardControl from "@/components/controls/card/CardControl";
+
+import TextControl from "@/components/controls/text/TextControl";
+import BlogCard from "@/components/views/blog/blogCard/BlogCard";
+
+import s from "@/styles/pages/BlogPage.module.scss";
 
 const BlogPage = () => {
+  const posts = blogPosts.slice(0, 3);
   return (
     <>
       <Head>
         <title>Blog | Bethsy Falcon</title>
       </Head>
-      <main className={styles.container}>
-        <Link href="/" className={styles.back}>
+
+      <main className={s.container}>
+        <Link href="/" className={s.back}>
           ← Volver al inicio
         </Link>
-        <h1 className={styles.title}>Reconectando con el código</h1>
-        <p className={styles.description}>
+
+        <TextControl as="h1" variant="title" className={s.title}>
+          Reconectando con el código
+        </TextControl>
+
+        <TextControl as="p" variant="body" className={s.description}>
           Reflexiones, aprendizajes y decisiones técnicas mientras fortalezco mis bases como
           frontend developer.
-        </p>
-        <div className={styles.grid}>
-          {blogPosts.map((post) => (
-            <CardControl key={post.slug}>
-              <Link key={post.slug} href={`/blog/${post.slug}`} className={styles.card}>
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  className={styles.image}
-                  width={400}
-                  height={220}
-                />
-                <div className={styles.cardContent}>
-                  <h3 className={styles.cardTitle}>{post.title}</h3>
-                  <p className={styles.cardDescription}>{post.description}</p>
-                  <span className={styles.meta}>
-                    {post.date} • {post.readingTime}
-                  </span>
-                </div>
-              </Link>{" "}
-            </CardControl>
+        </TextControl>
+
+        <div className={s.grid}>
+          {posts.map((post) => (
+            <BlogCard key={post.slug} {...post} />
           ))}
         </div>
       </main>
