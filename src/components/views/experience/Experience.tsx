@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import CardControl from "@/components/controls/card/CardControl";
 import TextControl from "@/components/controls/text/TextControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
@@ -6,7 +8,6 @@ import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 import { ExperienceProps } from "./Experienceprops";
 
 import s from "./Experience.module.scss";
-import Link from "next/link";
 
 const experiences: ExperienceProps[] = [
   {

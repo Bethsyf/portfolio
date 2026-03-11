@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import Link from "next/link";
+
 import s from "./ButtonControl.module.scss";
 
 type Variant = "primary" | "secondary" | "icon";

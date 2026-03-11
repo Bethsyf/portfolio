@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+
 import s from "./SectionLayout.module.scss";
 
 interface SectionLayoutProps {

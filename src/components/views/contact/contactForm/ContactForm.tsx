@@ -1,7 +1,9 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
-import s from "./ContactForm.module.scss";
+
 import ButtonControl from "@/components/controls/button/ButtonControl";
+
+import s from "./ContactForm.module.scss";
 
 interface ContactFormValues {
   name: string;

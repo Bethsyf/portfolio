@@ -1,6 +1,8 @@
-import { useTheme } from "@/hooks/useTheme";
-import ButtonControl from "@/components/controls/button/ButtonControl";
 import { FiMoon, FiSun } from "react-icons/fi";
+
+import { useTheme } from "@/hooks/useTheme";
+
+import ButtonControl from "@/components/controls/button/ButtonControl";
 
 export default function ThemeToggleControl() {
   const { theme, toggleTheme } = useTheme();

@@ -3,13 +3,13 @@ import Image from "next/image";
 import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
 
+import { featuredTechnologies } from "@/data/technologies";
 import myPhoto from "../../../../public/bethsy.png";
 
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./HeroView.module.scss";
-import { featuredTechnologies } from "@/data/technologies";
 
 export default function HeroView() {
   return (

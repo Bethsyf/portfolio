@@ -1,11 +1,12 @@
-import { useState } from "react";
 import Link from "next/link";
+import { useState } from "react";
 import { FiCode } from "react-icons/fi";
 import { TiThMenu } from "react-icons/ti";
 import { FaTimes } from "react-icons/fa";
-import { FiDownload } from "react-icons/fi";
-import s from "./NavbarView.module.scss";
+
 import ThemeToggleView from "@/components/controls/themeToggle/ThemeToggleControl";
+
+import s from "./NavbarView.module.scss";
 
 const navItems = [
   { label: "Inicio", href: "/" },

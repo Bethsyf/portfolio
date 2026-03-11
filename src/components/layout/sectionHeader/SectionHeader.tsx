@@ -1,4 +1,5 @@
 import TextControl from "@/components/controls/text/TextControl";
+
 import s from "./SectionHeader.module.scss";
 
 interface SectionHeaderProps {
