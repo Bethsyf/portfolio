@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import ButtonControl from "@/components/controls/button/ButtonControl";
 
 import s from "./ContactForm.module.scss";
+import TextControl from "@/components/controls/text/TextControl";
 
 interface ContactFormValues {
   name: string;
@@ -55,7 +56,9 @@ export default function ContactForm() {
 
   return (
     <div className={s.contactForm}>
-      <h3 className={s.titleForm}>Envíame un mensaje</h3>
+      <TextControl as="h3" variant="title" align="center" className={s.titleForm}>
+        Envíame un mensaje
+      </TextControl>
 
       <Formik
         initialValues={initialValues}

@@ -17,7 +17,7 @@ const navItems = [
   { label: "Contáctame", href: "#contact" },
 ];
 
-const NavbarView = () => {
+export default function NavbarView() {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle((prev) => !prev);
   const renderNavItems = (onClick?: () => void) =>
@@ -57,6 +57,4 @@ const NavbarView = () => {
       </div>
     </nav>
   );
-};
-
-export default NavbarView;
+}

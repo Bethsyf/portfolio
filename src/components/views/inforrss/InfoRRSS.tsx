@@ -1,10 +1,11 @@
+import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import Link from "next/link";
-import s from "./InfoRRSS.module.scss";
 
-const InfoRRSS = () => {
+import s from "./InfoRRSS.module.scss";
+s;
+export default function InfoRRSS() {
   return (
     <div className={s.info}>
       <div className={s.rrss}>
@@ -29,6 +30,4 @@ const InfoRRSS = () => {
       </div>
     </div>
   );
-};
-
-export default InfoRRSS;
+}

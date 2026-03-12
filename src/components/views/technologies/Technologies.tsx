@@ -5,6 +5,7 @@ import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 import CardControl from "@/components/controls/card/CardControl";
 
 import s from "./Technologies.module.scss";
+import TextControl from "@/components/controls/text/TextControl";
 
 export default function TechnologiesView() {
   return (
@@ -17,7 +18,9 @@ export default function TechnologiesView() {
         <div className={s.categories}>
           {technologyCategories.map(({ category, items }) => (
             <CardControl key={category} className={s.categoryCard}>
-              <h3 className={s.categoryTitle}>{category}</h3>
+              <TextControl as="h3" variant="title" align="center" className={s.categoryTitle}>
+                {category}
+              </TextControl>
 
               <ul className={s.techList}>
                 {items.map(({ name, icon: Icon }) => (
