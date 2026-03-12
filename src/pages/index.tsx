@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import NavbarView from "@/components/views/navbar/NavbarView";
+import Navbar from "@/components/layout/navbar/Navbar";
 import HeroView from "@/components/views/hero/HeroView";
 import TechnologiesView from "@/components/views/technologies/Technologies";
 import ProjectsView from "@/components/views/projects/proyectView/ProjectsView";
@@ -36,7 +36,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main} id="home">
-        <NavbarView />
+        <Navbar />
         <HeroView />
         <TechnologiesView />
         <ProjectsView />

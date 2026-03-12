@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 
 import ThemeToggleView from "@/components/controls/themeToggle/ThemeToggleControl";
 
-import s from "./NavbarView.module.scss";
+import s from "./Navbar.module.scss";
 
 const navItems = [
   { label: "Inicio", href: "/" },
@@ -17,7 +17,7 @@ const navItems = [
   { label: "Contáctame", href: "#contact" },
 ];
 
-export default function NavbarView() {
+export default function Navbar() {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle((prev) => !prev);
   const renderNavItems = (onClick?: () => void) =>
