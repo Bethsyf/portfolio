@@ -7,7 +7,7 @@ import ProjectsView from "@/components/views/projects/proyectView/ProjectsView";
 import ExperienceView from "@/components/views/experience/Experience";
 import BlogPreview from "@/components/views/blog/blogPreview/BlogPreview";
 import ContactView from "@/components/views/contact/contactView/ContactView";
-import Footer from "@/components/views/footer/Footer";
+import Footer from "@/components/layout/footer/Footer";
 
 import styles from "@/styles/pages/Home.module.scss";
 
