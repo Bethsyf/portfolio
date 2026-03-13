@@ -3,6 +3,8 @@ import InfoRRSS from "../../inforrss/InfoRRSS";
 
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+import TextControl from "@/components/controls/text/TextControl";
+import CardControl from "@/components/controls/card/CardControl";
 
 import s from "./ContactView.module.scss";
 
@@ -16,9 +18,30 @@ export default function ContactView() {
             description="¿Tienes una oportunidad o proyecto en mente?
             Estaré encantada de conversar contigo."
           />
+
           <div className={s.grid}>
             <ContactForm />
-            <InfoRRSS />
+
+            <CardControl hoverable={false} className={s.rightColumn}>
+              <InfoRRSS />
+
+              <div className={s.infoBlock}>
+                <div className={s.infoGroup}>
+                  <TextControl variant="label">Ubicación</TextControl>
+                  <TextControl>Medellín, Colombia</TextControl>
+                </div>
+
+                <div className={s.infoGroup}>
+                  <TextControl variant="label">Zona horaria</TextControl>
+                  <TextControl>GMT-5</TextControl>
+                </div>
+
+                <div className={s.infoGroup}>
+                  <TextControl variant="label">Trabajo remoto</TextControl>
+                  <TextControl>Disponible globalmente</TextControl>
+                </div>
+              </div>
+            </CardControl>
           </div>
         </div>
       </SectionLayout>
