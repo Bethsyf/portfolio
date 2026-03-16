@@ -5,21 +5,27 @@ import { TiThMenu } from "react-icons/ti";
 import { FaTimes } from "react-icons/fa";
 
 import ThemeToggleView from "@/components/controls/themeToggle/ThemeToggleControl";
+import LanguageToggleControl from "@/components/controls/languageToggle/LanguagetoggleControl";
 
 import s from "./Navbar.module.scss";
-
-const navItems = [
-  { label: "Inicio", href: "/" },
-  { label: "Tecnologías", href: "#technologies" },
-  { label: "Proyectos", href: "#projects" },
-  { label: "Experiencia", href: "#experience" },
-  { label: "Blog", href: "#blog" },
-  { label: "Contáctame", href: "#contact" },
-];
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function Navbar() {
   const [toggle, setToggle] = useState(false);
+
+  const t = useTranslation("navbar");
+
+  const navItems = [
+    { label: t.home, href: "/" },
+    { label: t.technologies, href: "#technologies" },
+    { label: t.projects, href: "#projects" },
+    { label: t.experience, href: "#experience" },
+    { label: t.blog, href: "#blog" },
+    { label: t.contact, href: "#contact" },
+  ];
+
   const handleToggle = () => setToggle((prev) => !prev);
+
   const renderNavItems = (onClick?: () => void) =>
     navItems.map((item) => (
       <li key={item.label} className={s.item}>
@@ -35,23 +41,36 @@ export default function Navbar() {
         <Link href="/">
           <FiCode className={s.iconCode} />
         </Link>
+
         <button onClick={handleToggle} className={s.btMenu} type="button">
           {toggle ? <FaTimes className={s.iconMenu} /> : <TiThMenu className={s.iconMenu} />}
         </button>
       </div>
+
       <div className={s.contMenu}>
-        {/* 📱 MOBILE */}
+        {/* MOBILE */}
         <ul className={`${toggle ? s.menu : s.menuHidden}`}>
           {renderNavItems(handleToggle)}
+
           <li className={s.item}>
             <ThemeToggleView />
           </li>
+
+          <li className={s.item}>
+            <LanguageToggleControl />
+          </li>
         </ul>
-        {/* 🖥 DESKTOP */}
+
+        {/* DESKTOP */}
         <ul className={s.menuDesk}>
           {renderNavItems()}
+
           <li className={s.item}>
             <ThemeToggleView />
+          </li>
+
+          <li className={s.item}>
+            <LanguageToggleControl />
           </li>
         </ul>
       </div>
