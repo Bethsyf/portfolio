@@ -3,9 +3,9 @@ import { technologyCategories } from "@/data/technologies";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 import CardControl from "@/components/controls/card/CardControl";
+import TextControl from "@/components/controls/text/TextControl";
 
 import s from "./Technologies.module.scss";
-import TextControl from "@/components/controls/text/TextControl";
 
 export default function TechnologiesView() {
   return (
