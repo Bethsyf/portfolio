@@ -1,10 +1,11 @@
 import Image from "next/image";
-
 import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
 
-import { featuredTechnologies } from "@/data/technologies";
+import { featuredTechnologies } from "@/data";
+import { profile } from "@/data";
 import myPhoto from "../../../../public/bethsy.png";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import ButtonControl from "@/components/controls/button/ButtonControl";
 import TextControl from "@/components/controls/text/TextControl";
@@ -12,21 +13,22 @@ import TextControl from "@/components/controls/text/TextControl";
 import s from "./HeroView.module.scss";
 
 export default function HeroView() {
+  const t = useTranslation("hero");
+
   return (
     <section className={s.container}>
       <div className={s.left}>
         <div className={s.textBlock}>
           <TextControl as="h1" variant="hero">
-            Bethsy Falcon
+            {profile.name}
           </TextControl>
 
           <TextControl as="h2" variant="label">
-            Frontend Developer
+            {t.role}
           </TextControl>
 
           <TextControl variant="body" className={s.description}>
-            Soy desarrolladora Frontend especializada en React, Next.js y TypeScript. Construyo
-            interfaces modernas, escalables y centradas en el usuario.
+            {t.description}
           </TextControl>
         </div>
 
@@ -39,30 +41,30 @@ export default function HeroView() {
         <div className={s.buttons}>
           <ButtonControl href="#projects">
             <FiGrid />
-            Ver proyectos
+            {t.projects}
           </ButtonControl>
 
-          <ButtonControl href="/cv.pdf" download>
+          <ButtonControl href={profile.cv} download>
             <FiDownload />
-            Descargar CV
+            {t.download}
           </ButtonControl>
 
           <ButtonControl
-            href="https://github.com/Bethsyf"
+            href={profile.github}
             target="_blank"
             rel="noopener noreferrer"
             variant="icon"
-            aria-label="Github"
+            aria-label={t.github}
           >
             <FaGithub />
           </ButtonControl>
 
           <ButtonControl
-            href="https://linkedin.com/in/bethsyfalcon-frontend"
+            href={profile.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             variant="icon"
-            aria-label="LinkedIn"
+            aria-label={t.linkedin}
           >
             <FaLinkedinIn />
           </ButtonControl>
@@ -71,13 +73,7 @@ export default function HeroView() {
 
       <div className={s.right}>
         <div className={s.imageWrapper}>
-          <Image
-            src={myPhoto}
-            alt="Bethsy Falcon - Frontend Developer"
-            fill
-            priority
-            className={s.image}
-          />
+          <Image src={myPhoto} alt={t.alt} fill priority className={s.image} />
         </div>
       </div>
     </section>

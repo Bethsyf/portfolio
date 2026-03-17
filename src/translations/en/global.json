@@ -6,5 +6,15 @@
     "experience": "Experience",
     "blog": "Blog",
     "contact": "Contact"
+  },
+
+  "hero": {
+    "role": "Frontend Developer",
+    "description": "I am a Frontend Developer specialized in React, Next.js and TypeScript. I build modern, scalable and user-focused interfaces.",
+    "projects": "View projects",
+    "download": "Download CV",
+    "alt": "Bethsy Falcon - Frontend Developer",
+    "github": "View GitHub profile",
+    "linkedin": "View LinkedIn profile"
   }
 }

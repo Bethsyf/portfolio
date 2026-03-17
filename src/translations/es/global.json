@@ -5,6 +5,17 @@
     "projects": "Proyectos",
     "experience": "Experiencia",
     "blog": "Blog",
-    "contact": "Contáctame"
+    "contact": "Contáctame",
+    "alt": "Bethsy Falcon - Frontend Developer"
+  },
+
+  "hero": {
+    "role": "Desarrolladora Frontend",
+    "description": "Soy desarrolladora Frontend especializada en React, Next.js y TypeScript. Construyo interfaces modernas, escalables y centradas en el usuario.",
+    "projects": "Ver proyectos",
+    "download": "Descargar CV",
+    "alt": "Bethsy Falcon - Desarrolladora Frontend",
+    "github": "Ver perfil de GitHub",
+    "linkedin": "Ver perfil de LinkedIn"
   }
 }

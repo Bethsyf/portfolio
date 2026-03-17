@@ -1,4 +1,4 @@
-import projects from "@/data/projects.json";
+import { projects } from "@/data";
 
 import TextControl from "@/components/controls/text/TextControl";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
