@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { blogPosts } from "@/data/blogPost";
 
-import TextControl from "@/components/controls/text/TextControl";
+import { TextControl } from "@/components/controls";
 import BlogCard from "@/components/views/blog/blogCard/BlogCard";
 
 import s from "@/styles/pages/BlogPage.module.scss";

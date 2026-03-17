@@ -5,7 +5,7 @@ import Image from "next/image";
 
 import { blogPosts } from "@/data/blogPost";
 
-import TextControl from "@/components/controls/text/TextControl";
+import { TextControl } from "@/components/controls";
 
 import s from "@/styles/pages/PostPage.module.scss";
 

@@ -1,6 +1,6 @@
 import { projects } from "@/data";
 
-import TextControl from "@/components/controls/text/TextControl";
+import { TextControl } from "@/components/controls";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 

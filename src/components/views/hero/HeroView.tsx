@@ -1,14 +1,12 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedinIn, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { FiDownload, FiGrid } from "react-icons/fi";
 
-import { featuredTechnologies } from "@/data";
-import { profile } from "@/data";
+import { featuredTechnologies, profile } from "@/data";
 import myPhoto from "../../../../public/bethsy.png";
 import { useTranslation } from "@/hooks/useTranslation";
 
-import ButtonControl from "@/components/controls/button/ButtonControl";
-import TextControl from "@/components/controls/text/TextControl";
+import { ButtonControl, TextControl } from "@/components/controls";
 
 import s from "./HeroView.module.scss";
 
@@ -34,7 +32,7 @@ export default function HeroView() {
 
         <div className={s.techStack}>
           {featuredTechnologies.map(({ name, icon: Icon }) => (
-            <Icon key={name} aria-label={name} />
+            <Icon key={name} aria-label={name} title={name} />
           ))}
         </div>
 

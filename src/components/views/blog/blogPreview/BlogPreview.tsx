@@ -2,7 +2,7 @@ import { blogPosts } from "@/data/blogPost";
 
 import BlogCard from "../blogCard/BlogCard";
 
-import ButtonControl from "@/components/controls/button/ButtonControl";
+import { ButtonControl } from "@/components/controls";
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 

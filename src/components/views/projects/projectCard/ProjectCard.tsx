@@ -1,9 +1,7 @@
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
-import ButtonControl from "@/components/controls/button/ButtonControl";
-import CardControl from "@/components/controls/card/CardControl";
-import TextControl from "@/components/controls/text/TextControl";
+import { ButtonControl, CardControl, TextControl } from "@/components/controls";
 
 import s from "./ProjectCard.module.scss";
 

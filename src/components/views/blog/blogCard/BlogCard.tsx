@@ -1,8 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import CardControl from "@/components/controls/card/CardControl";
-import TextControl from "@/components/controls/text/TextControl";
+import { CardControl, TextControl } from "@/components/controls";
 
 import s from "./BlogCard.module.scss";
 

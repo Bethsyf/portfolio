@@ -3,8 +3,7 @@ import InfoRRSS from "../../inforrss/InfoRRSS";
 
 import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
 import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
-import TextControl from "@/components/controls/text/TextControl";
-import CardControl from "@/components/controls/card/CardControl";
+import { TextControl, CardControl } from "@/components/controls";
 
 import s from "./ContactView.module.scss";
 
