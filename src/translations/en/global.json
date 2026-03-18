@@ -28,5 +28,24 @@
     "description": "Projects that demonstrate my ability to build modern, scalable interfaces aligned with frontend best practices.",
     "academic": "Academic",
     "real": "Real"
+  },
+
+  "experiences": {
+    "title": "Experience",
+    "description": "Professional experience building modern frontend interfaces focused on performance, scalability, and intuitive user experience.",
+    "items": [
+      {
+        "role": "Junior Frontend Developer",
+        "company": "KUTAI",
+        "duration": "June 2022 - September 2023",
+        "description": [
+          "Developed responsive and scalable web interfaces using Next.js, TypeScript, and Sass based on UI/UX designs.",
+          "Optimized existing components, improving performance, maintainability, and code quality.",
+          "Enhanced user experience through more intuitive and accessible interactions.",
+          "Integrated REST APIs to manage and display dynamic data.",
+          "Collaborated with designers and backend developers to implement new features."
+        ]
+      }
+    ]
   }
 }
