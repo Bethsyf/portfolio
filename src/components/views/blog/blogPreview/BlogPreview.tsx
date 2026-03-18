@@ -6,18 +6,16 @@ import { SectionHeader, SectionLayout } from "@/components/layout";
 import { ButtonControl } from "@/components/controls";
 
 import s from "./BlogPreview.module.scss";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function BlogPreview() {
   const previewPosts = blogPosts.slice(0, 3);
-
+  const t = useTranslation("blog");
   return (
     <section id="blog">
       <SectionLayout paddingY="8rem" align="center">
         <div className={s.content}>
-          <SectionHeader
-            title="Blog"
-            description="Aquí documento mi proceso de reconectar con el desarrollo frontend, repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino."
-          />
+          <SectionHeader title={t.title} description={t.description} />
 
           <div className={s.grid}>
             {previewPosts.map((post) => (
@@ -26,7 +24,7 @@ export default function BlogPreview() {
           </div>
 
           <div className={s.buttons}>
-            <ButtonControl href="/blog">Ver todos los artículos</ButtonControl>
+            <ButtonControl href="/blog">{t.cta}</ButtonControl>
           </div>
         </div>
       </SectionLayout>

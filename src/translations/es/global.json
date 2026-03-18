@@ -47,5 +47,11 @@
         ]
       }
     ]
+  },
+
+  "blog": {
+    "title": "Blog",
+    "description": "Aquí documento mi proceso de reconectar con el desarrollo frontend, repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino.",
+    "cta": "Ver todos los artículos"
   }
 }

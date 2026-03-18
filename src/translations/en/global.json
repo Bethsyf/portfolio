@@ -47,5 +47,11 @@
         ]
       }
     ]
+  },
+
+  "blog": {
+    "title": "Blog",
+    "description": "Here I document my journey reconnecting with frontend development, reviewing fundamentals, learning new tools, and strengthening my skills along the way.",
+    "cta": "View all posts"
   }
 }
