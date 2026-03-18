@@ -93,5 +93,9 @@
         "messageRequired": "Mensaje requerido"
       }
     }
+  },
+
+  "footer": {
+    "backToTop": "Volver al inicio"
   }
 }

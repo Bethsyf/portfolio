@@ -93,5 +93,9 @@
         "messageRequired": "Message is required"
       }
     }
+  },
+
+  "footer": {
+    "backToTop": "Back to top"
   }
 }
