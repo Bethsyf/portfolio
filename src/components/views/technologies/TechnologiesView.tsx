@@ -1,4 +1,5 @@
 import { technologyCategories } from "@/data";
+import { useTranslation } from "@/hooks/useTranslation";
 
 import { SectionHeader, SectionLayout } from "@/components/layout";
 import { CardControl, TextControl } from "@/components/controls";
@@ -6,13 +7,11 @@ import { CardControl, TextControl } from "@/components/controls";
 import s from "./Technologies.module.scss";
 
 export default function TechnologiesView() {
+  const t = useTranslation("technologies");
   return (
     <section id="technologies">
       <SectionLayout paddingY="8rem" align="center">
-        <SectionHeader
-          title="Tecnologías"
-          description="Este es el stack de tecnologías y herramientas con el que trabajo para desarrollar aplicaciones web modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida."
-        />
+        <SectionHeader title={t.title} description={t.description} />
         <div className={s.categories}>
           {technologyCategories.map(({ category, items }) => (
             <CardControl key={category} className={s.categoryCard}>

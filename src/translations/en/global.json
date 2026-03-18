@@ -16,5 +16,10 @@
     "alt": "Bethsy Falcon - Frontend Developer",
     "github": "View GitHub profile",
     "linkedin": "View LinkedIn profile"
+  },
+
+  "technologies": {
+    "title": "Technologies",
+    "description": "This is the stack of technologies and tools I use to build modern web applications, prioritizing performance, scalability, and a solid user experience."
   }
 }

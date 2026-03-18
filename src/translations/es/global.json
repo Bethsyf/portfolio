@@ -16,5 +16,10 @@
     "alt": "Bethsy Falcon - Desarrolladora Frontend",
     "github": "Ver perfil de GitHub",
     "linkedin": "Ver perfil de LinkedIn"
+  },
+
+  "technologies": {
+    "title": "Tecnologías",
+    "description": "Este es el stack de tecnologías y herramientas con el que trabajo para desarrollar aplicaciones web modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida."
   }
 }

@@ -7,4 +7,4 @@ export { default as HeroView } from "./hero/HeroView";
 export { default as InfoRRSS } from "./inforrss/InfoRRSS";
 export { default as ProjectsView } from "./projects/proyectView/ProjectsView";
 export { default as ProjectCard } from "./projects/projectCard/ProjectCard";
-export { default as TechnologiesView } from "./technologies/Technologies";
+export { default as TechnologiesView } from "./technologies/TechnologiesView";
