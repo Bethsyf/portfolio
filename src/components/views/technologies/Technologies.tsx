@@ -1,7 +1,6 @@
-import { technologyCategories } from "@/data/technologies";
+import { technologyCategories } from "@/data";
 
-import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+import { SectionHeader, SectionLayout } from "@/components/layout";
 import { CardControl, TextControl } from "@/components/controls";
 
 import s from "./Technologies.module.scss";

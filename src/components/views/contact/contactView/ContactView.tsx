@@ -1,8 +1,7 @@
 import ContactForm from "../contactForm/ContactForm";
 import InfoRRSS from "../../inforrss/InfoRRSS";
 
-import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
+import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl, CardControl } from "@/components/controls";
 
 import s from "./ContactView.module.scss";

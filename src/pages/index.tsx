@@ -1,13 +1,12 @@
 import Head from "next/head";
 
-import Navbar from "@/components/layout/navbar/Navbar";
+import { Navbar, Footer } from "@/components/layout";
 import HeroView from "@/components/views/hero/HeroView";
 import TechnologiesView from "@/components/views/technologies/Technologies";
 import ProjectsView from "@/components/views/projects/proyectView/ProjectsView";
 import ExperienceView from "@/components/views/experience/Experience";
 import BlogPreview from "@/components/views/blog/blogPreview/BlogPreview";
 import ContactView from "@/components/views/contact/contactView/ContactView";
-import Footer from "@/components/layout/footer/Footer";
 
 import styles from "@/styles/pages/Home.module.scss";
 

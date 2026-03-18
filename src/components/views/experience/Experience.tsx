@@ -1,8 +1,7 @@
 import Link from "next/link";
 
+import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl, CardControl } from "@/components/controls";
-import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 import { ExperienceProps } from "./Experienceprops";
 

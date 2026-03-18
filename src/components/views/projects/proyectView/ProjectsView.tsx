@@ -1,8 +1,7 @@
 import { projects } from "@/data";
 
+import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl } from "@/components/controls";
-import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 import ProjectCard from "../projectCard/ProjectCard";
 

@@ -2,9 +2,8 @@ import { blogPosts } from "@/data/blogPost";
 
 import BlogCard from "../blogCard/BlogCard";
 
+import { SectionHeader, SectionLayout } from "@/components/layout";
 import { ButtonControl } from "@/components/controls";
-import SectionHeader from "@/components/layout/sectionHeader/SectionHeader";
-import SectionLayout from "@/components/layout/sectionLayout/SectionLayout";
 
 import s from "./BlogPreview.module.scss";
 
