@@ -21,5 +21,12 @@
   "technologies": {
     "title": "Technologies",
     "description": "This is the stack of technologies and tools I use to build modern web applications, prioritizing performance, scalability, and a solid user experience."
+  },
+
+  "projects": {
+    "title": "Projects",
+    "description": "Projects that demonstrate my ability to build modern, scalable interfaces aligned with frontend best practices.",
+    "academic": "Academic",
+    "real": "Real"
   }
 }

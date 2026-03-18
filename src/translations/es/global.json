@@ -21,5 +21,12 @@
   "technologies": {
     "title": "Tecnologías",
     "description": "Este es el stack de tecnologías y herramientas con el que trabajo para desarrollar aplicaciones web modernas, priorizando rendimiento, escalabilidad y una experiencia de usuario sólida."
+  },
+
+  "projects": {
+    "title": "Proyectos",
+    "description": "Proyectos que demuestran mi capacidad para desarrollar interfaces modernas, escalables y alineadas con las mejores prácticas de desarrollo frontend.",
+    "academic": "Académicos",
+    "real": "Reales"
   }
 }
