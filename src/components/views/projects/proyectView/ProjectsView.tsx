@@ -2,8 +2,7 @@ import { projects } from "@/data";
 
 import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl } from "@/components/controls";
-
-import ProjectCard from "../projectCard/ProjectCard";
+import { ProjectCard } from "@/components/views";
 
 import s from "./ProjectsView.module.scss";
 

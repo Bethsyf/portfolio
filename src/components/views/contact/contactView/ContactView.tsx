@@ -1,5 +1,4 @@
-import ContactForm from "../contactForm/ContactForm";
-import InfoRRSS from "../../inforrss/InfoRRSS";
+import { ContactForm, InfoRRSS } from "@/components/views";
 
 import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl, CardControl } from "@/components/controls";

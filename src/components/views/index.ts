@@ -1,0 +1,10 @@
+export { default as BlogCard } from "./blog/blogCard/BlogCard";
+export { default as BlogPreview } from "./blog/blogPreview/BlogPreview";
+export { default as ContactView } from "./contact/contactView/ContactView";
+export { default as ContactForm } from "./contact/contactForm/ContactForm";
+export { default as ExperienceView } from "./experience/Experience";
+export { default as HeroView } from "./hero/HeroView";
+export { default as InfoRRSS } from "./inforrss/InfoRRSS";
+export { default as ProjectsView } from "./projects/proyectView/ProjectsView";
+export { default as ProjectCard } from "./projects/projectCard/ProjectCard";
+export { default as TechnologiesView } from "./technologies/Technologies";

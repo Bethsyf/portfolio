@@ -4,7 +4,7 @@ import Link from "next/link";
 import { blogPosts } from "@/data/blogPost";
 
 import { TextControl } from "@/components/controls";
-import BlogCard from "@/components/views/blog/blogCard/BlogCard";
+import { BlogCard } from "@/components/views";
 
 import s from "@/styles/pages/BlogPage.module.scss";
 
