@@ -1,20 +1,18 @@
-import { ContactForm, InfoRRSS } from "@/components/views";
+import { useTranslation } from "@/hooks/useTranslation";
 
+import { ContactForm, InfoRRSS } from "@/components/views";
 import { SectionHeader, SectionLayout } from "@/components/layout";
 import { TextControl, CardControl } from "@/components/controls";
 
 import s from "./ContactView.module.scss";
 
 export default function ContactView() {
+  const t = useTranslation("contact");
   return (
     <section id="contact">
       <SectionLayout paddingY="8rem" align="center">
         <div className={s.content}>
-          <SectionHeader
-            title={"Contacto"}
-            description="¿Tienes una oportunidad o proyecto en mente?
-            Estaré encantada de conversar contigo."
-          />
+          <SectionHeader title={t.title} description={t.description} />
 
           <div className={s.grid}>
             <ContactForm />
@@ -24,18 +22,18 @@ export default function ContactView() {
 
               <div className={s.infoBlock}>
                 <div className={s.infoGroup}>
-                  <TextControl variant="label">Ubicación</TextControl>
-                  <TextControl>Medellín, Colombia</TextControl>
+                  <TextControl variant="label">{t.location}</TextControl>
+                  <TextControl>{t.locationValue}</TextControl>
                 </div>
 
                 <div className={s.infoGroup}>
-                  <TextControl variant="label">Zona horaria</TextControl>
-                  <TextControl>GMT-5</TextControl>
+                  <TextControl variant="label">{t.timezone}</TextControl>
+                  <TextControl>{t.timezoneValue}</TextControl>
                 </div>
 
                 <div className={s.infoGroup}>
-                  <TextControl variant="label">Trabajo remoto</TextControl>
-                  <TextControl>Disponible globalmente</TextControl>
+                  <TextControl variant="label">{t.remote}</TextControl>
+                  <TextControl>{t.remoteValue}</TextControl>
                 </div>
               </div>
             </CardControl>

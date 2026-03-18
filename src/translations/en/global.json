@@ -53,5 +53,45 @@
     "title": "Blog",
     "description": "Here I document my journey reconnecting with frontend development, reviewing fundamentals, learning new tools, and strengthening my skills along the way.",
     "cta": "View all posts"
+  },
+
+  "contact": {
+    "title": "Contact",
+    "description": "Do you have an opportunity or project in mind? I would love to connect with you.",
+
+    "location": "Location",
+    "locationValue": "Medellín, Colombia",
+    "timezone": "Time zone",
+    "timezoneValue": "GMT-5",
+    "remote": "Remote work",
+    "remoteValue": "Available worldwide",
+
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+
+      "placeholderName": "Your name",
+      "placeholderEmail": "your@email.com",
+      "placeholderMessage": "Write your message",
+
+      "submit": "Send message",
+      "submitting": "Sending...",
+
+      "success": "Message sent successfully. I will contact you soon.",
+      "error": "Something went wrong. Please try again.",
+
+      "errors": {
+        "nameMin": "Minimum 3 characters",
+        "nameMax": "Maximum 30 characters",
+        "nameRequired": "Name is required",
+        "emailInvalid": "Invalid email",
+        "emailRequired": "Email is required",
+        "messageMin": "Minimum 3 characters",
+        "messageMax": "Maximum 500 characters",
+        "messageRequired": "Message is required"
+      }
+    }
   }
 }

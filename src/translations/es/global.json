@@ -53,5 +53,45 @@
     "title": "Blog",
     "description": "Aquí documento mi proceso de reconectar con el desarrollo frontend, repasando fundamentos, aprendiendo nuevas herramientas y fortaleciendo mis habilidades en el camino.",
     "cta": "Ver todos los artículos"
+  },
+
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Tienes una oportunidad o proyecto en mente? Estaré encantada de conversar contigo.",
+
+    "location": "Ubicación",
+    "locationValue": "Medellín, Colombia",
+    "timezone": "Zona horaria",
+    "timezoneValue": "GMT-5",
+    "remote": "Trabajo remoto",
+    "remoteValue": "Disponible globalmente",
+
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+
+      "placeholderName": "Tu nombre",
+      "placeholderEmail": "tu@email.com",
+      "placeholderMessage": "Escribe tu mensaje",
+
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+
+      "success": "Mensaje enviado correctamente. Te contactaré pronto.",
+      "error": "Hubo un error. Intenta nuevamente.",
+
+      "errors": {
+        "nameMin": "Mínimo 3 caracteres",
+        "nameMax": "Máximo 30 caracteres",
+        "nameRequired": "Nombre requerido",
+        "emailInvalid": "Correo no válido",
+        "emailRequired": "Correo requerido",
+        "messageMin": "Mínimo 3 caracteres",
+        "messageMax": "Máximo 500 caracteres",
+        "messageRequired": "Mensaje requerido"
+      }
+    }
   }
 }

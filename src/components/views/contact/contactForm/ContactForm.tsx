@@ -1,6 +1,8 @@
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 
+import { useTranslation } from "@/hooks/useTranslation";
+
 import { ButtonControl, TextControl } from "@/components/controls";
 
 import s from "./ContactForm.module.scss";
@@ -17,19 +19,23 @@ const initialValues: ContactFormValues = {
   message: "",
 };
 
-const validationSchema = Yup.object({
-  name: Yup.string()
-    .min(3, "Mínimo 3 caracteres")
-    .max(30, "Máximo 30 caracteres")
-    .required("Nombre requerido"),
-  email: Yup.string().email("Correo no válido").required("Correo requerido"),
-  message: Yup.string()
-    .min(3, "Mínimo 3 caracteres")
-    .max(500, "Máximo 500 caracteres")
-    .required("Mensaje requerido"),
-});
-
 export default function ContactForm() {
+  const t = useTranslation("contact");
+
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(3, t.form.errors.nameMin)
+      .max(30, t.form.errors.nameMax)
+      .required(t.form.errors.nameRequired),
+
+    email: Yup.string().email(t.form.errors.emailInvalid).required(t.form.errors.emailRequired),
+
+    message: Yup.string()
+      .min(3, t.form.errors.messageMin)
+      .max(500, t.form.errors.messageMax)
+      .required(t.form.errors.messageRequired),
+  });
+
   const handleSubmit = async (
     values: ContactFormValues,
     { resetForm, setSubmitting }: FormikHelpers<ContactFormValues>,
@@ -42,12 +48,14 @@ export default function ContactForm() {
         },
         body: JSON.stringify(values),
       });
-      if (!response.ok) throw new Error("Error al enviar");
+
+      if (!response.ok) throw new Error();
+
       resetForm();
-      alert("Mensaje enviado correctamente. Te contactaré pronto.");
+      alert(t.form.success);
     } catch (error) {
       console.error(error);
-      alert("Hubo un error. Intenta nuevamente.");
+      alert(t.form.error);
     } finally {
       setSubmitting(false);
     }
@@ -56,7 +64,7 @@ export default function ContactForm() {
   return (
     <div className={s.contactForm}>
       <TextControl as="h3" variant="title" align="center" className={s.titleForm}>
-        Envíame un mensaje
+        {t.form.title}
       </TextControl>
 
       <Formik
@@ -66,21 +74,29 @@ export default function ContactForm() {
       >
         {({ isSubmitting }) => (
           <Form className={s.form}>
-            <FormField label="Nombre" name="name" type="text" placeholder="Tu nombre" />
             <FormField
-              label="Correo electrónico"
+              label={t.form.name}
+              name="name"
+              type="text"
+              placeholder={t.form.placeholderName}
+            />
+
+            <FormField
+              label={t.form.email}
               name="email"
               type="email"
-              placeholder="tu@email.com"
+              placeholder={t.form.placeholderEmail}
             />
+
             <FormField
-              label="Mensaje"
+              label={t.form.message}
               name="message"
               as="textarea"
-              placeholder="Escribe tu mensaje"
+              placeholder={t.form.placeholderMessage}
             />
+
             <ButtonControl type="submit" variant="primary" size="md">
-              {isSubmitting ? "Enviando..." : "Enviar mensaje"}
+              {isSubmitting ? t.form.submitting : t.form.submit}
             </ButtonControl>
           </Form>
         )}
@@ -96,6 +112,7 @@ interface FormFieldProps {
   placeholder?: string;
   as?: string;
 }
+
 function FormField({ label, name, type = "text", placeholder, as }: FormFieldProps) {
   return (
     <div className={s.formGroup}>
