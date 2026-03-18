@@ -10,9 +10,7 @@ import s from "./ProjectsView.module.scss";
 
 export default function ProjectsView() {
   const renderProjects = (list: any[], showRepo = true) =>
-    list.map((project) => (
-      <ProjectCard key={project.title} project={project} showRepo={showRepo} />
-    ));
+    list.map((project) => <ProjectCard key={project.id} project={project} showRepo={showRepo} />);
 
   return (
     <section id="projects">
